@@ -238,10 +238,14 @@
             form.reset();
             setStatus('ok', "Got it — thanks! We'll map out a solution and email you back soon. ✦");
           } else {
-            setStatus('err', data.error || 'Something went wrong. Please try again, or email hello@aicollective.biz.');
+            setStatus('err', data.error || 'Something went wrong. Please try again in a moment.');
           }
         } catch (err) {
-          setStatus('err', 'Network hiccup — please try again, or email hello@aicollective.biz directly.');
+          // No live backend yet (e.g. static hosting): capture locally and guide to email.
+          const subject = encodeURIComponent('AI request from ' + (form.name.value.trim() || email));
+          const body = encodeURIComponent('What I want AI to do:\n' + describe + '\n\nBusiness: ' + form.business.value.trim() + '\nEmail: ' + email);
+          setStatus('ok', "Thanks! We're just finishing our contact setup — please email us at intheresults.com and we'll map out a solution.");
+          window.location.href = 'mailto:hello@intheresults.com?subject=' + subject + '&body=' + body;
         } finally { btn.disabled = false; }
       });
       function setStatus(state, msg) { statusEl.dataset.state = state; statusEl.textContent = msg; }
