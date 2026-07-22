@@ -287,30 +287,36 @@ button { cursor: pointer; background: none; border: none; }
   mix-blend-mode: multiply;
 }
 .hero__inner {
-  min-height: min(90vh, 820px);
+  min-height: min(88vh, 860px);
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; padding-block: clamp(var(--space-24), 14vh, 10rem) var(--space-20);
+  text-align: center; padding-block: clamp(var(--space-20), 12vh, 8rem) var(--space-24);
 }
 /* Hero sits on the dark synthwave image in BOTH themes — keep text light. */
 .hero, .hero .eyebrow, .hero__title, .hero__sub, .hero__meta, .hero__meta strong { color: #f4ecff; }
 .hero__badge { color: #f4ecff; }
 .hero__badge {
   display: inline-flex; align-items: center; gap: var(--space-2);
-  padding: 0.5em 1.1em; border-radius: var(--radius-full);
-  background: rgba(11,4,32,0.5);
-  border: 1px solid var(--color-border-glow); backdrop-filter: blur(6px);
-  font-size: var(--text-xs); font-weight: 600; letter-spacing: 0.08em;
-  text-transform: uppercase; color: var(--color-text); margin-bottom: var(--space-6);
+  padding: 0.55em 1.15em; border-radius: var(--radius-full);
+  background: rgba(11,4,32,0.78);
+  border: 1px solid var(--neon-cyan); backdrop-filter: blur(6px);
+  box-shadow: 0 0 18px rgba(0,229,255,0.35);
+  font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #f4ecff; margin-bottom: var(--space-6);
 }
 .hero__badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--neon-lime); box-shadow: var(--glow-lime); animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
 .hero__title {
-  font-size: var(--text-hero); font-weight: 600; line-height: 1.02; letter-spacing: -0.02em;
-  text-shadow: 0 2px 30px rgba(11,4,32,0.85), 0 0 60px rgba(11,4,32,0.6); max-width: 16ch; padding-bottom: 0.08em;
+  font-size: clamp(2.75rem, 0.5rem + 6vw, 6rem); font-weight: 600; line-height: 1.06;
+  letter-spacing: 0.005em; word-spacing: 0.04em;
+  text-shadow: 0 2px 30px rgba(11,4,32,0.9), 0 0 70px rgba(11,4,32,0.7);
+  max-width: 18ch; padding-bottom: 0.1em;
 }
-.hero__title .gradient-text { padding-inline: 0.06em; margin-right: 0.04em;
-  filter: drop-shadow(0 2px 10px rgba(11,4,32,0.7)); }
+.hero__title .gradient-text, .hero__title .gradient-text--cool {
+  padding-inline: 0.08em; margin-right: 0.06em;
+  background: linear-gradient(100deg, var(--neon-cyan), var(--neon-lime) 55%, #eaffb0);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(11,4,32,0.95)) drop-shadow(0 0 22px rgba(0,229,255,0.4)); }
 .hero__sub {
   margin-top: var(--space-6); max-width: 58ch; font-size: var(--text-lg);
   color: #f4ecff; text-shadow: 0 2px 20px rgba(11,4,32,0.9);
