@@ -275,10 +275,12 @@ button { cursor: pointer; background: none; border: none; }
 }
 .hero__bg::after {
   content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg,
-    rgba(11,4,32,0.55) 0%,
-    rgba(11,4,32,0.20) 45%,
-    var(--color-bg) 100%);
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 46%, rgba(11,4,32,0.72) 0%, rgba(11,4,32,0.30) 55%, transparent 80%),
+    linear-gradient(180deg,
+      rgba(11,4,32,0.55) 0%,
+      rgba(11,4,32,0.25) 45%,
+      var(--color-bg) 100%);
 }
 
 .hero__scanlines {
@@ -307,16 +309,16 @@ button { cursor: pointer; background: none; border: none; }
 @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
 .hero__title {
-  font-size: clamp(2.75rem, 0.5rem + 6vw, 6rem); font-weight: 600; line-height: 1.06;
-  letter-spacing: 0.005em; word-spacing: 0.04em;
-  text-shadow: 0 2px 30px rgba(11,4,32,0.9), 0 0 70px rgba(11,4,32,0.7);
-  max-width: 18ch; padding-bottom: 0.1em;
+  font-size: clamp(2.6rem, 0.9rem + 5vw, 5.25rem); font-weight: 600; line-height: 1.08;
+  letter-spacing: 0.01em; word-spacing: 0.04em; text-wrap: balance;
+  text-shadow: 0 2px 30px rgba(11,4,32,0.95), 0 0 70px rgba(11,4,32,0.8);
+  max-width: 15ch; padding-bottom: 0.1em;
 }
 .hero__title .gradient-text, .hero__title .gradient-text--cool {
-  padding-inline: 0.08em; margin-right: 0.06em;
-  background: linear-gradient(100deg, var(--neon-cyan), var(--neon-lime) 55%, #eaffb0);
+  padding-inline: 0.1em; margin-right: 0.06em; word-spacing: 0.06em;
+  background: linear-gradient(100deg, #5cf3ff, #d6ff7a 60%, #ffffff);
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 2px 10px rgba(11,4,32,0.95)) drop-shadow(0 0 22px rgba(0,229,255,0.4)); }
+  filter: drop-shadow(0 2px 6px rgba(11,4,32,1)) drop-shadow(0 0 26px rgba(0,229,255,0.55)); }
 .hero__sub {
   margin-top: var(--space-6); max-width: 58ch; font-size: var(--text-lg);
   color: #f4ecff; text-shadow: 0 2px 20px rgba(11,4,32,0.9);
