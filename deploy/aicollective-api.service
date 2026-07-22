@@ -1,0 +1,31 @@
+# /etc/systemd/system/aicollective-api.service
+# Runs the intake/newsletter backend (server.js) on port 8000 under systemd.
+#
+# Enable with:
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now aicollective-api
+#   sudo systemctl status aicollective-api
+
+[Unit]
+Description=AI Collective intake/newsletter API
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/aicollective
+ExecStart=/usr/bin/node /var/www/aicollective/server.js
+Restart=on-failure
+RestartSec=3
+Environment=NODE_ENV=production
+
+# --- Email config: fill these in ---
+# The real Resend API key (server-side only, never in the repo/client).
+Environment=RESEND_API_KEY=REPLACE_WITH_RESEND_API_KEY
+# Where intake submissions are emailed:
+Environment=INTAKE_TO_EMAIL=joelwfm@gmail.com
+# From address. Option B (launch now): use your VERIFIED intheresults.com.
+# Option A (after Resend upgrade + aicollective.biz verified): switch to info@aicollective.biz.
+Environment=INTAKE_FROM_EMAIL=The AI Collective <hello@intheresults.com>
+
+[Install]
+WantedBy=multi-user.target
