@@ -4,6 +4,14 @@ const express = require('express');
 const app = express();
 app.use(express.json({ limit: '256kb' }));
 
+// Custom-cred pass-through: when running behind Computer's proxy, call the
+// injected URL env var and send the injected token as x-api-key. The proxy
+// swaps in the real Resend key and forwards to api.resend.com.
+const CRED_URL = process.env.CUSTOM_CRED_API_RESEND_COM_URL || '';
+const CRED_TOKEN = process.env.CUSTOM_CRED_API_RESEND_COM_TOKEN || '';
+const USE_CRED_PROXY = !!(CRED_URL && CRED_TOKEN);
+if (USE_CRED_PROXY) console.log('[intake] using custom-cred pass-through for Resend');
+
 // CORS (site + local testing)
 app.use((req, res, next) => {
   res.set('Access-Control-Allow-Origin', '*');
@@ -15,6 +23,10 @@ app.use((req, res, next) => {
 
 // --- Config (override via env at deploy time) ---
 const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
+// When running behind Computer's custom-cred proxy, auth to api.resend.com is
+// injected automatically for outbound HTTPS. Set USE_PROXY_AUTH=1 to enable the
+// live path without a raw key in this process.
+const CAN_SEND = USE_CRED_PROXY || !!RESEND_API_KEY;
 const TO_EMAIL = process.env.INTAKE_TO_EMAIL || 'joelwfm@gmail.com';
 const FROM_EMAIL = process.env.INTAKE_FROM_EMAIL || 'The AI Collective <hello@intheresults.com>';
 
@@ -51,16 +63,27 @@ app.post('/api/intake', async (req, res) => {
 
   const text = `New AI Collective request (${submittedAt} Regina)\n\nName: ${name || '—'}\nEmail: ${email}\nBusiness: ${business || '—'}\nNewsletter opt-in: ${consent ? 'Yes' : 'No'}\n\nWhat they want AI to do:\n${describe}`;
 
-  if (!RESEND_API_KEY) {
+  if (!CAN_SEND) {
     // No key configured — accept + log so the UI still works in mockup mode.
-    console.log('[intake] (no RESEND_API_KEY set) would email:', text);
+    console.log('[intake] (no key / proxy) would email:', text);
     return res.json({ ok: true, mock: true });
   }
 
   try {
-    const r = await fetch('https://api.resend.com/emails', {
+    const headers = { 'Content-Type': 'application/json' };
+    let endpoint;
+    if (USE_CRED_PROXY) {
+      // Pass-through proxy: it injects the real Resend key and forwards to
+      // https://api.resend.com/emails. Send our proxy token as x-api-key.
+      endpoint = `${CRED_URL.replace(/\/$/, '')}/emails`;
+      headers['x-api-key'] = CRED_TOKEN;
+    } else {
+      endpoint = 'https://api.resend.com/emails';
+      headers['Authorization'] = `Bearer ${RESEND_API_KEY}`;
+    }
+    const r = await fetch(endpoint, {
       method: 'POST',
-      headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      headers,
       body: JSON.stringify({
         from: FROM_EMAIL,
         to: [TO_EMAIL],
@@ -81,6 +104,6 @@ app.post('/api/intake', async (req, res) => {
   }
 });
 
-app.get('/api/health', (req, res) => res.json({ ok: true, hasKey: !!RESEND_API_KEY }));
+app.get('/api/health', (req, res) => res.json({ ok: true, hasKey: CAN_SEND }));
 
 app.listen(8000, '0.0.0.0', () => console.log('Intake server listening on 8000'));
