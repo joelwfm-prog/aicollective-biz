@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A month of social posts in one afternoon — The AI Collective Playbooks</title>
+  <meta name="description" content="The prompt-and-schedule workflow a Regina café uses to stay consistent — from picking themes to a fully queued month of social posts in one sitting." />
+  <link rel="canonical" href="https://aicollective.biz/playbook-b.html" />
+  <meta property="og:title" content="A month of social posts in one afternoon — The AI Collective Playbooks" />
+  <meta property="og:description" content="The prompt-and-schedule workflow a Regina café uses to stay consistent — from idea to a fully queued month." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aicollective.biz/playbook-b.html" />
+  <meta property="og:site_name" content="The AI Collective" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "name": "A month of social posts in one afternoon",
+        "description": "A batch workflow for planning, generating, editing, and scheduling a full month of social media posts in a single sitting.",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Pick your monthly themes", "text": "Choose 3-5 recurring content themes so you're never starting from a blank page." },
+          { "@type": "HowToStep", "position": 2, "name": "Batch-generate the month with one prompt", "text": "Feed an AI tool your themes and voice in a single detailed prompt to draft 20-30 posts at once." },
+          { "@type": "HowToStep", "position": 3, "name": "Edit every post for voice", "text": "Read each draft out loud and rewrite anything that doesn't sound like you or your business." },
+          { "@type": "HowToStep", "position": 4, "name": "Load everything into a scheduler", "text": "Queue the edited posts into a scheduling tool so they publish automatically through the month." },
+          { "@type": "HowToStep", "position": 5, "name": "Repurpose across platforms", "text": "Adapt the strongest posts into other formats, like turning a caption into a short video script." }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": "Playbooks", "item": "https://aicollective.biz/playbooks.html" },
+          { "@type": "ListItem", "position": 3, "name": "A month of social posts in one afternoon", "item": "https://aicollective.biz/playbook-b.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="brand" aria-label="The AI Collective home">
+        <svg class="brand__logo" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <path d="M17 2 4 9.5v15L17 32l13-7.5v-15L17 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M17 9v16M9.5 13.25 17 17l7.5-3.75M9.5 20.75 17 17M24.5 20.75 17 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.65"/>
+          <circle cx="17" cy="17" r="3" fill="currentColor"/>
+        </svg>
+        <span class="brand__name">The AI <span>Collective</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <div class="nav__links">
+          <a class="nav__link" href="latest.html">Latest</a>
+          <a class="nav__link" href="playbooks.html" aria-current="page">Playbooks</a>
+          <a class="nav__link" href="ai-solutions.html">AI Solutions</a>
+          <a class="nav__link" href="about.html">About</a>
+        </div>
+        <div class="header__actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode"></button>
+          <a href="ai-solutions.html" class="btn btn--primary">Tell us your goal</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__head">
+      <span class="brand__name">The AI <span style="color:var(--neon-cyan)">Collective</span></span>
+      <button class="theme-toggle" id="mobileClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav__links">
+      <a href="latest.html">Latest</a>
+      <a href="playbooks.html">Playbooks</a>
+      <a href="ai-solutions.html">AI Solutions</a>
+      <a href="about.html">About</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <a href="playbooks.html">Playbooks</a> <span>/</span> <span aria-current="page">A month of social posts in one afternoon</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">Playbook B · Marketing · ~9 min</span>
+          <h1 class="page-hero__title">A month of social posts in one afternoon.</h1>
+          <p class="page-hero__sub">The prompt-and-schedule workflow a Regina café uses to stay consistent — from idea to a fully queued month.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight container">
+      <article class="prose reveal">
+        <p><strong>Social media dies the same way every time:</strong> you post daily for two weeks, get busy, and go quiet for a month. Customers notice the silence more than they notice any single post. The fix isn't posting more often — it's batching the whole month in one sitting so daily posting stops depending on daily willpower. Here's the workflow.</p>
+
+        <h2>1. Pick your monthly themes</h2>
+        <p>Before opening any AI tool, choose 3-5 themes you'll rotate through all month. For most small businesses that's something like: a behind-the-scenes look, a customer question answered, a product or service spotlight, a local/seasonal tie-in, and a plain "we're open, here's what's new" post. Themes matter because they give an AI tool structure — "write me social posts" produces mush, "write me posts following these five recurring themes" produces something usable.</p>
+
+        <h2>2. Batch-generate the month with one prompt</h2>
+        <p>This is the actual time-saver: one detailed prompt, one sitting, a month of drafts. Give the AI tool your themes, your voice, your platform, and how many posts you need. Be specific about tone and length or you'll get generic marketing-speak back.</p>
+        <div style="white-space:pre-wrap;background:var(--color-surface-2, rgba(255,255,255,.04));border-left:3px solid var(--neon-cyan);padding:14px 16px;border-radius:8px;font-size:14px;line-height:1.6">You are helping a small [type of business] in [town], Saskatchewan plan a month of Instagram/Facebook posts. Our voice is [e.g. warm, a little cheeky, never corporate]. Write 20 post drafts for the next 4 weeks, rotating evenly through these 5 themes: 1) behind-the-scenes, 2) answering a customer question, 3) spotlight on one product/service, 4) local/seasonal tie-in, 5) simple update or open-hours reminder. For each post give: a short caption (2-4 sentences, no corporate buzzwords), 3-5 relevant hashtags, and a one-line note on what photo or video would pair with it. Number them Week 1 Post 1, Week 1 Post 2, etc.</div>
+        <p>Twenty posts, one prompt, roughly the length of a coffee break to generate.</p>
+
+        <h2>3. Edit every post for voice</h2>
+        <p>Do not skip this step — it's what separates "clearly AI-written" from "sounds like us." Read each draft out loud. If a line makes you wince or sounds like a chain store wrote it, rewrite it in your own words. This usually takes less time than writing from scratch, because you're editing instead of staring at a blank box.</p>
+
+        <h2>4. Load everything into a scheduler</h2>
+        <p>Once edited, drop all 20 posts into a scheduling tool (most social platforms have a built-in one, and there are inexpensive third-party options) and set them to go out on a rhythm — say, every weekday. This is the step that actually buys back your month: the posting now happens whether or not you remember to log in.</p>
+
+        <h2>5. Repurpose across platforms</h2>
+        <p>Your strongest 4-5 posts from the batch are worth a second life. Turn a caption into a 30-second video script, or stretch a "behind-the-scenes" post into a short newsletter blurb. Ask your AI tool directly: "Turn post #7 into a 30-second video script with a hook in the first 3 seconds." One good idea, three formats.</p>
+
+        <h2>Local example: a Regina café</h2>
+        <p>Say you run a café in Regina's Cathedral neighbourhood. Historically, social media happened in bursts — a flurry of posts when you remembered, then three weeks of nothing. One Sunday afternoon, using the themes and prompt above, you generated a month of drafts: new pastry spotlights, a "how we source our beans" post, a couple of answers to questions you get constantly ("are you dog-friendly?"), and two seasonal posts tied to a Regina festival. You spent 40 minutes editing for voice, loaded everything into a free scheduler, and didn't open the app again for three weeks except to reply to comments. The feed looked more consistent than it had in a year, and it cost one afternoon.</p>
+
+        <h2>Watch out for</h2>
+        <p>Don't schedule and forget entirely — still check in every few days to reply to comments and messages, since a queued post with no human behind it feels hollow fast. And don't let every post sound identical; vary sentence length and openers so the feed doesn't read like a template got run 20 times.</p>
+
+        <h2>Do this now</h2>
+        <p>Block 90 minutes this week — themes, one prompt, an editing pass, and loading the scheduler. That's the whole system, and it resets every month in less time than one good coffee break.</p>
+
+        <p><a href="ai-solutions.html">Want us to map this out for your business? Tell us your goal →</a></p>
+      </article>
+
+      <div class="reveal" style="margin-top: var(--space-10)">
+        <a href="playbooks.html" class="btn btn--ghost">← All playbooks</a>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER CTA -->
+    <section class="section section--tight container">
+      <div class="cta-band reveal">
+        <div class="intake__grid-bg" aria-hidden="true"></div>
+        <div style="position:relative;z-index:1;text-align:center">
+          <span class="eyebrow">The AI Collective Weekly</span>
+          <h2 class="cta-band__title">Get this in your inbox every Thursday.</h2>
+          <p class="cta-band__desc">One plain-English AI email for Prairie business. No fluff, no spam, unsubscribe in one click.</p>
+          <a href="index.html#newsletter" class="btn btn--primary btn--lg">Join the free weekly →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="brand" aria-label="The AI Collective home">
+            <svg class="brand__logo" width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+              <path d="M17 2 4 9.5v15L17 32l13-7.5v-15L17 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M17 9v16M9.5 13.25 17 17l7.5-3.75M9.5 20.75 17 17M24.5 20.75 17 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.65"/>
+              <circle cx="17" cy="17" r="3" fill="currentColor"/>
+            </svg>
+            <span class="brand__name">The AI <span>Collective</span></span>
+          </a>
+          <p>Saskatchewan's source for practical AI. Made on the Prairies, built for Western Canada.</p>
+        </div>
+        <div class="footer__col"><h5>Read</h5><a href="latest.html">Latest</a><a href="playbooks.html">Playbooks</a><a href="ai-solutions.html">AI Solutions</a></div>
+        <div class="footer__col"><h5>Collective</h5><a href="about.html">About</a><a href="ai-solutions.html">Work with us</a><a href="index.html#newsletter">Newsletter</a></div>
+        <div class="footer__col"><h5>Get involved</h5><a href="ai-solutions.html">Tell us your goal</a><a href="about.html#tools">Submit a tool</a><a href="index.html#newsletter">Newsletter</a></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 The AI Collective · aicollective.biz · Moose Jaw, Saskatchewan</span>
+        <span>Privacy · Unsubscribe · CASL compliant</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
