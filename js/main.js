@@ -36,8 +36,8 @@
     });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
   items.forEach((el) => io.observe(el));
-  // Safety: reveal everything after 1.2s in case observer never fires
-  setTimeout(() => items.forEach((el) => el.classList.add('is-visible')), 1200);
+  // Safety: reveal everything after 900ms in case observer never fires
+  setTimeout(() => items.forEach((el) => el.classList.add('is-visible')), 900);
 })();
 
 // ---- Mobile nav ----

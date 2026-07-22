@@ -3,21 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The AI Collective — Saskatchewan's Source for AI, Built for Business</title>
-  <meta name="description" content="The AI Collective is Saskatchewan's source for practical AI news, playbooks, and tools for small and medium business. Made on the Prairies, built for Western Canada." />
-  <meta property="og:title" content="The AI Collective — Saskatchewan's Source for AI" />
+  <title>The AI Collective — Saskatchewan's Source for Practical AI</title>
+  <meta name="description" content="The AI Collective is Saskatchewan's source for practical AI news, playbooks, and tools for small and medium business. Made on the Prairies, built for Western Canada. No hype — just what works." />
+  <link rel="canonical" href="https://aicollective.biz/" />
+  <meta property="og:title" content="The AI Collective — Saskatchewan's Source for Practical AI" />
   <meta property="og:description" content="Practical AI news, playbooks, and tools for Western Canadian small business. No hype. Just what works." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aicollective.biz/" />
+  <meta property="og:site_name" content="The AI Collective" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://aicollective.biz/#org",
+        "name": "The AI Collective",
+        "url": "https://aicollective.biz/",
+        "description": "Saskatchewan's source for practical AI news, playbooks, and tools for small and medium business.",
+        "areaServed": ["Saskatchewan", "Western Canada", "Canada"],
+        "location": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": "Moose Jaw", "addressRegion": "SK", "addressCountry": "CA" } }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aicollective.biz/#website",
+        "url": "https://aicollective.biz/",
+        "name": "The AI Collective",
+        "publisher": { "@id": "https://aicollective.biz/#org" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#top" class="brand" aria-label="The AI Collective home">
+      <a href="index.html" class="brand" aria-label="The AI Collective home">
         <svg class="brand__logo" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
           <path d="M17 2 4 9.5v15L17 32l13-7.5v-15L17 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
           <path d="M17 9v16M9.5 13.25 17 17l7.5-3.75M9.5 20.75 17 17M24.5 20.75 17 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.65"/>
@@ -25,18 +52,16 @@
         </svg>
         <span class="brand__name">The AI <span>Collective</span></span>
       </a>
-
       <nav class="nav" aria-label="Primary">
         <div class="nav__links">
-          <a class="nav__link" href="#feed">Latest</a>
-          <a class="nav__link" href="#playbook">Playbooks</a>
-          <a class="nav__link" href="#products">Tools</a>
-          <a class="nav__link" href="#partners">Partners</a>
-          <a class="nav__link" href="#newsletter">Newsletter</a>
+          <a class="nav__link" href="latest.html">Latest</a>
+          <a class="nav__link" href="playbooks.html">Playbooks</a>
+          <a class="nav__link" href="ai-solutions.html">AI Solutions</a>
+          <a class="nav__link" href="about.html">About</a>
         </div>
         <div class="header__actions">
           <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode"></button>
-          <a href="#newsletter" class="btn btn--primary">Join Free</a>
+          <a href="ai-solutions.html" class="btn btn--primary">Tell us your goal</a>
           <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
           </button>
@@ -44,8 +69,6 @@
       </nav>
     </div>
   </header>
-
-  <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
     <div class="mobile-nav__head">
       <span class="brand__name">The AI <span style="color:var(--neon-cyan)">Collective</span></span>
@@ -54,11 +77,10 @@
       </button>
     </div>
     <div class="mobile-nav__links">
-      <a href="#feed">Latest</a>
-      <a href="#playbook">Playbooks</a>
-      <a href="#products">Tools</a>
-      <a href="#partners">Partners</a>
-      <a href="#newsletter">Newsletter</a>
+      <a href="latest.html">Latest</a>
+      <a href="playbooks.html">Playbooks</a>
+      <a href="ai-solutions.html">AI Solutions</a>
+      <a href="about.html">About</a>
     </div>
   </div>
 
@@ -70,10 +92,10 @@
       <div class="container hero__inner">
         <span class="hero__badge"><span class="dot"></span> Made in Saskatchewan · Built for Western Canada</span>
         <h1 class="hero__title">The Prairies' source for <span class="gradient-text--cool">AI that actually works</span></h1>
-        <p class="hero__sub">No hype, no jargon. Just clear, honest guidance on what AI means for your business — the news that matters, the playbooks to run this week, and the tools worth your money.</p>
+        <p class="hero__sub">No hype, no jargon. Just clear, honest guidance on what AI means for your business — the news that matters, the playbooks to run this week, and a plain-English way to map out AI for your own shop.</p>
         <div class="hero__actions">
-          <a href="#newsletter" class="btn btn--primary btn--lg">Get the free weekly →</a>
-          <a href="#feed" class="btn btn--ghost btn--lg">Read the latest</a>
+          <a href="ai-solutions.html" class="btn btn--primary btn--lg">Tell us what you want AI to do →</a>
+          <a href="latest.html" class="btn btn--ghost btn--lg">Read the latest</a>
         </div>
         <div class="hero__meta">
           <span><strong>2,400+</strong> Prairie businesses reading</span>
@@ -92,7 +114,6 @@
         <span class="ticker__item"><span class="star">✦</span> Local grants for AI adoption</span>
         <span class="ticker__item"><span class="star">✦</span> Social content in minutes</span>
         <span class="ticker__item"><span class="star">✦</span> Prairie AI meetups</span>
-        <!-- duplicate for seamless loop -->
         <span class="ticker__item"><span class="star">✦</span> AI search is eating Google</span>
         <span class="ticker__item"><span class="star">✦</span> Get cited by ChatGPT</span>
         <span class="ticker__item"><span class="star">✦</span> Automate the boring stuff</span>
@@ -110,39 +131,38 @@
         <p class="section-head__desc">Every week the AI world throws out a hundred new tools and ten thousand hot takes. We cut through it for owners and operators right here on the Prairies.</p>
       </div>
       <div class="pillars">
-        <article class="pillar reveal" style="--_accent: var(--neon-magenta)">
+        <a class="pillar reveal" href="latest.html" style="--_accent: var(--neon-magenta)">
           <div class="pillar__icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
           </div>
           <h3>Plain-English news</h3>
           <p>What happened, why it matters to your bottom line, and what (if anything) you should do about it. Read it in five minutes.</p>
-        </article>
-        <article class="pillar reveal" style="--_accent: var(--neon-cyan)">
+        </a>
+        <a class="pillar reveal" href="playbooks.html" style="--_accent: var(--neon-cyan)">
           <div class="pillar__icon">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2h6c0-.8.4-1.5 1-2A7 7 0 0 0 12 2Z"/></svg>
           </div>
           <h3>Run-it-this-week playbooks</h3>
           <p>Step-by-step guides built for real small businesses — not enterprise teams with a data department. Copy, paste, done.</p>
-        </article>
-        <article class="pillar reveal" style="--_accent: var(--neon-lime)">
+        </a>
+        <a class="pillar reveal" href="ai-solutions.html" style="--_accent: var(--neon-lime)">
           <div class="pillar__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7 12 3 4 7l8 4 8-4Z"/><path d="M4 7v10l8 4 8-4V7M12 11v10"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2h6c0-.8.4-1.5 1-2A7 7 0 0 0 12 2ZM9 22h6"/><path d="M12 8v3M10.5 9.5h3"/></svg>
           </div>
-          <h3>Honest tool reviews</h3>
-          <p>We test the tools so you don't waste a subscription. When something's worth it — including ours — we'll tell you why.</p>
-        </article>
+          <h3>A plan for your business</h3>
+          <p>Tell us what you wish AI could do, and we'll map a path — using tools that already exist or a custom setup. No cost to ask.</p>
+        </a>
       </div>
     </section>
 
-    <!-- ================= FEED ================= -->
-    <section class="section section--tight container" id="feed">
+    <!-- ================= LATEST TEASER ================= -->
+    <section class="section section--tight container">
       <div class="section-head reveal">
         <span class="eyebrow">Latest from the Collective</span>
         <h2 class="section-head__title">This week on the Prairies</h2>
       </div>
       <div class="feed">
-        <!-- Feature -->
-        <a href="#" class="card card--feature reveal">
+        <a href="latest.html" class="card card--feature reveal">
           <div class="card__media">
             <img src="assets/feat-search.png" alt="Neon illustration of an AI search engine answering a question about a local business" loading="lazy" />
           </div>
@@ -153,117 +173,34 @@
             <div class="card__meta"><span>Playbook</span> · <span>8 min read</span> · <span>Jul 21, 2026</span></div>
           </div>
         </a>
-        <!-- Side stack -->
         <div class="feed__side">
-          <a href="#" class="side-card reveal">
+          <a href="latest.html" class="side-card reveal">
             <span class="side-card__num">01</span>
-            <div class="side-card__body">
-              <h4>The 3 AI tools every Sask retailer should try before fall</h4>
-              <p>Tools · 5 min</p>
-            </div>
+            <div class="side-card__body"><h4>The 3 AI tools every Sask retailer should try before fall</h4><p>Tools · 5 min</p></div>
           </a>
-          <a href="#" class="side-card reveal">
+          <a href="latest.html" class="side-card reveal">
             <span class="side-card__num">02</span>
-            <div class="side-card__body">
-              <h4>Sask + Canada AI grants: what your business can actually claim in 2026</h4>
-              <p>Funding · 6 min</p>
-            </div>
+            <div class="side-card__body"><h4>Sask + Canada AI grants: what your business can actually claim in 2026</h4><p>Funding · 6 min</p></div>
           </a>
-          <a href="#" class="side-card reveal">
+          <a href="latest.html" class="side-card reveal">
             <span class="side-card__num">03</span>
-            <div class="side-card__body">
-              <h4>We tested 5 AI social schedulers. Two were worth it.</h4>
-              <p>Review · 7 min</p>
-            </div>
+            <div class="side-card__body"><h4>We tested 5 AI social schedulers. Two were worth it.</h4><p>Review · 7 min</p></div>
           </a>
         </div>
       </div>
-
-      <!-- Secondary row -->
-      <div class="pillars" style="margin-top: var(--space-6)">
-        <a href="#" class="card reveal">
-          <div class="card__media"><img src="assets/feat-automate.png" alt="Neon conveyor belt automating repetitive office tasks" loading="lazy" /></div>
-          <div class="card__body">
-            <span class="tag tag--cyan">Automation</span>
-            <h3 class="card__title">Automate the 5 tasks eating your Mondays</h3>
-            <p class="card__excerpt">Invoicing follow-ups, review requests, appointment reminders — the unglamorous wins that give you your week back.</p>
-            <div class="card__meta"><span>Guide</span> · <span>6 min</span></div>
-          </div>
-        </a>
-        <a href="#" class="card reveal">
-          <div class="card__media"><img src="assets/feat-content.png" alt="Neon speech bubbles representing AI-generated social content" loading="lazy" /></div>
-          <div class="card__body">
-            <span class="tag tag--lime">Marketing</span>
-            <h3 class="card__title">A month of social posts in one afternoon</h3>
-            <p class="card__excerpt">The exact prompt-and-schedule workflow a Regina café uses to stay consistent without hiring an agency.</p>
-            <div class="card__meta"><span>Playbook</span> · <span>9 min</span></div>
-          </div>
-        </a>
-        <a href="#" class="card reveal">
-          <div class="card__media"><img src="assets/feat-safety.png" alt="Neon shield representing responsible AI use and data privacy" loading="lazy" /></div>
-          <div class="card__body">
-            <span class="tag tag--orange">Do It Right</span>
-            <h3 class="card__title">Using AI without getting yourself in trouble</h3>
-            <p class="card__excerpt">Privacy, PIPEDA, client data, and the mistakes we see Prairie businesses make. A plain-language guardrail guide.</p>
-            <div class="card__meta"><span>Explainer</span> · <span>5 min</span></div>
-          </div>
-        </a>
-      </div>
+      <div style="margin-top:var(--space-8)"><a href="latest.html" class="btn btn--ghost">See all articles →</a></div>
     </section>
 
-    <!-- ================= PLAYBOOK / DO THIS NOW ================= -->
-    <section class="section container" id="playbook">
-      <div class="section-head reveal">
-        <span class="eyebrow">Start here</span>
-        <h2 class="section-head__title">New to AI? Do these four things first.</h2>
-        <p class="section-head__desc">You don't need a strategy deck. You need a weekend and a coffee. Here's where every Prairie business should start.</p>
-      </div>
-      <div class="playbook">
-        <div class="step reveal">
-          <div class="step__idx">1</div>
-          <div><h4>Make yourself findable by AI</h4><p>AI answer engines are the new front door. Make sure your business shows up when someone asks ChatGPT or Google's AI for a recommendation in your area.</p></div>
+    <!-- ================= AI SOLUTIONS CTA ================= -->
+    <section class="section container">
+      <div class="cta-band reveal">
+        <div class="intake__grid-bg" aria-hidden="true"></div>
+        <div style="position:relative;z-index:1">
+          <span class="eyebrow" style="justify-content:center">Tell us your goal</span>
+          <h2 style="margin-top:var(--space-3)">What do you wish AI could do for your business?</h2>
+          <p>Describe it in your own words — "I want to stop chasing invoices," "I want to show up when people ask ChatGPT for a plumber." We'll map out a solution from tools that already exist, or a custom setup. Free to ask.</p>
+          <a href="ai-solutions.html" class="btn btn--primary btn--lg">Map my AI solution →</a>
         </div>
-        <div class="step reveal">
-          <div class="step__idx">2</div>
-          <div><h4>Kill one repetitive task</h4><p>Pick the most annoying, repeatable thing you do every week. There's almost certainly an AI or automation that handles 80% of it.</p></div>
-        </div>
-        <div class="step reveal">
-          <div class="step__idx">3</div>
-          <div><h4>Get consistent on social</h4><p>Consistency beats brilliance. Use AI to keep your feed alive without it becoming a second full-time job.</p></div>
-        </div>
-        <div class="step reveal">
-          <div class="step__idx">4</div>
-          <div><h4>Set your ground rules</h4><p>Decide what AI can and can't touch in your business — customer data, client work, anything sensitive — before your team runs ahead of you.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PRODUCTS (soft push) ================= -->
-    <section class="section section--tight container" id="products">
-      <div class="section-head section-head--center reveal">
-        <span class="eyebrow">Built by the Collective</span>
-        <h2 class="section-head__title">Prairie-made tools we actually use</h2>
-        <p class="section-head__desc">We don't just write about AI — we build it. These are the tools we lean on ourselves and recommend to the businesses we work with.</p>
-      </div>
-      <div class="products">
-        <article class="product reveal">
-          <div class="product__glow" style="background: var(--neon-magenta)"></div>
-          <div class="product__name">Results AI</div>
-          <p class="product__tagline">Get your business cited by AI search engines. See where you stand and fix what's holding you back.</p>
-          <a href="#" class="product__link">Explore Results AI <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </article>
-        <article class="product reveal">
-          <div class="product__glow" style="background: var(--neon-cyan)"></div>
-          <div class="product__name">Dale Social</div>
-          <p class="product__tagline">Your always-on social copilot. Generate, schedule, and stay consistent — without the agency price tag.</p>
-          <a href="#" class="product__link">Explore Dale Social <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </article>
-        <article class="product reveal">
-          <div class="product__glow" style="background: var(--neon-lime)"></div>
-          <div class="product__name">Vyb6</div>
-          <p class="product__tagline">An AI site builder that ships a real website by chatting with it. Edit, publish, and go live in an afternoon.</p>
-          <a href="#" class="product__link">Explore Vyb6 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </article>
       </div>
     </section>
 
@@ -289,20 +226,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ================= PARTNERS / STATS ================= -->
-    <section class="section section--tight container" id="partners">
-      <div class="section-head section-head--center reveal">
-        <span class="eyebrow">The Collective is growing</span>
-        <h2 class="section-head__title">Prairie businesses, better with AI</h2>
-      </div>
-      <div class="stats reveal">
-        <div class="stat"><div class="stat__num gradient-text">2,400+</div><div class="stat__label">Subscribers &amp; growing</div></div>
-        <div class="stat"><div class="stat__num gradient-text--cool">40+</div><div class="stat__label">Playbooks published</div></div>
-        <div class="stat"><div class="stat__num gradient-text">15</div><div class="stat__label">Partner companies</div></div>
-        <div class="stat"><div class="stat__num gradient-text--cool">100%</div><div class="stat__label">Made on the Prairies</div></div>
-      </div>
-    </section>
   </main>
 
   <!-- ================= FOOTER ================= -->
@@ -310,7 +233,7 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="#top" class="brand" aria-label="The AI Collective home">
+          <a href="index.html" class="brand" aria-label="The AI Collective home">
             <svg class="brand__logo" width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true">
               <path d="M17 2 4 9.5v15L17 32l13-7.5v-15L17 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
               <path d="M17 9v16M9.5 13.25 17 17l7.5-3.75M9.5 20.75 17 17M24.5 20.75 17 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.65"/>
@@ -322,24 +245,21 @@
         </div>
         <div class="footer__col">
           <h5>Read</h5>
-          <a href="#feed">Latest</a>
-          <a href="#playbook">Playbooks</a>
-          <a href="#partners">Reviews</a>
-          <a href="#">Archive</a>
-        </div>
-        <div class="footer__col">
-          <h5>Tools</h5>
-          <a href="#products">Results AI</a>
-          <a href="#products">Dale Social</a>
-          <a href="#products">Vyb6</a>
-          <a href="#">Submit a tool</a>
+          <a href="latest.html">Latest</a>
+          <a href="playbooks.html">Playbooks</a>
+          <a href="ai-solutions.html">AI Solutions</a>
         </div>
         <div class="footer__col">
           <h5>Collective</h5>
+          <a href="about.html">About</a>
+          <a href="ai-solutions.html">Work with us</a>
           <a href="#newsletter">Newsletter</a>
-          <a href="#partners">Become a partner</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h5>Tools we build</h5>
+          <a href="about.html#tools">Results AI</a>
+          <a href="about.html#tools">Dale Social</a>
+          <a href="about.html#tools">Vyb6</a>
         </div>
       </div>
       <div class="footer__bottom">
