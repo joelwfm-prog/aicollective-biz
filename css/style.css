@@ -276,10 +276,10 @@ button { cursor: pointer; background: none; border: none; }
 .hero__bg::after {
   content: ''; position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 46%, rgba(11,4,32,0.72) 0%, rgba(11,4,32,0.30) 55%, transparent 80%),
+    radial-gradient(ellipse 62% 48% at 50% 44%, rgba(11,4,32,0.68) 0%, rgba(11,4,32,0.42) 45%, transparent 78%),
     linear-gradient(180deg,
       rgba(11,4,32,0.55) 0%,
-      rgba(11,4,32,0.25) 45%,
+      rgba(11,4,32,0.30) 45%,
       var(--color-bg) 100%);
 }
 
@@ -315,10 +315,11 @@ button { cursor: pointer; background: none; border: none; }
   max-width: 15ch; padding-bottom: 0.1em;
 }
 .hero__title .gradient-text, .hero__title .gradient-text--cool {
-  padding-inline: 0.1em; margin-right: 0.06em; word-spacing: 0.06em;
-  background: linear-gradient(100deg, #7df6ff, #eaffb0 55%, #ffffff);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-  filter: drop-shadow(0 2px 8px rgba(11,4,32,1)) drop-shadow(0 0 30px rgba(0,229,255,0.6)) drop-shadow(0 0 14px rgba(182,255,59,0.5)); }
+  padding-inline: 0.06em; margin-right: 0.04em; word-spacing: 0.06em;
+  background: none; -webkit-background-clip: initial; background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: #5cf3ff;
+  text-shadow: 0 2px 12px rgba(11,4,32,1), 0 0 26px rgba(0,229,255,0.55); }
 .hero__sub {
   margin-top: var(--space-6); max-width: 58ch; font-size: var(--text-lg);
   color: #f4ecff; text-shadow: 0 2px 20px rgba(11,4,32,0.9);
