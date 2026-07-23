@@ -210,11 +210,20 @@
           <span class="eyebrow">The AI Collective Weekly</span>
           <h2>One email, every Thursday. <span class="gradient-text">Zero fluff.</span></h2>
           <p>The AI news that matters to Prairie business, one thing to try this week, and exclusive deals from our partner companies. Free, forever.</p>
-          <form class="newsletter__form" onsubmit="event.preventDefault(); this.reset(); document.getElementById('nlNote').hidden=false;">
+          <form class="newsletter__form" id="nlForm">
             <label class="sr-only" for="nlEmail">Email address</label>
             <input class="newsletter__input" id="nlEmail" type="email" placeholder="you@yourbusiness.ca" required />
             <button class="btn btn--cyan btn--lg" type="submit">Join free</button>
           </form>
+          <script>
+          document.getElementById('nlForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            var em = document.getElementById('nlEmail').value.trim();
+            if(!em) return;
+            var done = function(){ document.getElementById('nlForm').reset(); document.getElementById('nlNote').hidden=false; };
+            fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,source:'homepage'})}).then(done).catch(done);
+          });
+          </script>
           <p id="nlNote" hidden style="margin-top:var(--space-4);font-size:var(--text-sm);color:var(--neon-lime)">You're in. Check your inbox to confirm — see you Thursday. ✦</p>
           <div class="newsletter__perks">
             <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Partner-only deals</span>
