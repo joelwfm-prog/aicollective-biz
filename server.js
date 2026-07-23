@@ -130,6 +130,22 @@ app.post('/api/intake', async (req, res) => {
 
 app.get('/api/health', (req, res) => res.json({ ok: true, canSend: CAN_SEND, subs: fs.existsSync(SUBS_CSV) }));
 
+// Read-only subscriber count + list for the notification checker.
+// Protected by a token so it's not public. Pass ?token=... matching NOTIFY_TOKEN.
+const NOTIFY_TOKEN = process.env.NOTIFY_TOKEN || 'aic-notify-7Kq2wLmZ';
+app.get('/api/subscribers', (req, res) => {
+  if ((req.query.token || '') !== NOTIFY_TOKEN) return res.status(403).json({ ok: false });
+  let rows = [];
+  try {
+    const raw = fs.readFileSync(SUBS_CSV, 'utf8').trim().split('\n');
+    rows = raw.slice(1).filter(Boolean).map(line => {
+      const m = line.match(/^"([^"]*)","([^"]*)","([^"]*)","([^"]*)"/);
+      return m ? { timestamp: m[1], email: m[2], source: m[3] } : null;
+    }).filter(Boolean);
+  } catch (e) {}
+  res.json({ ok: true, count: rows.length, subscribers: rows });
+});
+
 const PORT = process.env.PORT || 8000;
 if (require.main === module) {
   app.listen(PORT, '0.0.0.0', () => console.log('AI Collective server listening on ' + PORT));
