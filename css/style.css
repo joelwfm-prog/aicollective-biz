@@ -701,3 +701,31 @@ a.side-card:hover { transform: translateX(4px); border-color: var(--color-border
 .mobile-nav__links { display: flex; flex-direction: column; gap: var(--space-2); }
 .mobile-nav__links a { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 600; padding-block: var(--space-3); border-bottom: 1px solid var(--color-divider); }
 .mobile-nav__links a:hover { color: var(--neon-cyan); }
+
+/* ================= Newsletter slide-in popup ================= */
+.aic-nlpop{position:fixed;right:20px;bottom:20px;width:340px;max-width:calc(100vw - 32px);
+  background:#12091f;border:1px solid #2a1a3f;border-radius:16px;overflow:hidden;z-index:9999;
+  box-shadow:0 20px 60px rgba(0,0,0,.55);opacity:0;transform:translateY(24px) scale(.98);
+  transition:opacity .35s ease,transform .35s ease;font-family:inherit}
+.aic-nlpop.is-in{opacity:1;transform:translateY(0) scale(1)}
+.aic-nlpop__bar{height:4px;background:linear-gradient(90deg,#ff2d95,#ff7a00 40%,#b6ff3b 70%,#00e5ff)}
+.aic-nlpop__close{position:absolute;top:8px;right:10px;background:transparent;border:0;color:#8a7ca8;
+  font-size:24px;line-height:1;cursor:pointer;padding:4px 8px;border-radius:8px;transition:color .2s,background .2s}
+.aic-nlpop__close:hover{color:#fff;background:rgba(255,255,255,.06)}
+.aic-nlpop__body{padding:20px 20px 18px}
+.aic-nlpop__eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#00e5ff;font-weight:700}
+.aic-nlpop__title{font-size:20px;font-weight:800;color:#fff;line-height:1.2;margin:8px 0 6px}
+.aic-nlpop__title span{color:#b6ff3b}
+.aic-nlpop__desc{font-size:13.5px;color:#c9bfe0;line-height:1.5;margin:0 0 14px}
+.aic-nlpop__form{display:flex;flex-direction:column;gap:8px}
+.aic-nlpop__input{width:100%;box-sizing:border-box;padding:11px 13px;border-radius:10px;
+  border:1px solid #3a2a55;background:#0a0612;color:#fff;font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s}
+.aic-nlpop__input:focus{border-color:#00e5ff;box-shadow:0 0 0 3px rgba(0,229,255,.18)}
+.aic-nlpop__input::placeholder{color:#6b5d85}
+.aic-nlpop__btn{width:100%;padding:11px 16px;border:0;border-radius:10px;cursor:pointer;
+  font-size:14px;font-weight:800;color:#0a0612;background:linear-gradient(90deg,#ff2d95,#ff7a00);
+  transition:transform .15s ease,box-shadow .2s ease}
+.aic-nlpop__btn:hover{transform:translateY(-1px);box-shadow:0 0 22px rgba(255,45,149,.55)}
+.aic-nlpop__note{font-size:14px;color:#b6ff3b;font-weight:600;margin:4px 0 0}
+.aic-nlpop__fine{font-size:11px;color:#8a7ca8;margin:10px 0 0;text-align:center}
+@media (max-width:480px){.aic-nlpop{right:12px;left:12px;bottom:12px;width:auto}}
