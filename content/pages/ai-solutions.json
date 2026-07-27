@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "title": "Tell Us What You Want AI To Do For Your Business | The AI Collective",
+    "description": "Describe what you wish AI could do for your Saskatchewan or Western Canadian business. We'll map a practical solution — from existing tools or a custom setup. Free to ask.",
+    "ogTitle": "Tell Us What You Want AI To Do For Your Business",
+    "ogDescription": "Describe your goal in plain English. We map out an AI solution from existing tools or a custom build. Free to ask."
+  },
+  "seo": {
+    "serviceName": "AI solution mapping for small business",
+    "serviceDescription": "Describe what you want AI to do for your business and receive a mapped-out solution using existing tools or a custom setup.",
+    "offerDescription": "Free initial solution mapping",
+    "faq": [
+      {
+        "question": "Does it cost anything to ask?",
+        "answer": "No. Describing your goal and getting an initial solution map is free. If a paid tool or custom build makes sense, we'll tell you upfront."
+      },
+      {
+        "question": "Do I need to know which AI tool I need?",
+        "answer": "No. Just describe the outcome you want in plain English. We figure out whether an existing tool or a custom setup fits best."
+      },
+      {
+        "question": "Who is this for?",
+        "answer": "Small and medium businesses in Saskatchewan and across Western Canada that want practical AI help without the enterprise jargon."
+      }
+    ]
+  },
+  "crumbLabel": "AI Solutions",
+  "eyebrow": "Tell us your goal",
+  "heroTitle": "Tell us what you want AI to do for your business.",
+  "heroSub": "You don't need to know the tool, the jargon, or the tech. Just describe the outcome you want in plain English. We'll map out a practical solution — using tools that already exist, or a custom setup built for you.",
+  "steps": [
+    {
+      "icon": "lines",
+      "accent": "magenta",
+      "title": "Describe it",
+      "text": "In the box below, tell us the annoying task, the goal, or the \"I wish AI could…\" in your own words. One sentence or ten — whatever it takes."
+    },
+    {
+      "icon": "settings",
+      "accent": "cyan",
+      "title": "We map it",
+      "text": "We match your goal to the right approach — an off-the-shelf tool, a simple automation, or a custom build. Honest about what's worth paying for."
+    },
+    {
+      "icon": "check",
+      "accent": "lime",
+      "title": "You decide",
+      "text": "You get a plain-language plan back. Run it yourself, or have us set it up. No pressure, no obligation — asking is free."
+    }
+  ],
+  "intake": {
+    "eyebrow": "The free-text box",
+    "title": "What do you want AI to do?",
+    "description": "Be as specific or as vague as you like. Real examples: \"Stop me chasing late invoices,\" \"Show up when people ask ChatGPT for a Regina electrician,\" \"Turn my one blog post into a week of social posts.\"",
+    "describeLabel": "What do you want AI to do for your business?",
+    "describePlaceholder": "Describe the task, goal, or problem in your own words…",
+    "describeHint": "The more detail, the better the solution we can map for you.",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Jane Doe",
+    "businessLabel": "Business name",
+    "businessPlaceholder": "Prairie Plumbing Co.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@yourbusiness.ca",
+    "emailHint": "So we can send your solution map back. We never sell your info.",
+    "consentLabel": "Also send me The AI Collective Weekly — one plain-English AI email every Thursday. Unsubscribe anytime. (Optional)",
+    "submitLabel": "Map my AI solution →"
+  },
+  "faq": {
+    "eyebrow": "Good to know",
+    "title": "Common questions",
+    "items": [
+      {
+        "question": "Does it cost anything to ask?",
+        "answer": "No. Describing your goal and getting an initial solution map is free. If a paid tool or custom build makes sense, we'll tell you upfront — no surprises."
+      },
+      {
+        "question": "Do I need to know which tool I need?",
+        "answer": "Not at all. Just describe the outcome you want. Figuring out the right tool or setup is our job, not yours."
+      },
+      {
+        "question": "Who's this for?",
+        "answer": "Small and medium businesses in Saskatchewan and across Western Canada that want practical AI help without enterprise jargon or a big budget."
+      },
+      {
+        "question": "What happens to my info?",
+        "answer": "Your description comes straight to us so we can reply. We never sell your data, and you only join the newsletter if you tick the box."
+      }
+    ]
+  }
+}

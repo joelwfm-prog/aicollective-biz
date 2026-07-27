@@ -4,7 +4,9 @@
   "description": "The AI Collective — site + intake/newsletter backend",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node build/build.js",
+    "validate": "node build/validate.js"
   },
   "dependencies": {
     "express": "^4.22.2"

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{{> head}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "name": {{{json seo.name}}},
+        "url": {{{json canonical}}},
+        "description": {{{json seo.description}}},
+        "publisher": { "@type": "Organization", "name": {{{json site.siteName}}}, "url": "https://aicollective.biz/" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": {{{json crumbLabel}}}, "item": {{{json canonical}}} }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+{{> header}}
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <span aria-current="page">{{crumbLabel}}</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">{{eyebrow}}</span>
+          <h1 class="page-hero__title">{{heroTitle}}</h1>
+          <p class="page-hero__sub">{{heroSub}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section class="section section--tight container">
+      <div class="feed">
+        <a href="{{attr feature.href}}" class="card card--feature reveal">
+          <div class="card__media"><img src="{{attr feature.image}}" alt="{{attr feature.imageAlt}}" loading="lazy" /></div>
+          <div class="card__body">
+            <span class="tag tag--{{attr feature.tagColor}}">{{feature.tag}}</span>
+            <h3 class="card__title">{{feature.title}}</h3>
+            <p class="card__excerpt">{{feature.excerpt}}</p>
+            <div class="card__meta"><span>{{feature.kind}}</span> · <span>{{feature.readingTime}}</span> · <span>{{feature.date}}</span></div>
+          </div>
+        </a>
+        <div class="feed__side">
+{{#each sideCards}}
+          <a href="{{attr href}}" class="side-card reveal"><span class="side-card__num">{{num}}</span><div class="side-card__body"><h4>{{title}}</h4><p>{{meta}}</p></div></a>
+{{/each}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL ARTICLES -->
+    <section class="section section--tight container">
+      <div class="section-head reveal"><span class="eyebrow">{{recent.eyebrow}}</span><h2 class="section-head__title">{{recent.title}}</h2></div>
+      <div class="article-list">
+{{#each recent.articles}}
+        <a href="{{attr href}}" class="card reveal">
+          <div class="card__media"><img src="{{attr image}}" alt="{{attr imageAlt}}" loading="lazy" /></div>
+          <div class="card__body"><span class="tag tag--{{attr tagColor}}">{{tag}}</span><h3 class="card__title">{{title}}</h3><p class="card__excerpt">{{excerpt}}</p><div class="card__meta"><span>{{kind}}</span> · <span>{{readingTime}}</span> · <span>{{date}}</span></div></div>
+        </a>
+{{/each}}
+      </div>
+      <div style="margin-top:var(--space-10);text-align:center">
+        <p style="color:var(--color-text-muted);margin-bottom:var(--space-5)">{{recent.ctaText}}</p>
+        <a href="{{attr recent.ctaHref}}" class="btn btn--cyan btn--lg">{{recent.ctaLabel}}</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+{{> footer}}
+</body>
+</html>

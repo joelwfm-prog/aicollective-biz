@@ -1,0 +1,164 @@
+{
+  "slug": "playbook-e",
+  "meta": {
+    "title": "Turn one blog post into a week of content — The AI Collective Playbooks",
+    "description": "Repurpose a single article into social posts, an email, and a short video script — without sounding like a robot. Includes the exact repurposing prompt.",
+    "ogTitle": "Turn one blog post into a week of content — The AI Collective Playbooks",
+    "ogDescription": "Repurpose a single article into emails, social posts, and a short video script — without sounding like a robot."
+  },
+  "eyebrow": "Playbook E · Content · ~7 min",
+  "heroTitle": "Turn one blog post into a week of content.",
+  "heroSub": "Repurpose a single article into emails, social posts, and a short video script — without sounding like a robot.",
+  "title": "Turn one blog post into a week of content",
+  "howTo": {
+    "name": "Turn one blog post into a week of content",
+    "description": "A step-by-step method for repurposing a single article into five social posts, an email, and a short video script without sounding robotic.",
+    "steps": [
+      {
+        "name": "Pick the right source post",
+        "text": "Choose one article with a clear main point and at least one concrete example or number to draw from."
+      },
+      {
+        "name": "Pull out 5 stand-alone ideas",
+        "text": "Identify five moments in the post that work as a standalone thought on their own."
+      },
+      {
+        "name": "Generate the week's content with one prompt",
+        "text": "Feed the article and your voice into an AI tool to draft 5 social posts, one email, and one video script in a single pass."
+      },
+      {
+        "name": "Edit for voice and remove AI tells",
+        "text": "Rewrite robotic phrasing and generic transitions so every piece sounds like you actually wrote it."
+      },
+      {
+        "name": "Schedule the week",
+        "text": "Spread the five posts, the email, and the video script across the week instead of dumping them all at once."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "Most small businesses treat content like a one-and-done chore:"
+        },
+        {
+          "style": "normal",
+          "text": " write a blog post, publish it, move on. That's one piece of value extracted from an hour of writing. The better move is to treat every article as raw material — one solid post can realistically become five social posts, an email, and a short video script, covering a whole week without a single new idea. Here's how to do it without it reading like it came out of a machine."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "1. Pick the right source post"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not every article repurposes well. Look for one with a clear main point and at least one concrete detail, example, or number you can lift out — a listicle, a how-to, or a \"here's what we learned\" piece works better than a vague opinion post. If you don't have one yet, even a page of rough notes about something you know well is enough raw material to start."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "2. Pull out 5 stand-alone ideas"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Read back through the post and mark five moments that could stand alone as their own thought — a surprising point, a specific step, a mini-story, a common mistake, a quick tip. These five moments become your five social posts. Doing this pass yourself (even quickly) means the AI step that follows has real material to work with instead of guessing."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "3. Generate the week's content with one prompt"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Paste in the full article (or your five marked moments) along with your voice and platforms, and ask for everything at once:"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "prompt": "Here is a blog post I wrote: [paste full article]. I run a small [type of business] in [town], Saskatchewan and our voice is [e.g. plain-spoken, friendly, no corporate jargon]. From this one post, create:\n1) Five short, stand-alone social media posts (2-4 sentences each), each built around a different specific point from the article — not five versions of the same summary.\n2) One short email to send to our list, under 150 words, with a personal opening line and a link back to the full post.\n3) One 45-second video script with a strong hook in the first line, written the way a person would actually talk, not read.\nKeep everything grounded in specifics from the article — no generic filler like \"in today's fast-paced world.\""
+    },
+    {
+      "type": "heading",
+      "heading": "4. Edit for voice and remove AI tells"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is the step that decides whether the week's content sounds like you or sounds like everyone else's AI output. Watch for the usual tells: stiff transitional phrases (\"in conclusion,\" \"it's important to note\"), overly balanced sentences, and a lack of any actual opinion. Cut anything that sounds like a summary of a summary. Add back one thing only you would say — a specific local detail, a joke, an actual opinion about the topic."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "5. Schedule the week"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Spread all seven pieces (five posts, one email, one video script) across the week rather than posting them all the same day. A natural rhythm: social posts Monday through Friday, the email midweek, the video whenever you can film it. One article, one sitting to generate and edit, a full week covered."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Local example: a Prince Albert landscaping business"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Say you run a landscaping company near Prince Albert and you'd written a solid blog post on preparing a Prairie yard for winter. Historically that post got published and forgotten. Using the method above, you pulled five standalone ideas (mulching timing, the one tool most people forget to winterize, a common mistake with sprinkler lines, when to actually stop mowing, and a note about frost dates), ran the prompt, and got back five drafts, an email, and a video script in one pass. After twenty minutes of editing — swapping in your own phrasing and one dry joke about Saskatchewan winters — you had a full week of content built entirely from an article you'd already written months ago."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Watch out for"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Don't repurpose so aggressively that your feed becomes five versions of the exact same sentence — pull genuinely different angles, not paraphrases. And never skip the edit pass; unedited AI output tends to flatten into the same rhythm across every platform, which readers notice even if they can't say exactly why something feels off."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Do this now"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Grab the last article or long post you wrote, run it through the prompt above, and see how much of a week you can build from something you already made."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "link",
+          "href": "ai-solutions.html",
+          "text": "Want us to map this out for your business? Tell us your goal →"
+        }
+      ]
+    }
+  ]
+}

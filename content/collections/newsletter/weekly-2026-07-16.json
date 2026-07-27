@@ -1,0 +1,175 @@
+{
+  "slug": "weekly-2026-07-16",
+  "meta": {
+    "title": "Nobody's Googling you anymore — The AI Collective Weekly #1",
+    "description": "Issue #1 of The AI Collective Weekly: why customers are asking ChatGPT instead of Google, and the one thing every Prairie business should do this week to show up in AI answers.",
+    "ogTitle": "Nobody's Googling you anymore — The AI Collective Weekly #1",
+    "ogDescription": "Why customers are asking ChatGPT instead of Google, and the one thing to do this week."
+  },
+  "eyebrow": "The AI Collective Weekly · Issue #1 · July 16, 2026",
+  "heroTitle": "Nobody's Googling you anymore.",
+  "heroSub": "They're asking ChatGPT. Here's what that means for your business — and the one thing to do about it this week.",
+  "crumbLabel": "Weekly #1",
+  "article": {
+    "headline": "Nobody's Googling you anymore",
+    "description": "Issue #1 of The AI Collective Weekly: why customers are asking ChatGPT instead of Google, and the one thing every Prairie business should do this week.",
+    "datePublished": "2026-07-16",
+    "dateModified": "2026-07-16"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "Morning. Welcome to the first issue of The AI Collective Weekly."
+        },
+        {
+          "style": "normal",
+          "text": " One email, every Thursday. Plain English, no hype, and something you can actually use before the coffee's cold. Here's the deal for issue #1."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "The shift nobody announced"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A customer used to find you one way: they'd type \"plumber Regina\" into Google and scroll. Simple, and for twenty years, SEO was the whole game."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "normal",
+          "text": "That's quietly changing. More people — especially anyone under 40 — now open ChatGPT, Google's AI overview, or their phone's assistant and just "
+        },
+        {
+          "style": "italic",
+          "text": "ask"
+        },
+        {
+          "style": "normal",
+          "text": ": \"Who's a good plumber in Regina that does emergency calls?\" And the AI gives them one answer. Not a page of ten links. One recommendation, maybe three."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "If your business isn't in that answer, you don't exist for that customer. There's no page two to fight for anymore. There's the answer, or there's silence."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Why this matters more on the Prairies"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Here's the good news, and it's real: most local businesses in Saskatchewan haven't figured this out yet. The big national chains are optimizing hard for AI search. Your competitor down the street almost certainly isn't. That's a window — and windows close."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Being the business AI recommends when someone asks isn't luck. It's a handful of specific, boring, do-it-once things: making sure your business facts are consistent everywhere online, having real reviews, and publishing plain answers to the questions customers actually ask. We call it AEO — Answer Engine Optimization. It's the new SEO, and it's very learnable."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Do this now (15 minutes)"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "normal",
+          "text": "Open ChatGPT (or Google's AI) and ask it, as a customer would: "
+        },
+        {
+          "style": "bold",
+          "text": "\"Who are the best [what you do] in [your town]?\""
+        },
+        {
+          "style": "normal",
+          "text": " Then ask a follow-up: "
+        },
+        {
+          "style": "bold",
+          "text": "\"Tell me more about [your business name].\""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "normal",
+          "text": "Write down what it says. Is your business mentioned at all? Is what it says "
+        },
+        {
+          "style": "italic",
+          "text": "right"
+        },
+        {
+          "style": "normal",
+          "text": " — hours, services, location? For most owners, this first look is a gut-check. If you're missing or the details are wrong, that's exactly what we'll help you fix."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Want the full playbook?"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This week's anchor guide walks through the exact checklist a Saskatoon contractor used to get named in AI answers within six weeks — schema, profiles, reviews, and content, step by step."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "link",
+          "href": "playbook-a.html",
+          "text": "Read: Get cited by ChatGPT & AI search →"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "From the Prairies"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "That's it for issue #1. Next Thursday: the five repetitive tasks quietly eating your Mondays, and how to hand most of them to AI. If a business friend would find this useful, forward it — that's how a Prairie thing grows."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "— The AI Collective, Saskatchewan"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,970 @@
+{
+  "schemaVersion": 1,
+  "notes": {
+    "maxLengthBasis": "Every maxLength is derived from the narrowest supported viewport (360px). The .container reserves 24px of padding each side, leaving 312px, and each component subtracts its own padding on top of that. Characters per line = available width / (0.5 x rendered font size), which is the mean advance of Satoshi and Clash Display for mixed-case copy. maxLength is then that figure multiplied by the number of lines the component can grow to before it pushes the layout out of shape. Where a limit looks generous it is because the live copy already uses that many lines.",
+    "fontSizesAt360": {
+      "--text-xs": "12.1px",
+      "--text-sm": "14.1px",
+      "--text-base": "16.1px",
+      "--text-lg": "18.7px",
+      "--text-xl": "24px",
+      "--text-2xl": "32px",
+      ".hero__title": "41.6px"
+    }
+  },
+
+  "site": {
+    "label": "Site-wide",
+    "description": "Brand, navigation, header button and footer. Changing anything here changes every page.",
+    "file": "site.json",
+    "fields": [
+      {
+        "key": "siteName",
+        "label": "Site name",
+        "help": "Used by Google and by social networks as the publisher name. Not shown on the page itself.",
+        "type": "text",
+        "required": true,
+        "maxLength": 60
+      },
+      {
+        "key": "brandName",
+        "label": "Logo link description",
+        "help": "Read aloud by screen readers when someone lands on the logo, e.g. \"The AI Collective home\".",
+        "type": "text",
+        "required": true,
+        "maxLength": 40
+      },
+      {
+        "key": "brandNameLead",
+        "label": "Logo text (first part)",
+        "help": "The plain-coloured half of the wordmark. First and second part together must stay under about 18 characters or the logo collides with the menu button on a phone.",
+        "type": "text",
+        "required": true,
+        "maxLength": 8
+      },
+      {
+        "key": "brandNameAccent",
+        "label": "Logo text (highlighted part)",
+        "help": "The coloured half of the wordmark.",
+        "type": "text",
+        "required": true,
+        "maxLength": 10
+      },
+      {
+        "key": "contactEmail",
+        "label": "Contact email address",
+        "help": "Where the AI Solutions form sends people if the intake service is unreachable. The domain on its own is also shown in that message.",
+        "type": "email",
+        "required": true,
+        "maxLength": 60
+      },
+      {
+        "key": "nav",
+        "label": "Main menu",
+        "help": "Shown across the top on desktop and in the slide-out menu on phones.",
+        "type": "list",
+        "minItems": 2,
+        "maxItems": 5,
+        "itemFields": [
+          {
+            "key": "label",
+            "label": "Menu label",
+            "help": "One or two words. Longer labels wrap in the phone menu.",
+            "type": "text",
+            "required": true,
+            "maxLength": 14
+          },
+          {
+            "key": "href",
+            "label": "Links to",
+            "type": "reference",
+            "collection": "pages",
+            "required": true
+          }
+        ]
+      },
+      {
+        "key": "headerCta",
+        "label": "Header button",
+        "type": "group",
+        "fields": [
+          {
+            "key": "label",
+            "label": "Button text",
+            "help": "Sits beside the logo on a phone. Past 20 characters the header wraps onto two rows.",
+            "type": "text",
+            "required": true,
+            "maxLength": 20
+          },
+          {
+            "key": "href",
+            "label": "Links to",
+            "type": "reference",
+            "collection": "pages",
+            "required": true
+          },
+          {
+            "key": "hrefOnOwnPage",
+            "label": "Links to (when already on that page)",
+            "help": "Where the header button jumps to when the visitor is already on the page it normally links to.",
+            "type": "text",
+            "required": true,
+            "maxLength": 40
+          }
+        ]
+      },
+      {
+        "key": "articleCta",
+        "label": "Article footer prompt",
+        "help": "The coloured panel at the bottom of every playbook and newsletter issue.",
+        "type": "group",
+        "fields": [
+          { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+          { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 63 },
+          {
+            "key": "description",
+            "label": "Supporting text",
+            "help": "Two or three short sentences reads best. The panel is only 248px wide on a phone, so 160 characters is already six lines.",
+            "type": "textarea",
+            "required": true,
+            "maxLength": 320,
+            "assist": true
+          },
+          { "key": "buttonLabel", "label": "Button text", "type": "text", "required": true, "maxLength": 34 },
+          { "key": "buttonHref", "label": "Button links to", "type": "reference", "collection": "pages", "required": true }
+        ]
+      },
+      {
+        "key": "playbookBackLabel",
+        "label": "\"Back\" link on a playbook",
+        "type": "text",
+        "required": true,
+        "maxLength": 32
+      },
+      {
+        "key": "newsletterBackLabel",
+        "label": "\"Back\" link on a newsletter issue",
+        "type": "text",
+        "required": true,
+        "maxLength": 32
+      },
+      {
+        "key": "footer",
+        "label": "Footer",
+        "type": "group",
+        "fields": [
+          {
+            "key": "blurb",
+            "label": "Footer blurb",
+            "help": "Sits under the logo. Capped at 36 characters per line by the design, so 110 characters is three lines.",
+            "type": "textarea",
+            "required": true,
+            "maxLength": 110
+          },
+          {
+            "key": "columns",
+            "label": "Footer link columns",
+            "type": "list",
+            "minItems": 1,
+            "maxItems": 4,
+            "itemFields": [
+              { "key": "heading", "label": "Column heading", "type": "text", "required": true, "maxLength": 24 },
+              {
+                "key": "links",
+                "label": "Links",
+                "type": "list",
+                "minItems": 1,
+                "maxItems": 6,
+                "itemFields": [
+                  { "key": "label", "label": "Link text", "type": "text", "required": true, "maxLength": 28 },
+                  { "key": "href", "label": "Links to", "type": "text", "required": true, "maxLength": 60 }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "legalLeft",
+            "label": "Copyright line",
+            "help": "Bottom-left of the footer. 90 characters is two lines on a phone.",
+            "type": "text",
+            "required": true,
+            "maxLength": 90
+          },
+          {
+            "key": "legalRight",
+            "label": "Legal line",
+            "help": "Bottom-right of the footer.",
+            "type": "text",
+            "required": true,
+            "maxLength": 60
+          }
+        ]
+      }
+    ]
+  },
+
+  "pages": [
+    {
+      "key": "index",
+      "label": "Home",
+      "file": "pages/index.json",
+      "template": "index",
+      "fields": [
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters; Google cuts off longer titles.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "The grey summary under the Google link. Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "help": "Shown when the page is pasted into Facebook, LinkedIn or Slack. Under 120 characters reads best.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        {
+          "key": "seo",
+          "label": "Structured data",
+          "help": "Sent to Google as machine-readable business information. Not shown on the page.",
+          "type": "group",
+          "fields": [
+            { "key": "organizationDescription", "label": "One-line business description", "type": "textarea", "required": true, "maxLength": 200 }
+          ]
+        },
+        {
+          "key": "hero",
+          "label": "Hero",
+          "help": "The full-height opening panel.",
+          "type": "group",
+          "fields": [
+            { "key": "badge", "label": "Badge above the headline", "help": "Uppercase pill. 35 characters fits one line at 360px; 60 allows a two-line wrap.", "type": "text", "required": true, "maxLength": 60 },
+            {
+              "key": "title",
+              "label": "Headline",
+              "help": "Rendered at 41.6px on a phone in a 15-character-wide column, so the two parts together should stay under about 68 characters (roughly five lines).",
+              "type": "group",
+              "fields": [
+                { "key": "lead", "label": "Headline (plain part)", "type": "text", "required": true, "maxLength": 34 },
+                { "key": "accent", "label": "Headline (highlighted part)", "type": "text", "required": true, "maxLength": 34 }
+              ]
+            },
+            { "key": "sub", "label": "Sub-heading", "help": "33 characters per line on a phone; 240 is eight lines, which is as tall as the hero can take.", "type": "textarea", "required": true, "maxLength": 240, "assist": true },
+            { "key": "primaryLabel", "label": "Main button text", "help": "A full-width button on a phone holds about 34 characters.", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "primaryHref", "label": "Main button links to", "type": "reference", "collection": "pages", "required": true },
+            { "key": "secondaryLabel", "label": "Second button text", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "secondaryHref", "label": "Second button links to", "type": "reference", "collection": "pages", "required": true },
+            {
+              "key": "stats",
+              "label": "Trust badges",
+              "help": "The small pills under the buttons.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 3,
+              "itemFields": [
+                { "key": "lead", "label": "Bold part", "type": "text", "required": true, "maxLength": 24 },
+                { "key": "rest", "label": "Rest of the line", "help": "A pill holds about 38 characters per line.", "type": "text", "required": true, "maxLength": 44 }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "ticker",
+          "label": "Scrolling ticker",
+          "help": "The scrolling strip under the hero. Short phrases keep the loop moving; the list is repeated twice automatically.",
+          "type": "list",
+          "minItems": 3,
+          "maxItems": 8,
+          "itemFields": [{ "key": "", "label": "Phrase", "type": "text", "required": true, "maxLength": 40 }]
+        },
+        {
+          "key": "pillarsHead",
+          "label": "\"Why we exist\" heading",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            {
+              "key": "title",
+              "label": "Heading",
+              "help": "32px on a phone, about 19 characters per line. The two parts together should stay under 80 characters (four lines).",
+              "type": "group",
+              "fields": [
+                { "key": "lead", "label": "Heading (plain part)", "type": "text", "required": true, "maxLength": 48 },
+                { "key": "accent", "label": "Heading (highlighted part)", "type": "text", "required": true, "maxLength": 32 }
+              ]
+            },
+            { "key": "description", "label": "Supporting text", "help": "33 characters per line; 170 is five lines.", "type": "textarea", "required": true, "maxLength": 170, "assist": true }
+          ]
+        },
+        {
+          "key": "pillars",
+          "label": "Three feature cards",
+          "help": "The grid is built for three cards. Fewer will stretch; more will wrap awkwardly on desktop.",
+          "type": "list",
+          "minItems": 1,
+          "maxItems": 3,
+          "itemFields": [
+            { "key": "title", "label": "Card title", "help": "A card is 246px wide on a phone, about 26 characters per line. 48 keeps it to two lines.", "type": "text", "required": true, "maxLength": 48 },
+            { "key": "text", "label": "Card text", "help": "31 characters per line; 150 is five lines, which keeps the three cards roughly the same height.", "type": "textarea", "required": true, "maxLength": 150, "assist": true },
+            { "key": "href", "label": "Card links to", "type": "reference", "collection": "pages", "required": true },
+            { "key": "accent", "label": "Accent colour", "type": "select", "required": true, "options": [{ "value": "magenta", "label": "Magenta" }, { "value": "cyan", "label": "Cyan" }, { "value": "lime", "label": "Lime" }, { "value": "orange", "label": "Orange" }, { "value": "purple", "label": "Purple" }] },
+            { "key": "icon", "label": "Icon", "type": "select", "required": true, "options": [{ "value": "news", "label": "Document" }, { "value": "idea", "label": "Lightbulb" }, { "value": "idea-plus", "label": "Lightbulb (plus)" }, { "value": "lines", "label": "Lines" }, { "value": "settings", "label": "Settings" }, { "value": "check", "label": "Checkmark" }] }
+          ]
+        },
+        {
+          "key": "teaser",
+          "label": "Latest articles teaser",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "help": "19 characters per line at 360px; 58 is three lines.", "type": "text", "required": true, "maxLength": 58 },
+            {
+              "key": "feature",
+              "label": "Featured article card",
+              "type": "group",
+              "fields": [
+                { "key": "title", "label": "Card title", "help": "24px inside a 262px card, about 22 characters per line. 88 is four lines.", "type": "text", "required": true, "maxLength": 88 },
+                { "key": "excerpt", "label": "Card summary", "help": "33 characters per line; 220 is seven lines.", "type": "textarea", "required": true, "maxLength": 220, "assist": true },
+                { "key": "image", "label": "Card image", "type": "image", "required": true, "aspectRatio": "16:9", "minWidth": 1200 },
+                { "key": "imageAlt", "label": "Image description", "help": "Read aloud by screen readers and shown if the image fails to load. Describe what is in the picture.", "type": "text", "required": true, "maxLength": 125 },
+                { "key": "tag", "label": "Category pill", "type": "text", "required": true, "maxLength": 16 },
+                { "key": "tagColor", "label": "Pill colour", "type": "select", "required": true, "options": [{ "value": "magenta", "label": "Magenta" }, { "value": "cyan", "label": "Cyan" }, { "value": "lime", "label": "Lime" }, { "value": "orange", "label": "Orange" }, { "value": "purple", "label": "Purple" }] },
+                { "key": "kind", "label": "Content type", "help": "The three meta items share one 262px row, so keep each very short.", "type": "text", "required": true, "maxLength": 12 },
+                { "key": "readingTime", "label": "Reading time", "type": "text", "required": true, "maxLength": 14 },
+                { "key": "date", "label": "Date shown", "type": "text", "required": true, "maxLength": 14 },
+                { "key": "href", "label": "Card links to", "type": "reference", "collection": "playbooks", "required": true }
+              ]
+            },
+            {
+              "key": "sideCards",
+              "label": "Side list",
+              "help": "The narrow numbered list beside the featured card. The grid is built for three.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 3,
+              "itemFields": [
+                { "key": "num", "label": "Number", "type": "text", "required": true, "maxLength": 2 },
+                { "key": "title", "label": "Title", "help": "226px of usable width, about 28 characters per line. 84 is three lines.", "type": "text", "required": true, "maxLength": 84 },
+                { "key": "meta", "label": "Sub-line", "help": "Fits one line at 36 characters.", "type": "text", "required": true, "maxLength": 36 },
+                { "key": "href", "label": "Links to", "type": "text", "required": true, "maxLength": 60 }
+              ]
+            },
+            { "key": "moreLabel", "label": "\"See all\" button text", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "moreHref", "label": "\"See all\" links to", "type": "reference", "collection": "pages", "required": true }
+          ]
+        },
+        {
+          "key": "solutionsCta",
+          "label": "\"Tell us your goal\" panel",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "help": "24px inside a 248px panel, about 21 characters per line. 63 is three lines.", "type": "text", "required": true, "maxLength": 63 },
+            { "key": "description", "label": "Supporting text", "help": "27 characters per line on a phone. The current copy is already eight lines; 320 is the point at which the panel starts to dominate the page.", "type": "textarea", "required": true, "maxLength": 320, "assist": true },
+            { "key": "buttonLabel", "label": "Button text", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "buttonHref", "label": "Button links to", "type": "reference", "collection": "pages", "required": true }
+          ]
+        },
+        {
+          "key": "newsletter",
+          "label": "Newsletter sign-up",
+          "help": "The form posts to the live subscribe endpoint. Only the wording is editable.",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            {
+              "key": "title",
+              "label": "Heading",
+              "help": "32px inside a 232px panel, about 14 characters per line. The two parts together should stay under 58 characters (four lines).",
+              "type": "group",
+              "fields": [
+                { "key": "lead", "label": "Heading (plain part)", "type": "text", "required": true, "maxLength": 36 },
+                { "key": "accent", "label": "Heading (highlighted part)", "type": "text", "required": true, "maxLength": 22 }
+              ]
+            },
+            { "key": "description", "label": "Supporting text", "help": "25 characters per line; 240 is around nine lines.", "type": "textarea", "required": true, "maxLength": 240, "assist": true },
+            { "key": "placeholder", "label": "Email box placeholder", "help": "Grey hint text inside the box. The box holds about 26 characters before the hint is cut off.", "type": "text", "required": true, "maxLength": 26 },
+            { "key": "buttonLabel", "label": "Button text", "help": "The button goes full-width below 560px.", "type": "text", "required": true, "maxLength": 24 },
+            { "key": "successNote", "label": "Thank-you message", "help": "Shown after someone subscribes. 66 characters is two lines.", "type": "text", "required": true, "maxLength": 66 },
+            {
+              "key": "perks",
+              "label": "Reassurance list",
+              "help": "The short ticked items under the form. Each must fit one line beside its tick.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 4,
+              "itemFields": [{ "key": "", "label": "Perk", "type": "text", "required": true, "maxLength": 30 }]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key": "latest",
+      "label": "Latest",
+      "file": "pages/latest.json",
+      "template": "latest",
+      "fields": [
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        {
+          "key": "seo",
+          "label": "Structured data",
+          "help": "Machine-readable blog information for Google. Not shown on the page.",
+          "type": "group",
+          "fields": [
+            { "key": "name", "label": "Blog name", "type": "text", "required": true, "maxLength": 60 },
+            { "key": "description", "label": "Blog description", "type": "textarea", "required": true, "maxLength": 200 }
+          ]
+        },
+        { "key": "crumbLabel", "label": "Breadcrumb label", "help": "The last item in the \"Home / …\" trail. 48 characters is two lines.", "type": "text", "required": true, "maxLength": 48 },
+        { "key": "eyebrow", "label": "Small label above the headline", "help": "Uppercase and widely spaced: 38 characters fits one line, 56 allows two.", "type": "text", "required": true, "maxLength": 56 },
+        { "key": "heroTitle", "label": "Page headline", "help": "32px at 360px, about 19 characters per line. 70 is roughly four lines.", "type": "text", "required": true, "maxLength": 70 },
+        { "key": "heroSub", "label": "Page sub-heading", "help": "33 characters per line; 230 is seven lines.", "type": "textarea", "required": true, "maxLength": 230, "assist": true },
+        {
+          "key": "feature",
+          "label": "Featured article card",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Card title", "type": "text", "required": true, "maxLength": 88 },
+            { "key": "excerpt", "label": "Card summary", "type": "textarea", "required": true, "maxLength": 220, "assist": true },
+            { "key": "image", "label": "Card image", "type": "image", "required": true, "aspectRatio": "16:9", "minWidth": 1200 },
+            { "key": "imageAlt", "label": "Image description", "type": "text", "required": true, "maxLength": 125 },
+            { "key": "tag", "label": "Category pill", "type": "text", "required": true, "maxLength": 16 },
+            { "key": "tagColor", "label": "Pill colour", "type": "select", "required": true, "options": [{ "value": "magenta", "label": "Magenta" }, { "value": "cyan", "label": "Cyan" }, { "value": "lime", "label": "Lime" }, { "value": "orange", "label": "Orange" }, { "value": "purple", "label": "Purple" }] },
+            { "key": "kind", "label": "Content type", "type": "text", "required": true, "maxLength": 12 },
+            { "key": "readingTime", "label": "Reading time", "type": "text", "required": true, "maxLength": 14 },
+            { "key": "date", "label": "Date shown", "type": "text", "required": true, "maxLength": 14 },
+            { "key": "href", "label": "Card links to", "type": "reference", "collection": "playbooks", "required": true }
+          ]
+        },
+        {
+          "key": "sideCards",
+          "label": "Side list",
+          "type": "list",
+          "minItems": 1,
+          "maxItems": 3,
+          "itemFields": [
+            { "key": "num", "label": "Number", "type": "text", "required": true, "maxLength": 2 },
+            { "key": "title", "label": "Title", "help": "About 28 characters per line; 84 is three lines.", "type": "text", "required": true, "maxLength": 84 },
+            { "key": "meta", "label": "Sub-line", "type": "text", "required": true, "maxLength": 36 },
+            { "key": "href", "label": "Links to", "type": "text", "required": true, "maxLength": 60 }
+          ]
+        },
+        {
+          "key": "recent",
+          "label": "Recent articles grid",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 58 },
+            {
+              "key": "articles",
+              "label": "Articles",
+              "help": "A two-column grid on desktop, so even numbers look tidiest.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 8,
+              "itemFields": [
+                { "key": "title", "label": "Card title", "help": "18.7px inside a 262px card, about 28 characters per line. 84 is three lines.", "type": "text", "required": true, "maxLength": 84 },
+                { "key": "excerpt", "label": "Card summary", "help": "33 characters per line; 160 is five lines, which keeps the grid rows level.", "type": "textarea", "required": true, "maxLength": 160, "assist": true },
+                { "key": "image", "label": "Card image", "type": "image", "required": true, "aspectRatio": "16:9", "minWidth": 1200 },
+                { "key": "imageAlt", "label": "Image description", "type": "text", "required": true, "maxLength": 125 },
+                { "key": "tag", "label": "Category pill", "type": "text", "required": true, "maxLength": 16 },
+                { "key": "tagColor", "label": "Pill colour", "type": "select", "required": true, "options": [{ "value": "magenta", "label": "Magenta" }, { "value": "cyan", "label": "Cyan" }, { "value": "lime", "label": "Lime" }, { "value": "orange", "label": "Orange" }, { "value": "purple", "label": "Purple" }] },
+                { "key": "kind", "label": "Content type", "type": "text", "required": true, "maxLength": 12 },
+                { "key": "readingTime", "label": "Reading time", "type": "text", "required": true, "maxLength": 14 },
+                { "key": "date", "label": "Date shown", "type": "text", "required": true, "maxLength": 14 },
+                { "key": "href", "label": "Card links to", "type": "text", "required": true, "maxLength": 60 }
+              ]
+            },
+            { "key": "ctaText", "label": "Closing line", "help": "One line of 39 characters on a phone; 72 is two lines.", "type": "text", "required": true, "maxLength": 72 },
+            { "key": "ctaLabel", "label": "Closing link text", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "ctaHref", "label": "Closing link goes to", "type": "text", "required": true, "maxLength": 60 }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key": "playbooks",
+      "label": "Playbooks",
+      "file": "pages/playbooks.json",
+      "template": "playbooks",
+      "fields": [
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        {
+          "key": "seo",
+          "label": "Structured data",
+          "help": "A machine-readable version of the \"start here\" steps, sent to Google. Not shown on the page.",
+          "type": "group",
+          "fields": [
+            {
+              "key": "howTo",
+              "label": "How-to summary",
+              "type": "group",
+              "fields": [
+                { "key": "name", "label": "How-to title", "type": "text", "required": true, "maxLength": 100 },
+                { "key": "description", "label": "How-to description", "type": "textarea", "required": true, "maxLength": 250 },
+                {
+                  "key": "steps",
+                  "label": "Steps",
+                  "help": "Should mirror the visible \"start here\" steps.",
+                  "type": "list",
+                  "minItems": 2,
+                  "maxItems": 8,
+                  "itemFields": [
+                    { "key": "name", "label": "Step name", "type": "text", "required": true, "maxLength": 80 },
+                    { "key": "text", "label": "Step text", "type": "textarea", "required": true, "maxLength": 250 }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        { "key": "crumbLabel", "label": "Breadcrumb label", "type": "text", "required": true, "maxLength": 48 },
+        { "key": "eyebrow", "label": "Small label above the headline", "type": "text", "required": true, "maxLength": 56 },
+        { "key": "heroTitle", "label": "Page headline", "type": "text", "required": true, "maxLength": 70 },
+        { "key": "heroSub", "label": "Page sub-heading", "type": "textarea", "required": true, "maxLength": 230, "assist": true },
+        {
+          "key": "startHere",
+          "label": "\"Start here\" steps",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 58 },
+            { "key": "description", "label": "Supporting text", "help": "33 characters per line; 140 is four lines.", "type": "textarea", "required": true, "maxLength": 140, "assist": true },
+            {
+              "key": "steps",
+              "label": "Steps",
+              "type": "list",
+              "minItems": 2,
+              "maxItems": 8,
+              "itemFields": [
+                { "key": "title", "label": "Step title", "help": "A numbered step row leaves 204px, about 22 characters per line. 44 is two lines.", "type": "text", "required": true, "maxLength": 44 },
+                { "key": "text", "label": "Step text", "help": "25 characters per line; 170 is around seven lines.", "type": "textarea", "required": true, "maxLength": 170, "assist": true }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "library",
+          "label": "Playbook library",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 58 },
+            {
+              "key": "guides",
+              "label": "Cards",
+              "help": "A two-column grid on desktop.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 12,
+              "itemFields": [
+                { "key": "letter", "label": "Corner letter", "help": "A single character.", "type": "text", "required": true, "maxLength": 1 },
+                { "key": "title", "label": "Card title", "help": "246px card, about 26 characters per line. 78 is three lines.", "type": "text", "required": true, "maxLength": 78 },
+                { "key": "summary", "label": "Card summary", "help": "31 characters per line; 150 is five lines, which keeps the grid rows level.", "type": "textarea", "required": true, "maxLength": 150, "assist": true },
+                { "key": "category", "label": "Category", "help": "Sits on one line beside the reading time.", "type": "text", "required": true, "maxLength": 16 },
+                { "key": "readingTime", "label": "Reading time", "type": "text", "required": true, "maxLength": 14 },
+                { "key": "href", "label": "Card links to", "type": "reference", "collection": "playbooks", "required": true }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "cta",
+          "label": "Closing panel",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 63 },
+            { "key": "description", "label": "Supporting text", "type": "textarea", "required": true, "maxLength": 320, "assist": true },
+            { "key": "buttonLabel", "label": "Button text", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "buttonHref", "label": "Button links to", "type": "reference", "collection": "pages", "required": true }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key": "ai-solutions",
+      "label": "AI Solutions",
+      "file": "pages/ai-solutions.json",
+      "template": "ai-solutions",
+      "fields": [
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        {
+          "key": "seo",
+          "label": "Structured data",
+          "help": "Machine-readable service and FAQ information for Google. Not shown on the page.",
+          "type": "group",
+          "fields": [
+            { "key": "serviceName", "label": "Service name", "type": "text", "required": true, "maxLength": 100 },
+            { "key": "serviceDescription", "label": "Service description", "type": "textarea", "required": true, "maxLength": 250 },
+            { "key": "offerDescription", "label": "Offer description", "type": "text", "required": true, "maxLength": 100 },
+            {
+              "key": "faq",
+              "label": "FAQ for Google",
+              "help": "Should mirror the visible questions below.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 10,
+              "itemFields": [
+                { "key": "question", "label": "Question", "type": "text", "required": true, "maxLength": 120 },
+                { "key": "answer", "label": "Answer", "type": "textarea", "required": true, "maxLength": 300 }
+              ]
+            }
+          ]
+        },
+        { "key": "crumbLabel", "label": "Breadcrumb label", "type": "text", "required": true, "maxLength": 48 },
+        { "key": "eyebrow", "label": "Small label above the headline", "type": "text", "required": true, "maxLength": 56 },
+        { "key": "heroTitle", "label": "Page headline", "type": "text", "required": true, "maxLength": 70 },
+        { "key": "heroSub", "label": "Page sub-heading", "type": "textarea", "required": true, "maxLength": 230, "assist": true },
+        {
+          "key": "steps",
+          "label": "\"How it works\" cards",
+          "help": "The grid is built for three cards.",
+          "type": "list",
+          "minItems": 1,
+          "maxItems": 3,
+          "itemFields": [
+            { "key": "title", "label": "Card title", "help": "Numbered automatically. 246px card, about 26 characters per line.", "type": "text", "required": true, "maxLength": 48 },
+            { "key": "text", "label": "Card text", "help": "31 characters per line; 150 is five lines.", "type": "textarea", "required": true, "maxLength": 150, "assist": true },
+            { "key": "accent", "label": "Accent colour", "type": "select", "required": true, "options": [{ "value": "magenta", "label": "Magenta" }, { "value": "cyan", "label": "Cyan" }, { "value": "lime", "label": "Lime" }, { "value": "orange", "label": "Orange" }, { "value": "purple", "label": "Purple" }] },
+            { "key": "icon", "label": "Icon", "type": "select", "required": true, "options": [{ "value": "news", "label": "Document" }, { "value": "idea", "label": "Lightbulb" }, { "value": "idea-plus", "label": "Lightbulb (plus)" }, { "value": "lines", "label": "Lines" }, { "value": "settings", "label": "Settings" }, { "value": "check", "label": "Checkmark" }] }
+          ]
+        },
+        {
+          "key": "intake",
+          "label": "Enquiry form wording",
+          "help": "The form itself is wired to the live enquiry endpoint. Only the wording is editable here.",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "help": "24px inside a 248px panel, about 21 characters per line.", "type": "text", "required": true, "maxLength": 63 },
+            { "key": "description", "label": "Supporting text", "help": "31 characters per line; 220 is seven lines.", "type": "textarea", "required": true, "maxLength": 220, "assist": true },
+            { "key": "describeLabel", "label": "Main question label", "help": "35 characters per line; 70 is two lines.", "type": "text", "required": true, "maxLength": 70 },
+            { "key": "describePlaceholder", "label": "Main question placeholder", "help": "Grey hint text inside the box. Anything past about 28 characters is cut off on a phone.", "type": "text", "required": true, "maxLength": 60 },
+            { "key": "describeHint", "label": "Main question hint", "help": "Small grey line under the box. 41 characters per line; 80 is two lines.", "type": "text", "required": true, "maxLength": 80 },
+            { "key": "nameLabel", "label": "Name field label", "type": "text", "required": true, "maxLength": 35 },
+            { "key": "namePlaceholder", "label": "Name field placeholder", "help": "The input holds about 28 characters.", "type": "text", "required": true, "maxLength": 28 },
+            { "key": "businessLabel", "label": "Business field label", "type": "text", "required": true, "maxLength": 35 },
+            { "key": "businessPlaceholder", "label": "Business field placeholder", "type": "text", "required": true, "maxLength": 28 },
+            { "key": "emailLabel", "label": "Email field label", "type": "text", "required": true, "maxLength": 35 },
+            { "key": "emailPlaceholder", "label": "Email field placeholder", "type": "text", "required": true, "maxLength": 28 },
+            { "key": "emailHint", "label": "Email field hint", "type": "text", "required": true, "maxLength": 80 },
+            { "key": "consentLabel", "label": "Newsletter tick-box wording", "help": "Sits beside the tick box, leaving about 31 characters per line. 130 is four lines.", "type": "textarea", "required": true, "maxLength": 130 },
+            { "key": "submitLabel", "label": "Submit button text", "type": "text", "required": true, "maxLength": 34 }
+          ]
+        },
+        {
+          "key": "faq",
+          "label": "Questions section",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 58 },
+            {
+              "key": "items",
+              "label": "Questions",
+              "help": "A two-column grid on desktop.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 10,
+              "itemFields": [
+                { "key": "question", "label": "Question", "help": "246px card, about 26 characters per line. 78 is three lines.", "type": "text", "required": true, "maxLength": 78 },
+                { "key": "answer", "label": "Answer", "help": "31 characters per line; 190 is six lines, which keeps the grid rows level.", "type": "textarea", "required": true, "maxLength": 190, "assist": true }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key": "about",
+      "label": "About",
+      "file": "pages/about.json",
+      "template": "about",
+      "fields": [
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        {
+          "key": "seo",
+          "label": "Structured data",
+          "type": "group",
+          "fields": [{ "key": "name", "label": "Page name for Google", "type": "text", "required": true, "maxLength": 60 }]
+        },
+        { "key": "crumbLabel", "label": "Breadcrumb label", "type": "text", "required": true, "maxLength": 48 },
+        { "key": "eyebrow", "label": "Small label above the headline", "type": "text", "required": true, "maxLength": 56 },
+        { "key": "heroTitle", "label": "Page headline", "type": "text", "required": true, "maxLength": 70 },
+        { "key": "heroSub", "label": "Page sub-heading", "type": "textarea", "required": true, "maxLength": 230, "assist": true },
+        {
+          "key": "story",
+          "label": "Story",
+          "type": "group",
+          "fields": [
+            { "key": "heading", "label": "Heading", "help": "24px in a 312px column, about 26 characters per line. 60 is around two lines.", "type": "text", "required": true, "maxLength": 60 },
+            {
+              "key": "paragraphs",
+              "label": "Paragraphs",
+              "help": "Long-form text. Emphasis and links are set per fragment.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 12,
+              "itemFields": [
+                {
+                  "key": "runs",
+                  "label": "Text",
+                  "help": "A paragraph is made of one or more fragments so that a few words can be bold, italic, code or a link without writing HTML. Most paragraphs are a single plain fragment.",
+                  "type": "list",
+                  "minItems": 1,
+                  "maxItems": 20,
+                  "itemFields": [
+                    { "key": "text", "label": "Fragment text", "help": "39 characters per line at 360px; 600 is around fifteen lines, which is a long but readable paragraph.", "type": "textarea", "required": true, "maxLength": 600, "assist": true },
+                    { "key": "style", "label": "Emphasis", "type": "select", "options": [{ "value": "normal", "label": "Normal" }, { "value": "bold", "label": "Bold" }, { "value": "italic", "label": "Italic" }, { "value": "code", "label": "Code" }, { "value": "link", "label": "Link" }] },
+                    { "key": "href", "label": "Link target", "help": "Only used when the emphasis is set to Link.", "type": "text", "maxLength": 200 }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "values",
+          "label": "Values list",
+          "type": "list",
+          "minItems": 1,
+          "maxItems": 8,
+          "itemFields": [
+            { "key": "title", "label": "Value", "help": "Sits beside a tick, leaving about 35 characters per line.", "type": "text", "required": true, "maxLength": 60 },
+            { "key": "text", "label": "Explanation", "help": "40 characters per line; 120 is three lines.", "type": "textarea", "required": true, "maxLength": 120, "assist": true }
+          ]
+        },
+        {
+          "key": "toolsCta",
+          "label": "\"Submit a tool\" panel",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 63 },
+            { "key": "description", "label": "Supporting text", "help": "27 characters per line on a phone. The current copy is already eleven lines, which is why the limit is generous — shorter is better.", "type": "textarea", "required": true, "maxLength": 320, "assist": true },
+            { "key": "buttonLabel", "label": "Button text", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "buttonHref", "label": "Button links to", "type": "reference", "collection": "pages", "required": true }
+          ]
+        },
+        {
+          "key": "workCta",
+          "label": "Closing panel",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 63 },
+            { "key": "description", "label": "Supporting text", "type": "textarea", "required": true, "maxLength": 320, "assist": true },
+            { "key": "buttonLabel", "label": "Button text", "type": "text", "required": true, "maxLength": 34 },
+            { "key": "buttonHref", "label": "Button links to", "type": "reference", "collection": "pages", "required": true }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "collections": [
+    {
+      "key": "playbooks",
+      "label": "Playbooks",
+      "folder": "collections/playbooks",
+      "template": "playbook",
+      "slugFrom": "slug",
+      "maxItems": 40,
+      "sortBy": "slug",
+      "fields": [
+        {
+          "key": "slug",
+          "label": "Web address",
+          "help": "Becomes the page filename, e.g. \"playbook-a\" publishes at /playbook-a.html. Changing this breaks existing links.",
+          "type": "text",
+          "required": true,
+          "maxLength": 60
+        },
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        {
+          "key": "howTo",
+          "label": "Structured data",
+          "help": "A machine-readable version of the playbook, sent to Google. Not shown on the page.",
+          "type": "group",
+          "fields": [
+            { "key": "name", "label": "How-to title", "type": "text", "required": true, "maxLength": 100 },
+            { "key": "description", "label": "How-to description", "type": "textarea", "required": true, "maxLength": 250 },
+            {
+              "key": "steps",
+              "label": "Steps",
+              "help": "Should mirror the numbered sections in the article body.",
+              "type": "list",
+              "minItems": 1,
+              "maxItems": 12,
+              "itemFields": [
+                { "key": "name", "label": "Step name", "type": "text", "required": true, "maxLength": 80 },
+                { "key": "text", "label": "Step text", "type": "textarea", "required": true, "maxLength": 250 }
+              ]
+            }
+          ]
+        },
+        { "key": "title", "label": "Breadcrumb label", "help": "The last item in the \"Home / Playbooks / …\" trail. 48 characters is two lines.", "type": "text", "required": true, "maxLength": 48 },
+        { "key": "eyebrow", "label": "Small label above the headline", "type": "text", "required": true, "maxLength": 56 },
+        { "key": "heroTitle", "label": "Headline", "type": "text", "required": true, "maxLength": 70 },
+        { "key": "heroSub", "label": "Sub-heading", "type": "textarea", "required": true, "maxLength": 230, "assist": true },
+        {
+          "key": "blocks",
+          "label": "Article body",
+          "help": "The article, one block at a time. Use Heading for a section title, Paragraph for body copy, and Prompt for a copy-and-paste box.",
+          "type": "list",
+          "minItems": 1,
+          "maxItems": 120,
+          "itemFields": [
+            { "key": "type", "label": "Block type", "type": "select", "required": true, "options": [{ "value": "heading", "label": "Heading" }, { "value": "paragraph", "label": "Paragraph" }, { "value": "prompt", "label": "Prompt box" }] },
+            { "key": "heading", "label": "Section heading", "help": "Used by Heading blocks only. 26 characters per line at 360px; 78 is three lines, which is as tall as a section title should get.", "type": "text", "maxLength": 78, "assist": true },
+            { "key": "prompt", "label": "Prompt box text", "help": "Used by Prompt blocks only. Pre-formatted, so your line breaks are kept. 40 characters per line; 1600 is around forty lines, roughly a screen and a half on a phone.", "type": "textarea", "maxLength": 1600, "assist": true },
+            {
+              "key": "runs",
+              "label": "Paragraph text",
+              "help": "Used by Paragraph blocks. Split into fragments only when part of the sentence needs to be bold, italic, code or a link.",
+              "type": "list",
+              "maxItems": 30,
+              "itemFields": [
+                { "key": "text", "label": "Fragment text", "help": "39 characters per line at 360px; 800 is around twenty lines.", "type": "textarea", "required": true, "maxLength": 800, "assist": true },
+                { "key": "style", "label": "Emphasis", "type": "select", "options": [{ "value": "normal", "label": "Normal" }, { "value": "bold", "label": "Bold" }, { "value": "italic", "label": "Italic" }, { "value": "code", "label": "Code" }, { "value": "link", "label": "Link" }] },
+                { "key": "href", "label": "Link target", "help": "Only used when the emphasis is set to Link.", "type": "text", "maxLength": 200 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key": "newsletter",
+      "label": "Newsletter issues",
+      "folder": "collections/newsletter",
+      "template": "newsletter",
+      "slugFrom": "slug",
+      "maxItems": 200,
+      "sortBy": "slug",
+      "fields": [
+        {
+          "key": "slug",
+          "label": "Web address",
+          "help": "Becomes the page filename, e.g. \"weekly-2026-07-16\" publishes at /weekly-2026-07-16.html. Changing this breaks existing links.",
+          "type": "text",
+          "required": true,
+          "maxLength": 60
+        },
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        {
+          "key": "article",
+          "label": "Structured data",
+          "help": "Machine-readable article information for Google. Not shown on the page.",
+          "type": "group",
+          "fields": [
+            { "key": "headline", "label": "Headline for Google", "type": "text", "required": true, "maxLength": 110 },
+            { "key": "description", "label": "Description for Google", "type": "textarea", "required": true, "maxLength": 250 },
+            { "key": "datePublished", "label": "Published", "type": "date", "required": true },
+            { "key": "dateModified", "label": "Last updated", "type": "date", "required": true }
+          ]
+        },
+        { "key": "crumbLabel", "label": "Breadcrumb label", "help": "The last item in the \"Home / Latest / …\" trail.", "type": "text", "required": true, "maxLength": 48 },
+        { "key": "eyebrow", "label": "Small label above the headline", "type": "text", "required": true, "maxLength": 56 },
+        { "key": "heroTitle", "label": "Headline", "type": "text", "required": true, "maxLength": 70 },
+        { "key": "heroSub", "label": "Sub-heading", "type": "textarea", "required": true, "maxLength": 230, "assist": true },
+        {
+          "key": "blocks",
+          "label": "Issue body",
+          "help": "The issue, one block at a time. Use Heading for a section title, Paragraph for body copy, and Prompt for a copy-and-paste box.",
+          "type": "list",
+          "minItems": 1,
+          "maxItems": 120,
+          "itemFields": [
+            { "key": "type", "label": "Block type", "type": "select", "required": true, "options": [{ "value": "heading", "label": "Heading" }, { "value": "paragraph", "label": "Paragraph" }, { "value": "prompt", "label": "Prompt box" }] },
+            { "key": "heading", "label": "Section heading", "help": "Used by Heading blocks only. 26 characters per line at 360px; 78 is three lines, which is as tall as a section title should get.", "type": "text", "maxLength": 78, "assist": true },
+            { "key": "prompt", "label": "Prompt box text", "help": "Used by Prompt blocks only. Pre-formatted, so your line breaks are kept. 40 characters per line; 1600 is around forty lines, roughly a screen and a half on a phone.", "type": "textarea", "maxLength": 1600, "assist": true },
+            {
+              "key": "runs",
+              "label": "Paragraph text",
+              "help": "Used by Paragraph blocks. Split into fragments only when part of the sentence needs to be bold, italic, code or a link.",
+              "type": "list",
+              "maxItems": 30,
+              "itemFields": [
+                { "key": "text", "label": "Fragment text", "type": "textarea", "required": true, "maxLength": 800, "assist": true },
+                { "key": "style", "label": "Emphasis", "type": "select", "options": [{ "value": "normal", "label": "Normal" }, { "value": "bold", "label": "Bold" }, { "value": "italic", "label": "Italic" }, { "value": "code", "label": "Code" }, { "value": "link", "label": "Link" }] },
+                { "key": "href", "label": "Link target", "help": "Only used when the emphasis is set to Link.", "type": "text", "maxLength": 200 }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

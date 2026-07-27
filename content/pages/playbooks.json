@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "AI Playbooks for Small Business | The AI Collective",
+    "description": "Step-by-step AI playbooks built for real Saskatchewan and Western Canadian small businesses — not enterprise teams. Copy, paste, done. Start with the four things every business should do first.",
+    "ogTitle": "AI Playbooks for Small Business | The AI Collective",
+    "ogDescription": "Step-by-step AI playbooks for real small businesses. Copy, paste, done."
+  },
+  "seo": {
+    "howTo": {
+      "name": "The four things every Prairie business should do first with AI",
+      "description": "A starter AI playbook for small and medium businesses in Western Canada.",
+      "steps": [
+        {
+          "name": "Make yourself findable by AI",
+          "text": "Make sure your business shows up when someone asks ChatGPT or Google's AI for a recommendation in your area."
+        },
+        {
+          "name": "Kill one repetitive task",
+          "text": "Pick the most annoying repeatable weekly task and let AI or automation handle 80% of it."
+        },
+        {
+          "name": "Get consistent on social",
+          "text": "Use AI to keep your feed alive without it becoming a second full-time job."
+        },
+        {
+          "name": "Set your ground rules",
+          "text": "Decide what AI can and can't touch — customer data, client work, anything sensitive — before your team runs ahead of you."
+        }
+      ]
+    }
+  },
+  "crumbLabel": "Playbooks",
+  "eyebrow": "Run-it-this-week playbooks",
+  "heroTitle": "Step-by-step AI, built for real small business.",
+  "heroSub": "Not enterprise teams with a data department — you, your shop, and a weekend. Every playbook is plain-English and practical. Copy, paste, done.",
+  "startHere": {
+    "eyebrow": "Start here",
+    "title": "New to AI? Do these four things first.",
+    "description": "You don't need a strategy deck. You need a weekend and a coffee. Here's where every Prairie business should start.",
+    "steps": [
+      {
+        "title": "Make yourself findable by AI",
+        "text": "AI answer engines are the new front door. Make sure your business shows up when someone asks ChatGPT or Google's AI for a recommendation in your area."
+      },
+      {
+        "title": "Kill one repetitive task",
+        "text": "Pick the most annoying, repeatable thing you do every week. There's almost certainly an AI or automation that handles 80% of it."
+      },
+      {
+        "title": "Get consistent on social",
+        "text": "Consistency beats brilliance. Use AI to keep your feed alive without it becoming a second full-time job."
+      },
+      {
+        "title": "Set your ground rules",
+        "text": "Decide what AI can and can't touch in your business — customer data, client work, anything sensitive — before your team runs ahead of you."
+      }
+    ]
+  },
+  "library": {
+    "eyebrow": "The library",
+    "title": "Playbooks by goal",
+    "guides": [
+      {
+        "letter": "A",
+        "href": "playbook-a.html",
+        "title": "Get cited by ChatGPT & AI search",
+        "summary": "The exact checklist a Saskatoon contractor used to get named in AI answers in six weeks. Schema, profiles, reviews, and content.",
+        "category": "AI Search",
+        "readingTime": "8 min read"
+      },
+      {
+        "letter": "B",
+        "href": "playbook-b.html",
+        "title": "A month of social posts in one afternoon",
+        "summary": "The prompt-and-schedule workflow a Regina café uses to stay consistent — from idea to a fully queued month.",
+        "category": "Marketing",
+        "readingTime": "9 min read"
+      },
+      {
+        "letter": "C",
+        "href": "playbook-c.html",
+        "title": "Automate the 5 tasks eating your Mondays",
+        "summary": "Invoicing follow-ups, review requests, appointment reminders — the unglamorous wins that give you your week back.",
+        "category": "Automation",
+        "readingTime": "6 min read"
+      },
+      {
+        "letter": "D",
+        "href": "playbook-d.html",
+        "title": "Write your AI ground rules in 30 minutes",
+        "summary": "A fill-in-the-blank policy for what AI can and can't touch — client data, customer info, and quality control.",
+        "category": "Do It Right",
+        "readingTime": "5 min read"
+      },
+      {
+        "letter": "E",
+        "href": "playbook-e.html",
+        "title": "Turn one blog post into a week of content",
+        "summary": "Repurpose a single article into emails, social posts, and a short video script — without sounding like a robot.",
+        "category": "Content",
+        "readingTime": "7 min read"
+      },
+      {
+        "letter": "F",
+        "href": "playbook-f.html",
+        "title": "Claim your Sask + Canada AI grants",
+        "summary": "What kinds of funding a Prairie business can pursue for AI and tech adoption, and how to draft the application with AI's help.",
+        "category": "Funding",
+        "readingTime": "6 min read"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Can't find a playbook for your exact goal?",
+    "description": "Tell us what you want AI to do for your business and we'll map out a solution — from existing tools or a custom setup.",
+    "buttonLabel": "Tell us your goal →",
+    "buttonHref": "ai-solutions.html"
+  }
+}

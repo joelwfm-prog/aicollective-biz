@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "title": "Latest AI News for Prairie Business | The AI Collective",
+    "description": "Plain-English AI news, reviews, and analysis for Saskatchewan and Western Canadian small business. What happened, why it matters to your bottom line, and what to do about it.",
+    "ogTitle": "Latest AI News for Prairie Business | The AI Collective",
+    "ogDescription": "Plain-English AI news, reviews, and analysis for Western Canadian small business."
+  },
+  "seo": {
+    "name": "The AI Collective — Latest",
+    "description": "Plain-English AI news and reviews for Western Canadian small business."
+  },
+  "crumbLabel": "Latest",
+  "eyebrow": "Latest from the Collective",
+  "heroTitle": "AI news that matters to Prairie business.",
+  "heroSub": "What happened, why it matters to your bottom line, and what — if anything — you should do about it. No hype. Read each one in five minutes.",
+  "feature": {
+    "href": "playbook-a.html",
+    "image": "assets/feat-search.png",
+    "imageAlt": "Neon illustration of an AI search engine answering a question about a local business",
+    "tag": "AI Search",
+    "tagColor": "magenta",
+    "title": "Nobody's Googling you anymore — they're asking ChatGPT. Here's how to show up.",
+    "excerpt": "AI answer engines are quietly replacing the search results page. We break down exactly how a Saskatoon contractor got named in ChatGPT's answers in six weeks — and the free checklist to do it yourself.",
+    "kind": "Playbook",
+    "readingTime": "8 min read",
+    "date": "Jul 21, 2026"
+  },
+  "sideCards": [
+    {
+      "num": "01",
+      "href": "weekly-2026-07-16.html",
+      "title": "The AI Collective Weekly #1: Nobody's Googling you anymore",
+      "meta": "Newsletter · Jul 16"
+    },
+    {
+      "num": "02",
+      "href": "playbook-f.html",
+      "title": "Sask + Canada AI grants: what your business can pursue for AI adoption",
+      "meta": "Funding · 6 min"
+    },
+    {
+      "num": "03",
+      "href": "playbook-b.html",
+      "title": "A month of social posts in one afternoon",
+      "meta": "Marketing · 9 min"
+    }
+  ],
+  "recent": {
+    "eyebrow": "More reads",
+    "title": "Recent articles",
+    "ctaText": "Want these in your inbox every Thursday?",
+    "ctaLabel": "Join the free weekly →",
+    "ctaHref": "index.html#newsletter",
+    "articles": [
+      {
+        "href": "playbook-c.html",
+        "image": "assets/feat-automate.png",
+        "imageAlt": "Neon conveyor belt automating repetitive office tasks",
+        "tag": "Automation",
+        "tagColor": "cyan",
+        "title": "Automate the 5 tasks eating your Mondays",
+        "excerpt": "Invoicing follow-ups, review requests, appointment reminders — the unglamorous wins that give you your week back.",
+        "kind": "Guide",
+        "readingTime": "6 min",
+        "date": "Jul 18, 2026"
+      },
+      {
+        "href": "playbook-b.html",
+        "image": "assets/feat-content.png",
+        "imageAlt": "Neon speech bubbles representing AI-generated social content",
+        "tag": "Marketing",
+        "tagColor": "lime",
+        "title": "A month of social posts in one afternoon",
+        "excerpt": "The exact prompt-and-schedule workflow a Regina café uses to stay consistent without hiring an agency.",
+        "kind": "Playbook",
+        "readingTime": "9 min",
+        "date": "Jul 15, 2026"
+      },
+      {
+        "href": "playbook-d.html",
+        "image": "assets/feat-safety.png",
+        "imageAlt": "Neon shield representing responsible AI use and data privacy",
+        "tag": "Do It Right",
+        "tagColor": "orange",
+        "title": "Using AI without getting yourself in trouble",
+        "excerpt": "Privacy, PIPEDA, client data, and the mistakes we see Prairie businesses make. A plain-language guardrail guide.",
+        "kind": "Explainer",
+        "readingTime": "5 min",
+        "date": "Jul 11, 2026"
+      },
+      {
+        "href": "playbook-a.html",
+        "image": "assets/feat-search.png",
+        "imageAlt": "Neon illustration of AI search results",
+        "tag": "AI Search",
+        "tagColor": "magenta",
+        "title": "What is AEO, and why it's the new SEO for Sask businesses",
+        "excerpt": "Answer Engine Optimization in plain terms — how to be the business AI recommends when a customer asks.",
+        "kind": "Explainer",
+        "readingTime": "7 min",
+        "date": "Jul 8, 2026"
+      }
+    ]
+  }
+}

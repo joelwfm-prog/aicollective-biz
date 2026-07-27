@@ -1,0 +1,180 @@
+{
+  "slug": "playbook-f",
+  "meta": {
+    "title": "Claim your Sask + Canada AI grants — The AI Collective Playbooks",
+    "description": "A plain-language starting map to the kinds of federal, provincial, and regional funding a Saskatchewan small business can look into for tech and AI adoption.",
+    "ogTitle": "Claim your Sask + Canada AI grants — The AI Collective Playbooks",
+    "ogDescription": "What funding your business can actually look into in 2026, and how to draft the application with AI's help."
+  },
+  "eyebrow": "Playbook F · Funding · ~6 min",
+  "heroTitle": "Claim your Sask + Canada AI grants.",
+  "heroSub": "What funding your business can actually look into in 2026, and how to draft the application with AI's help.",
+  "title": "Claim your Sask + Canada AI grants",
+  "howTo": {
+    "name": "Claim your Sask + Canada AI grants",
+    "description": "A plain-language starting map to the categories of federal, provincial, and regional funding a Saskatchewan small business can look into for technology and AI adoption.",
+    "steps": [
+      {
+        "name": "Understand the categories of funding that exist",
+        "text": "Learn the broad types of support available: federal digital adoption programs, provincial productivity and innovation supports, and regional development funding."
+      },
+      {
+        "name": "Check federal small-business digital adoption style programs",
+        "text": "Look for current federal programs aimed at helping small businesses adopt digital tools and technology."
+      },
+      {
+        "name": "Check Saskatchewan provincial productivity and innovation supports",
+        "text": "Look for current provincial programs aimed at business productivity, innovation, or technology adoption."
+      },
+      {
+        "name": "Check Community Futures and regional development options",
+        "text": "Look into your local Community Futures office or regional economic development organization for loans or advisory support."
+      },
+      {
+        "name": "Confirm current eligibility before applying",
+        "text": "Verify details directly with the program, since names, amounts, and deadlines change often."
+      },
+      {
+        "name": "Draft your application with AI's help",
+        "text": "Use an AI tool to organize your project description and business case, then have a human fact-check and finalize it."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "A quick, important note before anything else:"
+        },
+        {
+          "style": "normal",
+          "text": " this is a starting map, not legal or financial advice, and it is not a list of specific programs. Government and regional funding programs change constantly — names, amounts, and deadlines shift, close, and reopen throughout the year. What follows is the general shape of where a Saskatchewan small business can look for support with technology and AI adoption, so you know what categories to search for and who to call. Always confirm current eligibility directly with the program before you plan around it."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "1. Understand the categories of funding that exist"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Broadly, support for a small business adopting new technology or AI in Canada tends to fall into a few buckets: federal programs aimed at helping small businesses digitize or modernize; provincial programs focused on productivity, innovation, or competitiveness; and regional or local development support, often delivered through community-based organizations. Some of these are grants (money you don't repay), some are low-interest loans, and some are advisory or training support with no cash attached at all. Knowing the category helps you search effectively even when a specific program's name has changed since you last looked."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "2. Check federal small-business digital adoption style programs"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "The federal government has, at various points, run programs specifically aimed at helping small and medium businesses adopt digital tools, e-commerce, or new technology — sometimes bundled with advisory services or student talent placements. These programs come and go and get renamed, so search for current federal small-business digital adoption or technology adoption programs rather than relying on a name you heard a while back. Your starting point should be the federal government's small business services pages and your local Canada Business network contact."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "3. Check Saskatchewan provincial productivity and innovation supports"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Saskatchewan periodically runs its own provincial programs focused on business productivity, innovation, and technology or process improvements, sometimes sector-specific (agriculture, manufacturing, tourism). These are worth checking directly with the Government of Saskatchewan's business and economic development pages, since provincial offerings shift with each budget cycle."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "4. Check Community Futures and regional development options"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Community Futures offices operate across rural and small-town Saskatchewan and are one of the most consistently available resources for small business owners — offering business loans, advisory support, and sometimes smaller grant programs, with a mandate specifically for smaller and rural communities. If you're outside a major city, your local Community Futures office is often a faster, more personal starting point than a federal or provincial portal. Regional economic development organizations in your city or municipality may run similar smaller-scale supports worth a call."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "5. Confirm current eligibility before applying"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Before you spend real time on any application: call or email the program directly, confirm it's still open, confirm your business type and size actually qualifies, and get the real current deadline in writing. Program details published a year ago — or even six months ago — may already be stale. This single phone call saves more wasted effort than anything else on this list."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "6. Draft your application with AI's help"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Grant applications reward clarity: what you want to do, why it matters, what it costs, and what changes if you get funded. An AI tool is genuinely useful for organizing this into a clean first draft, which you then fact-check and tighten yourself — never submit AI output without personally verifying every number and claim. Try this prompt:"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "prompt": "I run a small [type of business] in [town], Saskatchewan with [number] employees. I'm applying for a [type of program, e.g. provincial productivity/technology grant] to help fund [specific project, e.g. \"setting up AI-assisted customer service tools and staff training\"]. Help me draft a clear project description covering: 1) the problem we're solving, 2) exactly what we plan to do with the funding, 3) the timeline, 4) how we'll measure whether it worked. Keep it concrete and specific to my business, not generic. Flag anywhere I need to insert a real number or fact rather than guessing."
+    },
+    {
+      "type": "heading",
+      "heading": "Local example: a Melfort small manufacturer"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Say you run a small metal fabrication shop near Melfort and want help funding a move toward AI-assisted quoting and scheduling software. Rather than searching for one specific grant by name, you'd work through the categories above: check the federal small-business technology adoption space, check Saskatchewan's current provincial productivity or innovation supports, and call your local Community Futures office to ask what they currently offer. In one afternoon of calls and searches, you'd likely surface two or three live options worth a real look — some grants, some low-interest loan options — rather than betting everything on one program that might have already closed."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Watch out for"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Be wary of anyone charging a large upfront fee to \"guarantee\" you a grant — legitimate programs don't work that way. And don't build your whole technology plan around funding that hasn't been confirmed; treat any grant as a bonus that might offset a project you'd want to do anyway, not the reason the project exists."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "heading": "Do this now"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Call your local Community Futures office or regional economic development contact this week and simply ask: \"What's currently available for a small business looking to adopt new technology?\" That one conversation will tell you more than an hour of searching outdated program pages."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "link",
+          "href": "ai-solutions.html",
+          "text": "Want us to map this out for your business? Tell us your goal →"
+        }
+      ]
+    }
+  ]
+}

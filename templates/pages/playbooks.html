@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{{> head}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "name": {{{json seo.howTo.name}}},
+        "description": {{{json seo.howTo.description}}},
+        "step": [
+{{#each seo.howTo.steps}}
+          { "@type": "HowToStep", "position": {{@number}}, "name": {{{json name}}}, "text": {{{json text}}} }{{#unless @last}},{{/unless}}
+{{/each}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": {{{json crumbLabel}}}, "item": {{{json canonical}}} }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+{{> header}}
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <span aria-current="page">{{crumbLabel}}</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">{{eyebrow}}</span>
+          <h1 class="page-hero__title">{{heroTitle}}</h1>
+          <p class="page-hero__sub">{{heroSub}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- START HERE -->
+    <section class="section section--tight container">
+      <div class="section-head reveal">
+        <span class="eyebrow">{{startHere.eyebrow}}</span>
+        <h2 class="section-head__title">{{startHere.title}}</h2>
+        <p class="section-head__desc">{{startHere.description}}</p>
+      </div>
+      <div class="playbook">
+{{#each startHere.steps}}
+        <div class="step reveal"><div class="step__idx">{{@number}}</div><div><h4>{{title}}</h4><p>{{text}}</p></div></div>
+{{/each}}
+      </div>
+    </section>
+
+    <!-- PLAYBOOK LIBRARY -->
+    <section class="section section--tight container">
+      <div class="section-head reveal"><span class="eyebrow">{{library.eyebrow}}</span><h2 class="section-head__title">{{library.title}}</h2></div>
+      <div class="guide-list">
+{{#each library.guides}}
+        <a href="{{attr href}}" class="guide reveal"><span class="guide__num">{{letter}}</span><h3>{{title}}</h3><p>{{summary}}</p><div class="guide__meta"><span>{{category}}</span> · <span>{{readingTime}}</span></div></a>
+{{/each}}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight container">
+      <div class="cta-band reveal">
+        <div class="intake__grid-bg" aria-hidden="true"></div>
+        <div style="position:relative;z-index:1">
+          <h2>{{cta.title}}</h2>
+          <p>{{cta.description}}</p>
+          <a href="{{attr cta.buttonHref}}" class="btn btn--primary btn--lg">{{cta.buttonLabel}}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+{{> footer}}
+</body>
+</html>
