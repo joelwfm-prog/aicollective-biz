@@ -56,7 +56,7 @@
     },
     {
       "type": "heading",
-      "text": "1. Understand the categories of funding that exist"
+      "heading": "1. Understand the categories of funding that exist"
     },
     {
       "type": "paragraph",
@@ -68,7 +68,7 @@
     },
     {
       "type": "heading",
-      "text": "2. Check federal small-business digital adoption style programs"
+      "heading": "2. Check federal small-business digital adoption style programs"
     },
     {
       "type": "paragraph",
@@ -80,7 +80,7 @@
     },
     {
       "type": "heading",
-      "text": "3. Check Saskatchewan provincial productivity and innovation supports"
+      "heading": "3. Check Saskatchewan provincial productivity and innovation supports"
     },
     {
       "type": "paragraph",
@@ -92,7 +92,7 @@
     },
     {
       "type": "heading",
-      "text": "4. Check Community Futures and regional development options"
+      "heading": "4. Check Community Futures and regional development options"
     },
     {
       "type": "paragraph",
@@ -104,7 +104,7 @@
     },
     {
       "type": "heading",
-      "text": "5. Confirm current eligibility before applying"
+      "heading": "5. Confirm current eligibility before applying"
     },
     {
       "type": "paragraph",
@@ -116,7 +116,7 @@
     },
     {
       "type": "heading",
-      "text": "6. Draft your application with AI's help"
+      "heading": "6. Draft your application with AI's help"
     },
     {
       "type": "paragraph",
@@ -128,11 +128,11 @@
     },
     {
       "type": "prompt",
-      "text": "I run a small [type of business] in [town], Saskatchewan with [number] employees. I'm applying for a [type of program, e.g. provincial productivity/technology grant] to help fund [specific project, e.g. \"setting up AI-assisted customer service tools and staff training\"]. Help me draft a clear project description covering: 1) the problem we're solving, 2) exactly what we plan to do with the funding, 3) the timeline, 4) how we'll measure whether it worked. Keep it concrete and specific to my business, not generic. Flag anywhere I need to insert a real number or fact rather than guessing."
+      "prompt": "I run a small [type of business] in [town], Saskatchewan with [number] employees. I'm applying for a [type of program, e.g. provincial productivity/technology grant] to help fund [specific project, e.g. \"setting up AI-assisted customer service tools and staff training\"]. Help me draft a clear project description covering: 1) the problem we're solving, 2) exactly what we plan to do with the funding, 3) the timeline, 4) how we'll measure whether it worked. Keep it concrete and specific to my business, not generic. Flag anywhere I need to insert a real number or fact rather than guessing."
     },
     {
       "type": "heading",
-      "text": "Local example: a Melfort small manufacturer"
+      "heading": "Local example: a Melfort small manufacturer"
     },
     {
       "type": "paragraph",
@@ -144,7 +144,7 @@
     },
     {
       "type": "heading",
-      "text": "Watch out for"
+      "heading": "Watch out for"
     },
     {
       "type": "paragraph",
@@ -156,7 +156,7 @@
     },
     {
       "type": "heading",
-      "text": "Do this now"
+      "heading": "Do this now"
     },
     {
       "type": "paragraph",

@@ -157,8 +157,8 @@
           // No live backend yet (e.g. static hosting): capture locally and guide to email.
           const subject = encodeURIComponent('AI request from ' + (form.name.value.trim() || email));
           const body = encodeURIComponent('What I want AI to do:\n' + describe + '\n\nBusiness: ' + form.business.value.trim() + '\nEmail: ' + email);
-          setStatus('ok', "Thanks! We're just finishing our contact setup — please email us at intheresults.com and we'll map out a solution.");
-          window.location.href = 'mailto:hello@intheresults.com?subject=' + subject + '&body=' + body;
+          setStatus('ok', "Thanks! We're just finishing our contact setup — please email us at {{site.contactDomain}} and we'll map out a solution.");
+          window.location.href = 'mailto:{{site.contactEmail}}?subject=' + subject + '&body=' + body;
         } finally { btn.disabled = false; }
       });
       function setStatus(state, msg) { statusEl.dataset.state = state; statusEl.textContent = msg; }

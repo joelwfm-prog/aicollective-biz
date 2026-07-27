@@ -52,7 +52,7 @@
     },
     {
       "type": "heading",
-      "text": "1. Pick the right source post"
+      "heading": "1. Pick the right source post"
     },
     {
       "type": "paragraph",
@@ -64,7 +64,7 @@
     },
     {
       "type": "heading",
-      "text": "2. Pull out 5 stand-alone ideas"
+      "heading": "2. Pull out 5 stand-alone ideas"
     },
     {
       "type": "paragraph",
@@ -76,7 +76,7 @@
     },
     {
       "type": "heading",
-      "text": "3. Generate the week's content with one prompt"
+      "heading": "3. Generate the week's content with one prompt"
     },
     {
       "type": "paragraph",
@@ -88,11 +88,11 @@
     },
     {
       "type": "prompt",
-      "text": "Here is a blog post I wrote: [paste full article]. I run a small [type of business] in [town], Saskatchewan and our voice is [e.g. plain-spoken, friendly, no corporate jargon]. From this one post, create:\n1) Five short, stand-alone social media posts (2-4 sentences each), each built around a different specific point from the article — not five versions of the same summary.\n2) One short email to send to our list, under 150 words, with a personal opening line and a link back to the full post.\n3) One 45-second video script with a strong hook in the first line, written the way a person would actually talk, not read.\nKeep everything grounded in specifics from the article — no generic filler like \"in today's fast-paced world.\""
+      "prompt": "Here is a blog post I wrote: [paste full article]. I run a small [type of business] in [town], Saskatchewan and our voice is [e.g. plain-spoken, friendly, no corporate jargon]. From this one post, create:\n1) Five short, stand-alone social media posts (2-4 sentences each), each built around a different specific point from the article — not five versions of the same summary.\n2) One short email to send to our list, under 150 words, with a personal opening line and a link back to the full post.\n3) One 45-second video script with a strong hook in the first line, written the way a person would actually talk, not read.\nKeep everything grounded in specifics from the article — no generic filler like \"in today's fast-paced world.\""
     },
     {
       "type": "heading",
-      "text": "4. Edit for voice and remove AI tells"
+      "heading": "4. Edit for voice and remove AI tells"
     },
     {
       "type": "paragraph",
@@ -104,7 +104,7 @@
     },
     {
       "type": "heading",
-      "text": "5. Schedule the week"
+      "heading": "5. Schedule the week"
     },
     {
       "type": "paragraph",
@@ -116,7 +116,7 @@
     },
     {
       "type": "heading",
-      "text": "Local example: a Prince Albert landscaping business"
+      "heading": "Local example: a Prince Albert landscaping business"
     },
     {
       "type": "paragraph",
@@ -128,7 +128,7 @@
     },
     {
       "type": "heading",
-      "text": "Watch out for"
+      "heading": "Watch out for"
     },
     {
       "type": "paragraph",
@@ -140,7 +140,7 @@
     },
     {
       "type": "heading",
-      "text": "Do this now"
+      "heading": "Do this now"
     },
     {
       "type": "paragraph",

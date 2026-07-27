@@ -45,7 +45,7 @@
         </div>
         <div class="hero__meta">
 {{#each hero.stats}}
-          <span><strong>{{lead}}</strong> {{rest}}</span>
+          <span><strong>{{lead}}</strong> {{#if @first}}· {{/if}}{{rest}}</span>
 {{/each}}
         </div>
       </div>

@@ -93,7 +93,8 @@ function decorateBlocks(blocks) {
     const runs = decorateRuns(block.runs);
     const linkOnly = isParagraph && runs.length === 1 && runs[0].isLink;
     return {
-      text: block.text,
+      heading: block.heading,
+      prompt: block.prompt,
       runs,
       isHeading: block.type === 'heading',
       isParagraph,
@@ -167,7 +168,10 @@ function baseScope(site, page, outFile, navKey, ogType) {
 
 function main() {
   const partials = loadPartials();
-  const site = readJson(path.join(CONTENT, 'site.json'));
+  const raw = readJson(path.join(CONTENT, 'site.json'));
+  // The intake fallback shows the bare domain in prose but needs the full
+  // address in its mailto, so only the address is editable.
+  const site = Object.assign({}, raw, { contactDomain: raw.contactEmail.split('@').pop() });
   const written = [];
 
   for (const page of PAGES) {

@@ -52,7 +52,7 @@
     },
     {
       "type": "heading",
-      "text": "1. Decide what data is off-limits"
+      "heading": "1. Decide what data is off-limits"
     },
     {
       "type": "paragraph",
@@ -64,7 +64,7 @@
     },
     {
       "type": "heading",
-      "text": "2. Decide who can use AI for what"
+      "heading": "2. Decide who can use AI for what"
     },
     {
       "type": "paragraph",
@@ -76,7 +76,7 @@
     },
     {
       "type": "heading",
-      "text": "3. Set a human-review rule"
+      "heading": "3. Set a human-review rule"
     },
     {
       "type": "paragraph",
@@ -88,7 +88,7 @@
     },
     {
       "type": "heading",
-      "text": "4. Decide when to disclose AI use"
+      "heading": "4. Decide when to disclose AI use"
     },
     {
       "type": "paragraph",
@@ -109,7 +109,7 @@
     },
     {
       "type": "heading",
-      "text": "Copy this template"
+      "heading": "Copy this template"
     },
     {
       "type": "paragraph",
@@ -121,7 +121,7 @@
     },
     {
       "type": "prompt",
-      "text": "OUR AI GROUND RULES — [Business Name]\n\n1. OFF-LIMITS DATA: We never paste the following into any AI tool: [customer names + contact info, financial details, health info, employee records, anything shared in confidence — add your own]. If we need AI's help with something involving a real customer, we strip out identifying details first.\n\n2. WHO CAN USE AI, FOR WHAT: [Role/person] can use AI tools for [task, e.g. drafting general email replies, social captions, internal notes]. [Role/person] should NOT use AI for [task involving sensitive data or final legal/financial decisions].\n\n3. HUMAN REVIEW: No AI-generated content goes to a customer, client, or the public without being read and approved by [role/person] first. No exceptions.\n\n4. DISCLOSURE: We tell customers AI was involved when [your rule, e.g. \"AI helped generate a personalized recommendation or written estimate\"]. We don't bother disclosing for [your rule, e.g. \"routine social posts or internal drafts\"].\n\nReviewed by: _______  Date: _______  Next review: _______"
+      "prompt": "OUR AI GROUND RULES — [Business Name]\n\n1. OFF-LIMITS DATA: We never paste the following into any AI tool: [customer names + contact info, financial details, health info, employee records, anything shared in confidence — add your own]. If we need AI's help with something involving a real customer, we strip out identifying details first.\n\n2. WHO CAN USE AI, FOR WHAT: [Role/person] can use AI tools for [task, e.g. drafting general email replies, social captions, internal notes]. [Role/person] should NOT use AI for [task involving sensitive data or final legal/financial decisions].\n\n3. HUMAN REVIEW: No AI-generated content goes to a customer, client, or the public without being read and approved by [role/person] first. No exceptions.\n\n4. DISCLOSURE: We tell customers AI was involved when [your rule, e.g. \"AI helped generate a personalized recommendation or written estimate\"]. We don't bother disclosing for [your rule, e.g. \"routine social posts or internal drafts\"].\n\nReviewed by: _______  Date: _______  Next review: _______"
     },
     {
       "type": "paragraph",
@@ -133,11 +133,11 @@
     },
     {
       "type": "prompt",
-      "text": "I run a small [type of business] in [town], Saskatchewan with [number] employees. Help me tighten this AI ground rules policy for my specific business: [paste the filled-in template above]. Flag anything that seems too vague to actually follow, and suggest one or two industry-specific data types I should probably add to the off-limits list given what my business handles."
+      "prompt": "I run a small [type of business] in [town], Saskatchewan with [number] employees. Help me tighten this AI ground rules policy for my specific business: [paste the filled-in template above]. Flag anything that seems too vague to actually follow, and suggest one or two industry-specific data types I should probably add to the off-limits list given what my business handles."
     },
     {
       "type": "heading",
-      "text": "Local example: a Yorkton accounting office"
+      "heading": "Local example: a Yorkton accounting office"
     },
     {
       "type": "paragraph",
@@ -149,7 +149,7 @@
     },
     {
       "type": "heading",
-      "text": "Watch out for"
+      "heading": "Watch out for"
     },
     {
       "type": "paragraph",
@@ -161,7 +161,7 @@
     },
     {
       "type": "heading",
-      "text": "Do this now"
+      "heading": "Do this now"
     },
     {
       "type": "paragraph",

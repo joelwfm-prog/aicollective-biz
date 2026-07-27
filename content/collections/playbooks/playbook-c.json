@@ -52,7 +52,7 @@
     },
     {
       "type": "heading",
-      "text": "1. Invoicing follow-ups"
+      "heading": "1. Invoicing follow-ups"
     },
     {
       "type": "paragraph",
@@ -85,7 +85,7 @@
     },
     {
       "type": "heading",
-      "text": "2. Review requests"
+      "heading": "2. Review requests"
     },
     {
       "type": "paragraph",
@@ -118,7 +118,7 @@
     },
     {
       "type": "heading",
-      "text": "3. Appointment reminders"
+      "heading": "3. Appointment reminders"
     },
     {
       "type": "paragraph",
@@ -151,7 +151,7 @@
     },
     {
       "type": "heading",
-      "text": "4. FAQ email replies"
+      "heading": "4. FAQ email replies"
     },
     {
       "type": "paragraph",
@@ -184,11 +184,11 @@
     },
     {
       "type": "prompt",
-      "text": "Here's an email from a customer: [paste email]. Draft a reply in a warm, plain-spoken, no-corporate-jargon tone, the way a small Saskatchewan business owner would answer a customer directly. Keep it under 120 words, answer their actual question first, and end with a simple next step (book a time, call the shop, etc). Here's how we normally answer this type of question, for reference: [paste your usual answer or a few past examples]."
+      "prompt": "Here's an email from a customer: [paste email]. Draft a reply in a warm, plain-spoken, no-corporate-jargon tone, the way a small Saskatchewan business owner would answer a customer directly. Keep it under 120 words, answer their actual question first, and end with a simple next step (book a time, call the shop, etc). Here's how we normally answer this type of question, for reference: [paste your usual answer or a few past examples]."
     },
     {
       "type": "heading",
-      "text": "5. Weekly reporting"
+      "heading": "5. Weekly reporting"
     },
     {
       "type": "paragraph",
@@ -221,7 +221,7 @@
     },
     {
       "type": "heading",
-      "text": "Local example: a Saskatoon retailer"
+      "heading": "Local example: a Saskatoon retailer"
     },
     {
       "type": "paragraph",
@@ -233,7 +233,7 @@
     },
     {
       "type": "heading",
-      "text": "Watch out for"
+      "heading": "Watch out for"
     },
     {
       "type": "paragraph",
@@ -245,7 +245,7 @@
     },
     {
       "type": "heading",
-      "text": "Do this now"
+      "heading": "Do this now"
     },
     {
       "type": "paragraph",

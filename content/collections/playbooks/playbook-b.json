@@ -52,7 +52,7 @@
     },
     {
       "type": "heading",
-      "text": "1. Pick your monthly themes"
+      "heading": "1. Pick your monthly themes"
     },
     {
       "type": "paragraph",
@@ -64,7 +64,7 @@
     },
     {
       "type": "heading",
-      "text": "2. Batch-generate the month with one prompt"
+      "heading": "2. Batch-generate the month with one prompt"
     },
     {
       "type": "paragraph",
@@ -76,7 +76,7 @@
     },
     {
       "type": "prompt",
-      "text": "You are helping a small [type of business] in [town], Saskatchewan plan a month of Instagram/Facebook posts. Our voice is [e.g. warm, a little cheeky, never corporate]. Write 20 post drafts for the next 4 weeks, rotating evenly through these 5 themes: 1) behind-the-scenes, 2) answering a customer question, 3) spotlight on one product/service, 4) local/seasonal tie-in, 5) simple update or open-hours reminder. For each post give: a short caption (2-4 sentences, no corporate buzzwords), 3-5 relevant hashtags, and a one-line note on what photo or video would pair with it. Number them Week 1 Post 1, Week 1 Post 2, etc."
+      "prompt": "You are helping a small [type of business] in [town], Saskatchewan plan a month of Instagram/Facebook posts. Our voice is [e.g. warm, a little cheeky, never corporate]. Write 20 post drafts for the next 4 weeks, rotating evenly through these 5 themes: 1) behind-the-scenes, 2) answering a customer question, 3) spotlight on one product/service, 4) local/seasonal tie-in, 5) simple update or open-hours reminder. For each post give: a short caption (2-4 sentences, no corporate buzzwords), 3-5 relevant hashtags, and a one-line note on what photo or video would pair with it. Number them Week 1 Post 1, Week 1 Post 2, etc."
     },
     {
       "type": "paragraph",
@@ -88,7 +88,7 @@
     },
     {
       "type": "heading",
-      "text": "3. Edit every post for voice"
+      "heading": "3. Edit every post for voice"
     },
     {
       "type": "paragraph",
@@ -100,7 +100,7 @@
     },
     {
       "type": "heading",
-      "text": "4. Load everything into a scheduler"
+      "heading": "4. Load everything into a scheduler"
     },
     {
       "type": "paragraph",
@@ -112,7 +112,7 @@
     },
     {
       "type": "heading",
-      "text": "5. Repurpose across platforms"
+      "heading": "5. Repurpose across platforms"
     },
     {
       "type": "paragraph",
@@ -124,7 +124,7 @@
     },
     {
       "type": "heading",
-      "text": "Local example: a Regina café"
+      "heading": "Local example: a Regina café"
     },
     {
       "type": "paragraph",
@@ -136,7 +136,7 @@
     },
     {
       "type": "heading",
-      "text": "Watch out for"
+      "heading": "Watch out for"
     },
     {
       "type": "paragraph",
@@ -148,7 +148,7 @@
     },
     {
       "type": "heading",
-      "text": "Do this now"
+      "heading": "Do this now"
     },
     {
       "type": "paragraph",

@@ -5,10 +5,11 @@
 //   node build/validate.js         report problems, exit non-zero on failure
 //   node build/validate.js --list  print the field paths each template reads
 //
-// Three classes of problem are reported:
+// Four classes of problem are reported:
 //   missing  — a template reads a field the schema does not describe
 //   orphan   — the schema describes a field no template reads
 //   content  — a content file breaks a schema rule (required / maxLength / type)
+//   howto    — structured data claims a different number of steps than the page shows
 
 const fs = require('fs');
 const path = require('path');
@@ -41,7 +42,7 @@ const DERIVED_LOCALS = new Set([
   'spaceBefore',
 ]);
 
-const DERIVED_EXACT = new Set(['meta.canonical', 'meta.ogType', 'meta.ogUrl']);
+const DERIVED_EXACT = new Set(['meta.canonical', 'meta.ogType', 'meta.ogUrl', 'site.contactDomain']);
 
 // The mirror image: schema fields the build reads and reshapes, so no template
 // names them directly. Prefix match, so "site.nav" covers "site.nav[].label".
@@ -177,6 +178,11 @@ function checkValue(value, field, where, problems) {
   if (field.type === 'date' && !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
     problems.push(`content: ${where} must be a YYYY-MM-DD date`);
   }
+  // contactEmail is interpolated into an inline script, so a stray quote would
+  // break the page rather than just look wrong.
+  if (field.type === 'email' && !/^[^\s@"'<>]+@[^\s@"'<>]+\.[^\s@"'<>]+$/.test(value)) {
+    problems.push(`content: ${where} is not a valid email address`);
+  }
 }
 
 function checkFields(fields, data, where, problems) {
@@ -184,6 +190,64 @@ function checkFields(fields, data, where, problems) {
   for (const field of fields) {
     checkValue(object[field.key], field, `${where}.${field.key}`, problems);
   }
+}
+
+// ------------------------------------------------------- structured data drift
+//
+// The JSON-LD HowTo lives in its own `howTo` / `seo.howTo` group rather than
+// being generated from the visible sections, because the two are not always
+// worded the same and regenerating them would change the published markup.
+// That independence is the hazard: an editor can rename, add or delete a
+// numbered section and leave Google reading a recipe the page no longer
+// contains. Nothing renders differently, so the drift is invisible on the page
+// and only shows up in search. Counting both sides catches it at build time.
+//
+// A visible section is a heading block numbered "1. ", "2) " and so on;
+// unnumbered headings ("Watch out for") are commentary, not steps.
+
+const NUMBERED_HEADING = /^\d+[.)]\s/;
+
+function checkHowTo(label, declared, visible, problems) {
+  if (!declared || declared.length === visible.length) return;
+  problems.push(
+    `howto: ${label} declares ${declared.length} structured-data step(s) ` +
+      `but the page shows ${visible.length} numbered section(s) — ` +
+      `Google would be told about a step readers cannot see`
+  );
+}
+
+function checkStructuredData(schema, problems) {
+  const playbooksPage = readJson(path.join(CONTENT, 'pages', 'playbooks.json'));
+  checkHowTo(
+    'pages/playbooks.json',
+    playbooksPage.seo && playbooksPage.seo.howTo && playbooksPage.seo.howTo.steps,
+    (playbooksPage.startHere && playbooksPage.startHere.steps) || [],
+    problems
+  );
+
+  const dir = path.join(CONTENT, 'collections', 'playbooks');
+  if (!fs.existsSync(dir)) return;
+  for (const file of fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
+    const item = readJson(path.join(dir, file));
+    const headings = (item.blocks || [])
+      .filter((b) => b.type === 'heading' && NUMBERED_HEADING.test(b.heading || ''));
+    checkHowTo(`collections/playbooks/${file}`, item.howTo && item.howTo.steps, headings, problems);
+  }
+}
+
+// Block types share one list, so the schema cannot say which field each type
+// requires. Enforce it here instead.
+const BLOCK_SHAPE = { heading: 'heading', paragraph: 'runs', prompt: 'prompt' };
+
+function checkBlocks(blocks, where, problems) {
+  (blocks || []).forEach((block, i) => {
+    const key = BLOCK_SHAPE[block.type];
+    if (!key) return; // an unknown type is already reported by the select check
+    const value = block[key];
+    if (value === undefined || value === null || value === '' || (Array.isArray(value) && !value.length)) {
+      problems.push(`content: ${where}.blocks[${i}] is a ${block.type} block but has no ${key}`);
+    }
+  });
 }
 
 // -------------------------------------------------------------------- driver
@@ -246,9 +310,14 @@ function main() {
       problems.push(`content: ${collection.folder} has ${files.length} items, maximum ${collection.maxItems}`);
     }
     for (const file of files) {
-      checkFields(collection.fields, readJson(path.join(dir, file)), `${collection.folder}/${file}`, problems);
+      const item = readJson(path.join(dir, file));
+      const where = `${collection.folder}/${file}`;
+      checkFields(collection.fields, item, where, problems);
+      checkBlocks(item.blocks, where, problems);
     }
   }
+
+  checkStructuredData(schema, problems);
 
   if (problems.length) {
     for (const p of problems.sort()) process.stderr.write(`${p}\n`);

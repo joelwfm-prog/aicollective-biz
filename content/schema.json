@@ -51,6 +51,14 @@
         "maxLength": 10
       },
       {
+        "key": "contactEmail",
+        "label": "Contact email address",
+        "help": "Where the AI Solutions form sends people if the intake service is unreachable. The domain on its own is also shown in that message.",
+        "type": "email",
+        "required": true,
+        "maxLength": 60
+      },
+      {
         "key": "nav",
         "label": "Main menu",
         "help": "Shown across the top on desktop and in the slide-out menu on phones.",
@@ -867,7 +875,8 @@
           "maxItems": 120,
           "itemFields": [
             { "key": "type", "label": "Block type", "type": "select", "required": true, "options": [{ "value": "heading", "label": "Heading" }, { "value": "paragraph", "label": "Paragraph" }, { "value": "prompt", "label": "Prompt box" }] },
-            { "key": "text", "label": "Heading or prompt text", "help": "Used by Heading and Prompt blocks. A heading should stay under about 52 characters (two lines); a prompt box is pre-formatted and can be long.", "type": "textarea", "maxLength": 2000, "assist": true },
+            { "key": "heading", "label": "Section heading", "help": "Used by Heading blocks only. 26 characters per line at 360px; 78 is three lines, which is as tall as a section title should get.", "type": "text", "maxLength": 78, "assist": true },
+            { "key": "prompt", "label": "Prompt box text", "help": "Used by Prompt blocks only. Pre-formatted, so your line breaks are kept. 40 characters per line; 1600 is around forty lines, roughly a screen and a half on a phone.", "type": "textarea", "maxLength": 1600, "assist": true },
             {
               "key": "runs",
               "label": "Paragraph text",
@@ -939,7 +948,8 @@
           "maxItems": 120,
           "itemFields": [
             { "key": "type", "label": "Block type", "type": "select", "required": true, "options": [{ "value": "heading", "label": "Heading" }, { "value": "paragraph", "label": "Paragraph" }, { "value": "prompt", "label": "Prompt box" }] },
-            { "key": "text", "label": "Heading or prompt text", "help": "Used by Heading and Prompt blocks. A heading should stay under about 52 characters (two lines); a prompt box is pre-formatted and can be long.", "type": "textarea", "maxLength": 2000, "assist": true },
+            { "key": "heading", "label": "Section heading", "help": "Used by Heading blocks only. 26 characters per line at 360px; 78 is three lines, which is as tall as a section title should get.", "type": "text", "maxLength": 78, "assist": true },
+            { "key": "prompt", "label": "Prompt box text", "help": "Used by Prompt blocks only. Pre-formatted, so your line breaks are kept. 40 characters per line; 1600 is around forty lines, roughly a screen and a half on a phone.", "type": "textarea", "maxLength": 1600, "assist": true },
             {
               "key": "runs",
               "label": "Paragraph text",

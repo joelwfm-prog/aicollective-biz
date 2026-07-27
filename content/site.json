@@ -3,6 +3,7 @@
   "brandName": "The AI Collective",
   "brandNameLead": "The AI",
   "brandNameAccent": "Collective",
+  "contactEmail": "hello@intheresults.com",
   "nav": [
     { "label": "Latest", "href": "latest.html" },
     { "label": "Playbooks", "href": "playbooks.html" },

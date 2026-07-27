@@ -21,9 +21,18 @@
     "secondaryHref": "latest.html",
     "secondaryLabel": "Read the latest",
     "stats": [
-      { "lead": "Made in Saskatchewan", "rest": "· built for Western Canada" },
-      { "lead": "Every Thursday", "rest": "in your inbox" },
-      { "lead": "Zero", "rest": "spam, unsubscribe anytime" }
+      {
+        "lead": "Made in Saskatchewan",
+        "rest": "built for Western Canada"
+      },
+      {
+        "lead": "Every Thursday",
+        "rest": "in your inbox"
+      },
+      {
+        "lead": "Zero",
+        "rest": "spam, unsubscribe anytime"
+      }
     ]
   },
   "ticker": [

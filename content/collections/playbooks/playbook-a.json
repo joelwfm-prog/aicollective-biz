@@ -56,7 +56,7 @@
     },
     {
       "type": "heading",
-      "text": "1. Lock down your NAP everywhere"
+      "heading": "1. Lock down your NAP everywhere"
     },
     {
       "type": "paragraph",
@@ -77,7 +77,7 @@
     },
     {
       "type": "heading",
-      "text": "2. Fully build out your Google Business Profile"
+      "heading": "2. Fully build out your Google Business Profile"
     },
     {
       "type": "paragraph",
@@ -89,7 +89,7 @@
     },
     {
       "type": "heading",
-      "text": "3. Go get real reviews"
+      "heading": "3. Go get real reviews"
     },
     {
       "type": "paragraph",
@@ -101,7 +101,7 @@
     },
     {
       "type": "heading",
-      "text": "4. Publish plain-English FAQ content"
+      "heading": "4. Publish plain-English FAQ content"
     },
     {
       "type": "paragraph",
@@ -113,7 +113,7 @@
     },
     {
       "type": "heading",
-      "text": "5. Add basic schema markup"
+      "heading": "5. Add basic schema markup"
     },
     {
       "type": "paragraph",
@@ -125,7 +125,7 @@
     },
     {
       "type": "prompt",
-      "text": "Write valid JSON-LD schema markup for a LocalBusiness named \"[Your Business Name]\" located at \"[Full Address]\" in [City], Saskatchewan. Include phone number [Phone], website [URL], opening hours [Hours], and price range [$-$$$]. Also generate a matching FAQPage schema block for these three questions and answers: [Q1 + A1], [Q2 + A2], [Q3 + A3]. Output both as separate <script type=\"application/ld+json\"> blocks I can paste into my site's HTML head."
+      "prompt": "Write valid JSON-LD schema markup for a LocalBusiness named \"[Your Business Name]\" located at \"[Full Address]\" in [City], Saskatchewan. Include phone number [Phone], website [URL], opening hours [Hours], and price range [$-$$$]. Also generate a matching FAQPage schema block for these three questions and answers: [Q1 + A1], [Q2 + A2], [Q3 + A3]. Output both as separate <script type=\"application/ld+json\"> blocks I can paste into my site's HTML head."
     },
     {
       "type": "paragraph",
@@ -146,7 +146,7 @@
     },
     {
       "type": "heading",
-      "text": "6. Test yourself in ChatGPT"
+      "heading": "6. Test yourself in ChatGPT"
     },
     {
       "type": "paragraph",
@@ -158,7 +158,7 @@
     },
     {
       "type": "heading",
-      "text": "Local example: a Saskatoon contractor"
+      "heading": "Local example: a Saskatoon contractor"
     },
     {
       "type": "paragraph",
@@ -170,7 +170,7 @@
     },
     {
       "type": "heading",
-      "text": "Watch out for"
+      "heading": "Watch out for"
     },
     {
       "type": "paragraph",
@@ -182,7 +182,7 @@
     },
     {
       "type": "heading",
-      "text": "Do this now"
+      "heading": "Do this now"
     },
     {
       "type": "paragraph",
