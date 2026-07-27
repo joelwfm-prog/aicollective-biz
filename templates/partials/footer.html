@@ -1,0 +1,27 @@
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="brand" aria-label="{{attr site.brandName}} home">
+            <svg class="brand__logo" width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+              <path d="M17 2 4 9.5v15L17 32l13-7.5v-15L17 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M17 9v16M9.5 13.25 17 17l7.5-3.75M9.5 20.75 17 17M24.5 20.75 17 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.65"/>
+              <circle cx="17" cy="17" r="3" fill="currentColor"/>
+            </svg>
+            <span class="brand__name">{{site.brandNameLead}} <span>{{site.brandNameAccent}}</span></span>
+          </a>
+          <p>{{site.footer.blurb}}</p>
+        </div>
+{{#each footerColumns}}
+        <div class="footer__col"><h5>{{heading}}</h5>{{#each links}}<a href="{{attr href}}">{{label}}</a>{{/each}}</div>
+{{/each}}
+      </div>
+      <div class="footer__bottom">
+        <span>{{site.footer.legalLeft}}</span>
+        <span>{{site.footer.legalRight}}</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/newsletter-popup.js" defer></script>

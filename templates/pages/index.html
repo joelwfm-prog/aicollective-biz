@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{{> head}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://aicollective.biz/#org",
+        "name": {{{json site.siteName}}},
+        "url": "https://aicollective.biz/",
+        "description": {{{json seo.organizationDescription}}},
+        "areaServed": ["Saskatchewan", "Western Canada", "Canada"],
+        "location": { "@type": "Place", "address": { "@type": "PostalAddress", "addressRegion": "SK", "addressCountry": "CA" } }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aicollective.biz/#website",
+        "url": "https://aicollective.biz/",
+        "name": {{{json site.siteName}}},
+        "publisher": { "@id": "https://aicollective.biz/#org" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+{{> header}}
+
+  <main id="top">
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__scanlines" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <span class="hero__badge"><span class="dot"></span> {{hero.badge}}</span>
+        <h1 class="hero__title">{{hero.title.lead}} <span class="gradient-text--cool">{{hero.title.accent}}</span></h1>
+        <p class="hero__sub">{{hero.sub}}</p>
+        <div class="hero__actions">
+          <a href="{{attr hero.primaryHref}}" class="btn btn--primary btn--lg">{{hero.primaryLabel}}</a>
+          <a href="{{attr hero.secondaryHref}}" class="btn btn--ghost btn--lg">{{hero.secondaryLabel}}</a>
+        </div>
+        <div class="hero__meta">
+{{#each hero.stats}}
+          <span><strong>{{lead}}</strong> {{rest}}</span>
+{{/each}}
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TICKER ================= -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+{{#each ticker}}
+        <span class="ticker__item"><span class="star">✦</span> {{.}}</span>
+{{/each}}
+{{#each ticker}}
+        <span class="ticker__item"><span class="star">✦</span> {{.}}</span>
+{{/each}}
+      </div>
+    </div>
+
+    <!-- ================= PILLARS ================= -->
+    <section class="section container">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">{{pillarsHead.eyebrow}}</span>
+        <h2 class="section-head__title">{{pillarsHead.title.lead}} <span class="gradient-text--cool">{{pillarsHead.title.accent}}</span></h2>
+        <p class="section-head__desc">{{pillarsHead.description}}</p>
+      </div>
+      <div class="pillars">
+{{#each pillars}}
+        <a class="pillar reveal" href="{{attr href}}" style="--_accent: var(--neon-{{attr accent}})">
+          <div class="pillar__icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{{iconSvg}}}</svg>
+          </div>
+          <h3>{{title}}</h3>
+          <p>{{text}}</p>
+        </a>
+{{/each}}
+      </div>
+    </section>
+
+    <!-- ================= LATEST TEASER ================= -->
+    <section class="section section--tight container">
+      <div class="section-head reveal">
+        <span class="eyebrow">{{teaser.eyebrow}}</span>
+        <h2 class="section-head__title">{{teaser.title}}</h2>
+      </div>
+      <div class="feed">
+        <a href="{{attr teaser.feature.href}}" class="card card--feature reveal">
+          <div class="card__media">
+            <img src="{{attr teaser.feature.image}}" alt="{{attr teaser.feature.imageAlt}}" loading="lazy" />
+          </div>
+          <div class="card__body">
+            <span class="tag tag--{{attr teaser.feature.tagColor}}">{{teaser.feature.tag}}</span>
+            <h3 class="card__title">{{teaser.feature.title}}</h3>
+            <p class="card__excerpt">{{teaser.feature.excerpt}}</p>
+            <div class="card__meta"><span>{{teaser.feature.kind}}</span> · <span>{{teaser.feature.readingTime}}</span> · <span>{{teaser.feature.date}}</span></div>
+          </div>
+        </a>
+        <div class="feed__side">
+{{#each teaser.sideCards}}
+          <a href="{{attr href}}" class="side-card reveal">
+            <span class="side-card__num">{{num}}</span>
+            <div class="side-card__body"><h4>{{title}}</h4><p>{{meta}}</p></div>
+          </a>
+{{/each}}
+        </div>
+      </div>
+      <div style="margin-top:var(--space-8)"><a href="{{attr teaser.moreHref}}" class="btn btn--ghost">{{teaser.moreLabel}}</a></div>
+    </section>
+
+    <!-- ================= AI SOLUTIONS CTA ================= -->
+    <section class="section container">
+      <div class="cta-band reveal">
+        <div class="intake__grid-bg" aria-hidden="true"></div>
+        <div style="position:relative;z-index:1">
+          <span class="eyebrow" style="justify-content:center">{{solutionsCta.eyebrow}}</span>
+          <h2 style="margin-top:var(--space-3)">{{solutionsCta.title}}</h2>
+          <p>{{solutionsCta.description}}</p>
+          <a href="{{attr solutionsCta.buttonHref}}" class="btn btn--primary btn--lg">{{solutionsCta.buttonLabel}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="section container" id="newsletter">
+      <div class="newsletter reveal">
+        <div class="newsletter__grid-bg" aria-hidden="true"></div>
+        <div class="newsletter__inner">
+          <span class="eyebrow">{{newsletter.eyebrow}}</span>
+          <h2>{{newsletter.title.lead}} <span class="gradient-text">{{newsletter.title.accent}}</span></h2>
+          <p>{{newsletter.description}}</p>
+          <form class="newsletter__form" id="nlForm">
+            <label class="sr-only" for="nlEmail">Email address</label>
+            <input class="newsletter__input" id="nlEmail" type="email" placeholder="{{attr newsletter.placeholder}}" required />
+            <button class="btn btn--cyan btn--lg" type="submit">{{newsletter.buttonLabel}}</button>
+          </form>
+          <script>
+          document.getElementById('nlForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            var em = document.getElementById('nlEmail').value.trim();
+            if(!em) return;
+            var done = function(){ document.getElementById('nlForm').reset(); document.getElementById('nlNote').hidden=false; };
+            fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,source:'homepage'})}).then(done).catch(done);
+          });
+          </script>
+          <p id="nlNote" hidden style="margin-top:var(--space-4);font-size:var(--text-sm);color:var(--neon-lime)">{{newsletter.successNote}}</p>
+          <div class="newsletter__perks">
+{{#each newsletter.perks}}
+            <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> {{.}}</span>
+{{/each}}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+{{> footer}}
+</body>
+</html>

@@ -1,0 +1,172 @@
+{
+  "slug": "playbook-b",
+  "meta": {
+    "title": "A month of social posts in one afternoon — The AI Collective Playbooks",
+    "description": "The prompt-and-schedule workflow a Regina café uses to stay consistent — from picking themes to a fully queued month of social posts in one sitting.",
+    "ogTitle": "A month of social posts in one afternoon — The AI Collective Playbooks",
+    "ogDescription": "The prompt-and-schedule workflow a Regina café uses to stay consistent — from idea to a fully queued month."
+  },
+  "eyebrow": "Playbook B · Marketing · ~9 min",
+  "heroTitle": "A month of social posts in one afternoon.",
+  "heroSub": "The prompt-and-schedule workflow a Regina café uses to stay consistent — from idea to a fully queued month.",
+  "title": "A month of social posts in one afternoon",
+  "howTo": {
+    "name": "A month of social posts in one afternoon",
+    "description": "A batch workflow for planning, generating, editing, and scheduling a full month of social media posts in a single sitting.",
+    "steps": [
+      {
+        "name": "Pick your monthly themes",
+        "text": "Choose 3-5 recurring content themes so you're never starting from a blank page."
+      },
+      {
+        "name": "Batch-generate the month with one prompt",
+        "text": "Feed an AI tool your themes and voice in a single detailed prompt to draft 20-30 posts at once."
+      },
+      {
+        "name": "Edit every post for voice",
+        "text": "Read each draft out loud and rewrite anything that doesn't sound like you or your business."
+      },
+      {
+        "name": "Load everything into a scheduler",
+        "text": "Queue the edited posts into a scheduling tool so they publish automatically through the month."
+      },
+      {
+        "name": "Repurpose across platforms",
+        "text": "Adapt the strongest posts into other formats, like turning a caption into a short video script."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "Social media dies the same way every time:"
+        },
+        {
+          "style": "normal",
+          "text": " you post daily for two weeks, get busy, and go quiet for a month. Customers notice the silence more than they notice any single post. The fix isn't posting more often — it's batching the whole month in one sitting so daily posting stops depending on daily willpower. Here's the workflow."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "1. Pick your monthly themes"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Before opening any AI tool, choose 3-5 themes you'll rotate through all month. For most small businesses that's something like: a behind-the-scenes look, a customer question answered, a product or service spotlight, a local/seasonal tie-in, and a plain \"we're open, here's what's new\" post. Themes matter because they give an AI tool structure — \"write me social posts\" produces mush, \"write me posts following these five recurring themes\" produces something usable."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "2. Batch-generate the month with one prompt"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is the actual time-saver: one detailed prompt, one sitting, a month of drafts. Give the AI tool your themes, your voice, your platform, and how many posts you need. Be specific about tone and length or you'll get generic marketing-speak back."
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "text": "You are helping a small [type of business] in [town], Saskatchewan plan a month of Instagram/Facebook posts. Our voice is [e.g. warm, a little cheeky, never corporate]. Write 20 post drafts for the next 4 weeks, rotating evenly through these 5 themes: 1) behind-the-scenes, 2) answering a customer question, 3) spotlight on one product/service, 4) local/seasonal tie-in, 5) simple update or open-hours reminder. For each post give: a short caption (2-4 sentences, no corporate buzzwords), 3-5 relevant hashtags, and a one-line note on what photo or video would pair with it. Number them Week 1 Post 1, Week 1 Post 2, etc."
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Twenty posts, one prompt, roughly the length of a coffee break to generate."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "3. Edit every post for voice"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Do not skip this step — it's what separates \"clearly AI-written\" from \"sounds like us.\" Read each draft out loud. If a line makes you wince or sounds like a chain store wrote it, rewrite it in your own words. This usually takes less time than writing from scratch, because you're editing instead of staring at a blank box."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "4. Load everything into a scheduler"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Once edited, drop all 20 posts into a scheduling tool (most social platforms have a built-in one, and there are inexpensive third-party options) and set them to go out on a rhythm — say, every weekday. This is the step that actually buys back your month: the posting now happens whether or not you remember to log in."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "5. Repurpose across platforms"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Your strongest 4-5 posts from the batch are worth a second life. Turn a caption into a 30-second video script, or stretch a \"behind-the-scenes\" post into a short newsletter blurb. Ask your AI tool directly: \"Turn post #7 into a 30-second video script with a hook in the first 3 seconds.\" One good idea, three formats."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Local example: a Regina café"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Say you run a café in Regina's Cathedral neighbourhood. Historically, social media happened in bursts — a flurry of posts when you remembered, then three weeks of nothing. One Sunday afternoon, using the themes and prompt above, you generated a month of drafts: new pastry spotlights, a \"how we source our beans\" post, a couple of answers to questions you get constantly (\"are you dog-friendly?\"), and two seasonal posts tied to a Regina festival. You spent 40 minutes editing for voice, loaded everything into a free scheduler, and didn't open the app again for three weeks except to reply to comments. The feed looked more consistent than it had in a year, and it cost one afternoon."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Watch out for"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Don't schedule and forget entirely — still check in every few days to reply to comments and messages, since a queued post with no human behind it feels hollow fast. And don't let every post sound identical; vary sentence length and openers so the feed doesn't read like a template got run 20 times."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Do this now"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Block 90 minutes this week — themes, one prompt, an editing pass, and loading the scheduler. That's the whole system, and it resets every month in less time than one good coffee break."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "link",
+          "href": "ai-solutions.html",
+          "text": "Want us to map this out for your business? Tell us your goal →"
+        }
+      ]
+    }
+  ]
+}

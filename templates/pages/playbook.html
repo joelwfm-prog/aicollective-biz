@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{{> head}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "HowTo",
+        "name": {{{json howTo.name}}},
+        "description": {{{json howTo.description}}},
+        "step": [
+{{#each howTo.steps}}
+          { "@type": "HowToStep", "position": {{@number}}, "name": {{{json name}}}, "text": {{{json text}}} }{{#unless @last}},{{/unless}}
+{{/each}}
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": "Playbooks", "item": "https://aicollective.biz/playbooks.html" },
+          { "@type": "ListItem", "position": 3, "name": {{{json title}}}, "item": {{{json canonical}}} }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+{{> header}}
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <a href="playbooks.html">Playbooks</a> <span>/</span> <span aria-current="page">{{title}}</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">{{eyebrow}}</span>
+          <h1 class="page-hero__title">{{heroTitle}}</h1>
+          <p class="page-hero__sub">{{heroSub}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight container">
+      <article class="prose reveal">
+{{#each blocks}}
+{{> proseBlock}}
+{{/each}}
+      </article>
+
+      <div class="reveal" style="margin-top: var(--space-10)">
+        <a href="playbooks.html" class="btn btn--ghost">{{site.playbookBackLabel}}</a>
+      </div>
+    </section>
+
+{{> articleCta}}
+  </main>
+
+  <!-- FOOTER -->
+{{> footer}}
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{{> head}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "name": {{{json seo.name}}},
+        "url": {{{json canonical}}},
+        "about": { "@type": "Organization", "name": {{{json site.siteName}}}, "url": "https://aicollective.biz/", "foundingLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressRegion": "SK", "addressCountry": "CA" } } }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": {{{json crumbLabel}}}, "item": {{{json canonical}}} }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+{{> header}}
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <span aria-current="page">{{crumbLabel}}</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">{{eyebrow}}</span>
+          <h1 class="page-hero__title">{{heroTitle}}</h1>
+          <p class="page-hero__sub">{{heroSub}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section section--tight container">
+      <div class="about-grid">
+        <div class="prose reveal">
+          <h2>{{story.heading}}</h2>
+{{#each story.paragraphs}}
+          <p>{{#each runs}}{{> proseRun}}{{/each}}</p>
+{{/each}}
+        </div>
+        <ul class="value-list reveal">
+{{#each values}}
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><div><strong>{{title}}</strong><p>{{text}}</p></div></li>
+{{/each}}
+        </ul>
+      </div>
+    </section>
+
+    <!-- HAVE A TOOL THAT CAN HELP -->
+    <section class="section section--tight container" id="tools">
+      <div class="cta-band reveal">
+        <div class="intake__grid-bg" aria-hidden="true"></div>
+        <div style="position:relative;z-index:1;text-align:center">
+          <span class="eyebrow">{{toolsCta.eyebrow}}</span>
+          <h2 class="cta-band__title">{{toolsCta.title}}</h2>
+          <p class="cta-band__desc">{{toolsCta.description}}</p>
+          <a href="{{attr toolsCta.buttonHref}}" class="btn btn--primary btn--lg">{{toolsCta.buttonLabel}}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--tight container">
+      <div class="cta-band reveal">
+        <div class="intake__grid-bg" aria-hidden="true"></div>
+        <div style="position:relative;z-index:1">
+          <h2>{{workCta.title}}</h2>
+          <p>{{workCta.description}}</p>
+          <a href="{{attr workCta.buttonHref}}" class="btn btn--primary btn--lg">{{workCta.buttonLabel}}</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+{{> footer}}
+</body>
+</html>

@@ -1,0 +1,206 @@
+{
+  "slug": "playbook-a",
+  "meta": {
+    "title": "Get cited by ChatGPT & AI search — The AI Collective Playbooks",
+    "description": "The exact checklist a Saskatoon contractor used to get named in AI answers in six weeks: consistent NAP, Google Business Profile, real reviews, FAQ content, and basic schema.",
+    "ogTitle": "Get cited by ChatGPT & AI search — The AI Collective Playbooks",
+    "ogDescription": "The checklist a Saskatoon contractor used to get named in AI answers in six weeks. Schema, profiles, reviews, and content."
+  },
+  "eyebrow": "Playbook A · AI Search · ~8 min",
+  "heroTitle": "Get cited by ChatGPT & AI search.",
+  "heroSub": "The exact checklist a Saskatoon contractor used to get named in AI answers within six weeks — schema, profiles, reviews, and content, step by step.",
+  "title": "Get cited by ChatGPT & AI search",
+  "howTo": {
+    "name": "Get cited by ChatGPT & AI search",
+    "description": "A step-by-step checklist for getting a small Saskatchewan business named when customers ask ChatGPT or Google AI for a recommendation.",
+    "steps": [
+      {
+        "name": "Lock down your NAP everywhere",
+        "text": "Make your business Name, Address, and Phone number identical on every directory and profile so AI models trust the facts."
+      },
+      {
+        "name": "Fully build out your Google Business Profile",
+        "text": "Complete every field, pick accurate categories, add real photos, and post updates so AI systems have a rich, current source."
+      },
+      {
+        "name": "Go get real reviews",
+        "text": "Ask happy customers directly and reply to every review, since review volume and sentiment feed AI recommendations."
+      },
+      {
+        "name": "Publish plain-English FAQ content",
+        "text": "Write a page answering the exact questions customers ask, in the same words they'd use, so AI can quote you directly."
+      },
+      {
+        "name": "Add basic schema markup",
+        "text": "Add LocalBusiness and FAQ structured data to your site so machines can read your facts without guessing."
+      },
+      {
+        "name": "Test yourself in ChatGPT",
+        "text": "Ask ChatGPT and Google AI the way a customer would, check what they say about you, and fix anything wrong."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "Here's the new reality:"
+        },
+        {
+          "style": "normal",
+          "text": " your next customer probably isn't scrolling ten blue links. They're asking ChatGPT or Google's AI overview \"who's a good [what you do] in [your town]\" and getting one answer back. Answer Engine Optimization (AEO) is the practice of making sure that answer is you. None of this requires a developer or a budget — it requires an afternoon and some follow-through. Here's the checklist, in order."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "1. Lock down your NAP everywhere"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "normal",
+          "text": "NAP means Name, Address, Phone — and it needs to be "
+        },
+        {
+          "style": "italic",
+          "text": "identical"
+        },
+        {
+          "style": "normal",
+          "text": ", character for character, everywhere your business appears online: Google Business Profile, Facebook, Yelp, industry directories, your own website footer. AI systems cross-reference these listings to decide whether your business is real and where it actually operates. \"123 Main St.\" on one site and \"123 Main Street, Unit A\" on another is enough to make an AI model hedge or skip you entirely. Spend twenty minutes searching your business name and fixing every mismatch you find."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "2. Fully build out your Google Business Profile"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is the single richest source AI tools pull from for local business facts. Fill in every field — hours, service area, categories, attributes — not just the minimum. Upload real photos of your shop, crew, or work. Post an update or offer every couple of weeks so the profile reads as active, not abandoned. An empty or stale profile tells both customers and AI models you might not be reliable."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "3. Go get real reviews"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Review count and tone are a major signal for who gets recommended. Don't wait for reviews to trickle in — ask. After a job, service, or sale, send a direct link and a simple request: \"Mind leaving us a quick review? It really helps.\" Reply to every review, good or rough, since responses show up too. This is the least technical, highest-leverage step on this list."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "4. Publish plain-English FAQ content"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Write a page — or a section on your site — that answers the actual questions customers type or ask out loud: \"Do you do emergency calls?\" \"How much does a basement reno run?\" \"Are you open Saturdays?\" Use the customer's phrasing, not marketing language. AI answer engines favour content that directly matches a question with a direct, quotable answer."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "5. Add basic schema markup"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Schema is a small piece of structured code that tells search and AI systems exactly what your business facts are, instead of making them guess from paragraph text. You don't need to write it by hand. Try this prompt with any AI assistant:"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "text": "Write valid JSON-LD schema markup for a LocalBusiness named \"[Your Business Name]\" located at \"[Full Address]\" in [City], Saskatchewan. Include phone number [Phone], website [URL], opening hours [Hours], and price range [$-$$$]. Also generate a matching FAQPage schema block for these three questions and answers: [Q1 + A1], [Q2 + A2], [Q3 + A3]. Output both as separate <script type=\"application/ld+json\"> blocks I can paste into my site's HTML head."
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "normal",
+          "text": "Paste the result into your site's "
+        },
+        {
+          "style": "code",
+          "text": "<head>"
+        },
+        {
+          "style": "normal",
+          "text": " (or hand it to whoever maintains your site). It's invisible to visitors but very visible to machines."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "6. Test yourself in ChatGPT"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Once the above is live, check your work the way a customer would. Open ChatGPT and ask: \"Who are the best [your trade] in [your town]?\" then follow up with \"Tell me more about [your business name].\" Note what it says. Right facts? Wrong facts? Not mentioned at all? Re-run the same check monthly — AI answers shift as your signals strengthen."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Local example: a Saskatoon contractor"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Say you run a small renovation company in Saskatoon. Before doing any of this, asking ChatGPT \"who's a good contractor in Saskatoon for kitchen renos\" turned up two competitors and not you. Over six weeks, you cleaned up your directory listings, filled out your Google Business Profile properly, asked twenty past clients for reviews (twelve responded), added a five-question FAQ page, and pasted in schema generated with the prompt above. By week six, the same question returned your business by name, with your actual service area and phone number quoted correctly. Nothing here was a trick — it was just making the facts easy for a machine to find and trust."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Watch out for"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Don't fake reviews or stuff your FAQ page with keywords instead of real answers — AI systems and customers both notice when content is padded rather than useful. And don't do this once and walk away: profiles go stale, reviews slow down, and competitors catch up. Treat it as quarterly maintenance, not a one-time project."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Do this now"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pick one step — probably the NAP check or the Google Business Profile — and do it today. The other five matter, but momentum matters more than sequence."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "link",
+          "href": "ai-solutions.html",
+          "text": "Want us to map this out for your business? Tell us your goal →"
+        }
+      ]
+    }
+  ]
+}

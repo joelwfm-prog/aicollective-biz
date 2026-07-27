@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "title": "The AI Collective — Saskatchewan's Source for Practical AI",
+    "description": "The AI Collective is Saskatchewan's source for practical AI news, playbooks, and tools for small and medium business. Made on the Prairies, built for Western Canada. No hype — just what works.",
+    "ogTitle": "The AI Collective — Saskatchewan's Source for Practical AI",
+    "ogDescription": "Practical AI news, playbooks, and tools for Western Canadian small business. No hype. Just what works.",
+    "twitterCard": "summary_large_image"
+  },
+  "seo": {
+    "organizationDescription": "Saskatchewan's source for practical AI news, playbooks, and tools for small and medium business."
+  },
+  "hero": {
+    "badge": "Made in Saskatchewan · Built for Western Canada",
+    "title": {
+      "lead": "The Prairies' source for",
+      "accent": "AI that actually works"
+    },
+    "sub": "No hype, no jargon. Just clear, honest guidance on what AI means for your business — the news that matters, the playbooks to run this week, and a plain-English way to map out AI for your own shop.",
+    "primaryHref": "ai-solutions.html",
+    "primaryLabel": "Tell us what you want AI to do →",
+    "secondaryHref": "latest.html",
+    "secondaryLabel": "Read the latest",
+    "stats": [
+      { "lead": "Made in Saskatchewan", "rest": "· built for Western Canada" },
+      { "lead": "Every Thursday", "rest": "in your inbox" },
+      { "lead": "Zero", "rest": "spam, unsubscribe anytime" }
+    ]
+  },
+  "ticker": [
+    "AI search is eating Google",
+    "Get cited by ChatGPT",
+    "Automate the boring stuff",
+    "Local grants for AI adoption",
+    "Prairie AI meetups"
+  ],
+  "pillarsHead": {
+    "eyebrow": "Why we exist",
+    "title": {
+      "lead": "AI is moving fast. We keep it",
+      "accent": "simple and local."
+    },
+    "description": "Every week the AI world throws out a hundred new tools and ten thousand hot takes. We cut through it for owners and operators right here on the Prairies."
+  },
+  "pillars": [
+    {
+      "href": "latest.html",
+      "accent": "magenta",
+      "icon": "news",
+      "title": "Plain-English news",
+      "text": "What happened, why it matters to your bottom line, and what (if anything) you should do about it. Read it in five minutes."
+    },
+    {
+      "href": "playbooks.html",
+      "accent": "cyan",
+      "icon": "idea",
+      "title": "Run-it-this-week playbooks",
+      "text": "Step-by-step guides built for real small businesses — not enterprise teams with a data department. Copy, paste, done."
+    },
+    {
+      "href": "ai-solutions.html",
+      "accent": "lime",
+      "icon": "idea-plus",
+      "title": "A plan for your business",
+      "text": "Tell us what you wish AI could do, and we'll map a path — using tools that already exist or a custom setup. No cost to ask."
+    }
+  ],
+  "teaser": {
+    "eyebrow": "Latest from the Collective",
+    "title": "This week on the Prairies",
+    "feature": {
+      "href": "playbook-a.html",
+      "image": "assets/feat-search.png",
+      "imageAlt": "Neon illustration of an AI search engine answering a question about a local business",
+      "tag": "AI Search",
+      "tagColor": "magenta",
+      "title": "Nobody's Googling you anymore — they're asking ChatGPT. Here's how to show up.",
+      "excerpt": "AI answer engines are quietly replacing the search results page. We break down exactly how a Saskatoon contractor got named in ChatGPT's answers in six weeks — and the free checklist to do it yourself.",
+      "kind": "Playbook",
+      "readingTime": "8 min read",
+      "date": "Jul 21, 2026"
+    },
+    "sideCards": [
+      {
+        "num": "01",
+        "href": "weekly-2026-07-16.html",
+        "title": "The AI Collective Weekly #1: Nobody's Googling you anymore",
+        "meta": "Newsletter · Jul 16"
+      },
+      {
+        "num": "02",
+        "href": "playbook-c.html",
+        "title": "Automate the 5 tasks eating your Mondays",
+        "meta": "Automation · 6 min"
+      },
+      {
+        "num": "03",
+        "href": "playbook-f.html",
+        "title": "Sask + Canada AI grants: what your business can pursue",
+        "meta": "Funding · 6 min"
+      }
+    ],
+    "moreHref": "latest.html",
+    "moreLabel": "See all articles →"
+  },
+  "solutionsCta": {
+    "eyebrow": "Tell us your goal",
+    "title": "What do you wish AI could do for your business?",
+    "description": "Describe it in your own words — \"I want to stop chasing invoices,\" \"I want to show up when people ask ChatGPT for a plumber.\" We'll map out a solution from tools that already exist, or a custom setup. Free to ask.",
+    "buttonHref": "ai-solutions.html",
+    "buttonLabel": "Map my AI solution →"
+  },
+  "newsletter": {
+    "eyebrow": "The AI Collective Weekly",
+    "title": {
+      "lead": "One email, every Thursday.",
+      "accent": "Zero fluff."
+    },
+    "description": "The AI news that matters to Prairie business, one thing to try this week, and exclusive deals from our partner companies. Free, forever.",
+    "placeholder": "you@yourbusiness.ca",
+    "buttonLabel": "Join free",
+    "successNote": "You're in. Check your inbox to confirm — see you Thursday. ✦",
+    "perks": [
+      "Partner-only deals",
+      "No spam, ever",
+      "Unsubscribe in one click"
+    ]
+  }
+}

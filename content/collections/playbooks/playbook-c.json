@@ -1,0 +1,269 @@
+{
+  "slug": "playbook-c",
+  "meta": {
+    "title": "Automate the 5 tasks eating your Mondays — The AI Collective Playbooks",
+    "description": "Invoicing follow-ups, review requests, appointment reminders, FAQ replies, and weekly reporting — the unglamorous wins that give you your week back.",
+    "ogTitle": "Automate the 5 tasks eating your Mondays — The AI Collective Playbooks",
+    "ogDescription": "Invoicing follow-ups, review requests, appointment reminders — the unglamorous wins that give you your week back."
+  },
+  "eyebrow": "Playbook C · Automation · ~6 min",
+  "heroTitle": "Automate the 5 tasks eating your Mondays.",
+  "heroSub": "Invoicing follow-ups, review requests, appointment reminders — the unglamorous wins that give you your week back.",
+  "title": "Automate the 5 tasks eating your Mondays",
+  "howTo": {
+    "name": "Automate the 5 tasks eating your Mondays",
+    "description": "A tool-agnostic guide to automating invoicing follow-ups, review requests, appointment reminders, FAQ replies, and weekly reporting.",
+    "steps": [
+      {
+        "name": "Automate invoicing follow-ups",
+        "text": "Trigger a polite reminder automatically when an invoice passes its due date instead of chasing payments by memory."
+      },
+      {
+        "name": "Automate review requests",
+        "text": "Trigger a review request automatically after a job or sale closes, while the experience is still fresh."
+      },
+      {
+        "name": "Automate appointment reminders",
+        "text": "Trigger a reminder message a day or two before a booked appointment to cut down no-shows."
+      },
+      {
+        "name": "Automate FAQ email replies",
+        "text": "Use an AI assistant to draft or auto-send answers to the same handful of questions that arrive every week."
+      },
+      {
+        "name": "Automate weekly reporting",
+        "text": "Trigger a scheduled AI summary of the week's sales, bookings, or tickets so you start Monday already informed."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "Every Monday has the same five ghosts:"
+        },
+        {
+          "style": "normal",
+          "text": " the invoice you meant to chase, the review you meant to ask for, the reminder call you meant to make, the same three questions in your inbox, and the report you promise yourself you'll build \"properly\" one day. None of these require a human's judgment — they require a trigger and a template. Here's how to hand each one off, tool-agnostic, no coding required."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "1. Invoicing follow-ups"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "The trigger:"
+        },
+        {
+          "style": "normal",
+          "text": " an invoice crosses its due date unpaid. "
+        },
+        {
+          "style": "bold",
+          "text": "The tool type:"
+        },
+        {
+          "style": "normal",
+          "text": " most invoicing or accounting software (and simple automation platforms that connect apps together) can watch for overdue invoices and fire off a pre-written, polite reminder automatically — no need to remember who owes what. "
+        },
+        {
+          "style": "bold",
+          "text": "The win:"
+        },
+        {
+          "style": "normal",
+          "text": " you stop being the person who has to feel awkward asking for money, because the system asks on a schedule, consistently, before it becomes a real problem."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "2. Review requests"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "The trigger:"
+        },
+        {
+          "style": "normal",
+          "text": " a job wraps up, a sale closes, an appointment finishes. "
+        },
+        {
+          "style": "bold",
+          "text": "The tool type:"
+        },
+        {
+          "style": "normal",
+          "text": " connect your booking or point-of-sale system to an automated message (text or email) that goes out a few hours later asking for a review, timed while the experience is still fresh. "
+        },
+        {
+          "style": "bold",
+          "text": "The win:"
+        },
+        {
+          "style": "normal",
+          "text": " review volume compounds without you personally asking every single customer — which, as covered in our AI search playbook, directly affects whether AI tools recommend you."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "3. Appointment reminders"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "The trigger:"
+        },
+        {
+          "style": "normal",
+          "text": " a booking sits 24-48 hours out. "
+        },
+        {
+          "style": "bold",
+          "text": "The tool type:"
+        },
+        {
+          "style": "normal",
+          "text": " most scheduling tools have built-in automated reminders, or you can wire one together with a simple automation platform that texts or emails a day ahead. "
+        },
+        {
+          "style": "bold",
+          "text": "The win:"
+        },
+        {
+          "style": "normal",
+          "text": " fewer no-shows, and you stop spending Monday morning on reminder calls that a text does better anyway."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "4. FAQ email replies"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "The trigger:"
+        },
+        {
+          "style": "normal",
+          "text": " an email arrives asking one of the same 5-10 questions you answer every week. "
+        },
+        {
+          "style": "bold",
+          "text": "The tool type:"
+        },
+        {
+          "style": "normal",
+          "text": " an AI assistant trained on your actual answers (or even just a well-built prompt you paste into) can draft a reply in your voice in seconds, which you skim and send. "
+        },
+        {
+          "style": "bold",
+          "text": "The win:"
+        },
+        {
+          "style": "normal",
+          "text": " you're editing instead of composing from scratch, which is a fraction of the time. Try this prompt:"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "text": "Here's an email from a customer: [paste email]. Draft a reply in a warm, plain-spoken, no-corporate-jargon tone, the way a small Saskatchewan business owner would answer a customer directly. Keep it under 120 words, answer their actual question first, and end with a simple next step (book a time, call the shop, etc). Here's how we normally answer this type of question, for reference: [paste your usual answer or a few past examples]."
+    },
+    {
+      "type": "heading",
+      "text": "5. Weekly reporting"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "The trigger:"
+        },
+        {
+          "style": "normal",
+          "text": " Sunday night or Monday morning, on a schedule. "
+        },
+        {
+          "style": "bold",
+          "text": "The tool type:"
+        },
+        {
+          "style": "normal",
+          "text": " pull the week's numbers from your sales, booking, or ticketing system and feed them to an AI tool with a standing prompt that summarizes what happened — busiest day, top sellers, anything unusual. "
+        },
+        {
+          "style": "bold",
+          "text": "The win:"
+        },
+        {
+          "style": "normal",
+          "text": " you open Monday already knowing what happened last week instead of digging through last week's mess to find out."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Local example: a Saskatoon retailer"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Say you run a small home goods shop in Saskatoon. Mondays used to start with the same ritual: check who hasn't paid their invoice, remember you meant to ask three customers for reviews, answer the same \"are you open on the long weekend\" email for the fourth time, and try to reconstruct last week's sales from memory. After setting up automated overdue-invoice reminders, a same-day review request text, and a standing Sunday-night AI sales summary, Monday became a normal day — the busywork had already happened automatically over the weekend, and what was left was actual work: talking to customers and running the shop."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Watch out for"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Automating a task doesn't mean removing yourself from it entirely — check in on automated messages periodically to make sure the tone still sounds like you, and always keep a human reviewing anything that touches money or a customer complaint before it goes further. Automation should remove the repetitive grind, not your judgment."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Do this now"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Pick the one task from this list that annoys you most every single week, and set up just that one automation today. Once it's running and you trust it, add the next."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "link",
+          "href": "ai-solutions.html",
+          "text": "Want us to map this out for your business? Tell us your goal →"
+        }
+      ]
+    }
+  ]
+}

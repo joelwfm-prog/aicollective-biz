@@ -1,0 +1,185 @@
+{
+  "slug": "playbook-d",
+  "meta": {
+    "title": "Write your AI ground rules in 30 minutes — The AI Collective Playbooks",
+    "description": "A fill-in-the-blank policy for what AI can and can't touch — client data, customer info, PIPEDA, human review, and disclosure — for small Saskatchewan businesses.",
+    "ogTitle": "Write your AI ground rules in 30 minutes — The AI Collective Playbooks",
+    "ogDescription": "A fill-in-the-blank policy for what AI can and can't touch — client data, customer info, and quality control."
+  },
+  "eyebrow": "Playbook D · Do It Right · ~5 min",
+  "heroTitle": "Write your AI ground rules in 30 minutes.",
+  "heroSub": "A fill-in-the-blank policy for what AI can and can't touch — client data, customer info, and quality control.",
+  "title": "Write your AI ground rules in 30 minutes",
+  "howTo": {
+    "name": "Write your AI ground rules in 30 minutes",
+    "description": "A fill-in-the-blank policy template covering off-limits data, who can use AI for what, human-review rules, and customer disclosure for a small business.",
+    "steps": [
+      {
+        "name": "Decide what data is off-limits",
+        "text": "List what can never be pasted into an AI tool, starting with customer and employee personal information."
+      },
+      {
+        "name": "Decide who can use AI for what",
+        "text": "Name the roles or people allowed to use AI tools and the specific tasks they're allowed to use it for."
+      },
+      {
+        "name": "Set a human-review rule",
+        "text": "Require a person to check any AI output before it reaches a customer, client, or the public."
+      },
+      {
+        "name": "Decide when to disclose AI use",
+        "text": "Set a plain rule for when customers are told AI was involved in creating something."
+      },
+      {
+        "name": "Write it down and share it",
+        "text": "Put the four decisions into a one-page document and walk your team through it."
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "bold",
+          "text": "Most small businesses using AI have no written rule about it at all"
+        },
+        {
+          "style": "normal",
+          "text": " — someone started using ChatGPT for emails, someone else started using it for social posts, and nobody ever decided what's actually okay to paste into it. That gap is where mistakes happen: a staff member pastes a customer's phone number and order history into a chatbot to \"summarize it,\" not realizing that data just left the building. You don't need a lawyer or a 20-page policy to close that gap. You need four decisions and a page to write them on. Thirty minutes, start to finish."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "1. Decide what data is off-limits"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "This is the most important decision on the page. Be specific and err on the side of caution. At minimum, this should include: customer names paired with contact details, financial information, health information, employee personal records, and anything a customer shared with you in confidence. Under Canada's private-sector privacy law (PIPEDA), businesses are expected to protect personal information and only use it for the purpose it was collected for — pasting a customer's details into a public AI tool to \"help write an email\" is not a use they agreed to, and most AI tools' terms allow that pasted data to be stored or used to improve the model. When in doubt, strip out names and identifying details before you paste anything in."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "2. Decide who can use AI for what"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Not every tool needs to be locked down to one person, but write down, plainly, who's allowed to use AI and for which tasks — e.g., \"front desk staff can use AI to draft email replies to general questions; nobody uses AI to draft anything involving a specific customer's personal or financial details.\" This avoids both extremes: total free-for-all, or nobody using a genuinely useful tool out of vague nervousness."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "3. Set a human-review rule"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Every single thing an AI tool produces that a customer, client, or the public will see should be read by a person first. Not skimmed — read. AI tools confidently state things that are wrong, out of date, or off-brand, and a customer won't know or care that \"the AI wrote it.\" The rule is simple: no AI output goes out the door unreviewed."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "4. Decide when to disclose AI use"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "normal",
+          "text": "You don't need to caption every social post \"written by AI,\" but decide now, calmly, rather than in the middle of a complaint later. A reasonable default: disclose when AI played a substantial role in something customers might reasonably assume was fully human — a detailed personalized recommendation, for instance — and don't bother disclosing routine use like drafting a generic social caption. Write your own line for this; there's no universal right answer, but there needs to be "
+        },
+        {
+          "style": "italic",
+          "text": "a"
+        },
+        {
+          "style": "normal",
+          "text": " answer."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Copy this template"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Fill in the blanks and you have a working one-pager:"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "text": "OUR AI GROUND RULES — [Business Name]\n\n1. OFF-LIMITS DATA: We never paste the following into any AI tool: [customer names + contact info, financial details, health info, employee records, anything shared in confidence — add your own]. If we need AI's help with something involving a real customer, we strip out identifying details first.\n\n2. WHO CAN USE AI, FOR WHAT: [Role/person] can use AI tools for [task, e.g. drafting general email replies, social captions, internal notes]. [Role/person] should NOT use AI for [task involving sensitive data or final legal/financial decisions].\n\n3. HUMAN REVIEW: No AI-generated content goes to a customer, client, or the public without being read and approved by [role/person] first. No exceptions.\n\n4. DISCLOSURE: We tell customers AI was involved when [your rule, e.g. \"AI helped generate a personalized recommendation or written estimate\"]. We don't bother disclosing for [your rule, e.g. \"routine social posts or internal drafts\"].\n\nReviewed by: _______  Date: _______  Next review: _______"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "You can also ask an AI tool to help you tailor it:"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "text": "I run a small [type of business] in [town], Saskatchewan with [number] employees. Help me tighten this AI ground rules policy for my specific business: [paste the filled-in template above]. Flag anything that seems too vague to actually follow, and suggest one or two industry-specific data types I should probably add to the off-limits list given what my business handles."
+    },
+    {
+      "type": "heading",
+      "text": "Local example: a Yorkton accounting office"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Say you run a small bookkeeping office in Yorkton. One staffer had started using a free AI chatbot to draft client emails, occasionally pasting in real account numbers to \"make the email specific.\" Nobody had told her not to — it just hadn't come up. After a 30-minute team meeting using this template, the office landed on: no client financial identifiers ever get pasted into any AI tool, general correspondence drafting is fine for any staff member, and the office manager reads anything AI-drafted before it's sent to a client. Nothing dramatic changed day to day — but the gap that could have caused a real problem was closed in half an hour."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Watch out for"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "A policy nobody's read isn't a policy. Walk your team through it out loud, post it somewhere visible, and revisit it every few months as you adopt new tools — this is guidance to get you organized quickly, not a substitute for professional legal advice on privacy obligations specific to your industry."
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Do this now"
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Book 30 minutes with anyone on your team who touches AI tools, fill in the template together, and print one copy for the wall."
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "style": "link",
+          "href": "ai-solutions.html",
+          "text": "Want us to map this out for your business? Tell us your goal →"
+        }
+      ]
+    }
+  ]
+}

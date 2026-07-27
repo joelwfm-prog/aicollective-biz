@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{{> head}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": {{{json seo.serviceName}}},
+        "provider": { "@type": "Organization", "name": {{{json site.siteName}}}, "url": "https://aicollective.biz/" },
+        "areaServed": ["Saskatchewan", "Western Canada", "Canada"],
+        "description": {{{json seo.serviceDescription}}},
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD", "description": {{{json seo.offerDescription}}} }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": {{{json crumbLabel}}}, "item": {{{json canonical}}} }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+{{#each seo.faq}}
+          { "@type": "Question", "name": {{{json question}}}, "acceptedAnswer": { "@type": "Answer", "text": {{{json answer}}} } }{{#unless @last}},{{/unless}}
+{{/each}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+{{> header}}
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span>/</span> <span aria-current="page">{{crumbLabel}}</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">{{eyebrow}}</span>
+          <h1 class="page-hero__title">{{heroTitle}}</h1>
+          <p class="page-hero__sub">{{heroSub}}</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section--tight container">
+      <div class="pillars">
+{{#each steps}}
+        <article class="pillar reveal" style="--_accent: var(--neon-{{attr accent}})">
+          <div class="pillar__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">{{{iconSvg}}}</svg></div>
+          <h3>{{@number}}. {{title}}</h3>
+          <p>{{text}}</p>
+        </article>
+{{/each}}
+      </div>
+    </section>
+
+    <!-- INTAKE FORM -->
+    <section class="section section--tight container" id="intake">
+      <div class="intake reveal">
+        <div class="intake__grid-bg" aria-hidden="true"></div>
+        <div class="intake__inner">
+          <span class="eyebrow">{{intake.eyebrow}}</span>
+          <h2 style="font-size:var(--text-xl);margin-top:var(--space-3)">{{intake.title}}</h2>
+          <p style="color:var(--color-text-muted);margin-top:var(--space-3);max-width:60ch">{{intake.description}}</p>
+
+          <form class="intake__form" id="intakeForm" novalidate>
+            <div class="field">
+              <label for="describe">{{intake.describeLabel}} <span class="req">*</span></label>
+              <textarea class="textarea" id="describe" name="describe" placeholder="{{attr intake.describePlaceholder}}" required></textarea>
+              <span class="hint">{{intake.describeHint}}</span>
+            </div>
+            <div class="field__row">
+              <div class="field">
+                <label for="name">{{intake.nameLabel}}</label>
+                <input class="input" id="name" name="name" type="text" placeholder="{{attr intake.namePlaceholder}}" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="business">{{intake.businessLabel}}</label>
+                <input class="input" id="business" name="business" type="text" placeholder="{{attr intake.businessPlaceholder}}" autocomplete="organization" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">{{intake.emailLabel}} <span class="req">*</span></label>
+              <input class="input" id="email" name="email" type="email" placeholder="{{attr intake.emailPlaceholder}}" autocomplete="email" required />
+              <span class="hint">{{intake.emailHint}}</span>
+            </div>
+            <label class="consent">
+              <input type="checkbox" id="consent" name="consent" />
+              <span>{{intake.consentLabel}}</span>
+            </label>
+            <div class="intake__submit">
+              <button class="btn btn--primary btn--lg" type="submit" id="intakeSubmit">{{intake.submitLabel}}</button>
+              <span class="intake__status" id="intakeStatus" role="status" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section--tight container">
+      <div class="section-head reveal">
+        <span class="eyebrow">{{faq.eyebrow}}</span>
+        <h2 class="section-head__title">{{faq.title}}</h2>
+      </div>
+      <div class="guide-list">
+{{#each faq.items}}
+        <div class="guide reveal"><h3>{{question}}</h3><p>{{answer}}</p></div>
+{{/each}}
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+{{> footer}}
+  <script>
+    (function () {
+      const API = '__PORT_8000__'.startsWith('__') ? 'http://localhost:8000' : '__PORT_8000__';
+      const form = document.getElementById('intakeForm');
+      const statusEl = document.getElementById('intakeStatus');
+      const btn = document.getElementById('intakeSubmit');
+      if (!form) return;
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const describe = form.describe.value.trim();
+        const email = form.email.value.trim();
+        if (describe.length < 10) { setStatus('err', 'Please describe what you want AI to do (a sentence or more).'); form.describe.focus(); return; }
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { setStatus('err', 'Please enter a valid email so we can reply.'); form.email.focus(); return; }
+        btn.disabled = true; setStatus('loading', 'Sending your request…');
+        try {
+          const res = await fetch(`${API}/api/intake`, {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: form.name.value.trim(), email, business: form.business.value.trim(),
+              describe, consent: form.consent.checked,
+            }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && data.ok) {
+            form.reset();
+            setStatus('ok', "Got it — thanks! We'll map out a solution and email you back soon. ✦");
+          } else {
+            setStatus('err', data.error || 'Something went wrong. Please try again in a moment.');
+          }
+        } catch (err) {
+          // No live backend yet (e.g. static hosting): capture locally and guide to email.
+          const subject = encodeURIComponent('AI request from ' + (form.name.value.trim() || email));
+          const body = encodeURIComponent('What I want AI to do:\n' + describe + '\n\nBusiness: ' + form.business.value.trim() + '\nEmail: ' + email);
+          setStatus('ok', "Thanks! We're just finishing our contact setup — please email us at intheresults.com and we'll map out a solution.");
+          window.location.href = 'mailto:hello@intheresults.com?subject=' + subject + '&body=' + body;
+        } finally { btn.disabled = false; }
+      });
+      function setStatus(state, msg) { statusEl.dataset.state = state; statusEl.textContent = msg; }
+    })();
+  </script>
+</body>
+</html>

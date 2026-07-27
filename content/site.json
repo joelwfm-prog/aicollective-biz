@@ -1,0 +1,57 @@
+{
+  "siteName": "The AI Collective",
+  "brandName": "The AI Collective",
+  "brandNameLead": "The AI",
+  "brandNameAccent": "Collective",
+  "nav": [
+    { "label": "Latest", "href": "latest.html" },
+    { "label": "Playbooks", "href": "playbooks.html" },
+    { "label": "AI Solutions", "href": "ai-solutions.html" },
+    { "label": "About", "href": "about.html" }
+  ],
+  "headerCta": {
+    "label": "Tell us your goal",
+    "href": "ai-solutions.html",
+    "hrefOnOwnPage": "#intake"
+  },
+  "articleCta": {
+    "eyebrow": "The AI Collective Weekly",
+    "title": "Get this in your inbox every Thursday.",
+    "description": "One plain-English AI email for Prairie business. No fluff, no spam, unsubscribe in one click.",
+    "buttonLabel": "Join the free weekly →",
+    "buttonHref": "index.html#newsletter"
+  },
+  "playbookBackLabel": "← All playbooks",
+  "newsletterBackLabel": "← All issues & articles",
+  "footer": {
+    "blurb": "Saskatchewan's source for practical AI. Made on the Prairies, built for Western Canada.",
+    "columns": [
+      {
+        "heading": "Read",
+        "links": [
+          { "label": "Latest", "href": "latest.html" },
+          { "label": "Playbooks", "href": "playbooks.html" },
+          { "label": "AI Solutions", "href": "ai-solutions.html" }
+        ]
+      },
+      {
+        "heading": "Collective",
+        "links": [
+          { "label": "About", "href": "about.html" },
+          { "label": "Work with us", "href": "ai-solutions.html" },
+          { "label": "Newsletter", "href": "index.html#newsletter" }
+        ]
+      },
+      {
+        "heading": "Get involved",
+        "links": [
+          { "label": "Tell us your goal", "href": "ai-solutions.html" },
+          { "label": "Submit a tool", "href": "about.html#tools" },
+          { "label": "Newsletter", "href": "index.html#newsletter" }
+        ]
+      }
+    ],
+    "legalLeft": "© 2026 The AI Collective · aicollective.biz · Saskatchewan, Canada",
+    "legalRight": "Privacy · Unsubscribe · CASL compliant"
+  }
+}
