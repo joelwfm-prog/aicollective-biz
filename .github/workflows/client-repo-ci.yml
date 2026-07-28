@@ -1,0 +1,44 @@
+name: Content CI
+
+on:
+  push:
+    branches: [master, draft]
+  pull_request:
+    branches: [master, draft]
+
+# Vyb6's publish flow reads this check before fast-forwarding master.
+# It must validate content and prove the site builds — and must NOT fail on
+# drift between committed HTML and freshly built HTML, because Vyb6 commits
+# content JSON only and the deploy target rebuilds on the server.
+jobs:
+  validate:
+    name: Validate content and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate content against templates
+        run: npm run validate
+
+      - name: Build site
+        run: npm run build
+
+      - name: Report build drift (informational only)
+        if: always()
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::notice::Committed HTML differs from freshly built output."
+            echo "This is expected — Vyb6 commits content JSON and the deploy"
+            echo "target rebuilds. Listing changed files for visibility:"
+            git status --porcelain
+          else
+            echo "No drift between committed HTML and built output."
+          fi
