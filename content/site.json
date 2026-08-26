@@ -7,6 +7,7 @@
   "nav": [
     { "label": "Latest", "href": "latest.html" },
     { "label": "Playbooks", "href": "playbooks.html" },
+    { "label": "Podcast", "href": "podcast.html" },
     { "label": "AI Solutions", "href": "ai-solutions.html" },
     { "label": "About", "href": "about.html" }
   ],
@@ -22,6 +23,13 @@
     "buttonLabel": "Join the free weekly →",
     "buttonHref": "index.html#newsletter"
   },
+  "podcast": {
+    "name": "Behind the Prompt",
+    "host": "Hailey Schwabe",
+    "sponsor": "Results AI",
+    "homeUrl": "https://behindtheprompt.fm",
+    "chambersAnchor": "https://behindtheprompt.fm/#partners"
+  },
   "playbookBackLabel": "← All playbooks",
   "newsletterBackLabel": "← All issues & articles",
   "footer": {
@@ -32,6 +40,7 @@
         "links": [
           { "label": "Latest", "href": "latest.html" },
           { "label": "Playbooks", "href": "playbooks.html" },
+          { "label": "Podcast", "href": "podcast.html" },
           { "label": "AI Solutions", "href": "ai-solutions.html" }
         ]
       },

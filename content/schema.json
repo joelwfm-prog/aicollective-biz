@@ -199,6 +199,19 @@
             "maxLength": 60
           }
         ]
+      },
+      {
+        "key": "podcast",
+        "label": "Podcast (Behind the Prompt)",
+        "help": "Facts about the Behind the Prompt podcast, surfaced on the /podcast section. Editing here changes the host credit strip and the outbound links to the podcast home.",
+        "type": "group",
+        "fields": [
+          { "key": "name", "label": "Podcast name", "type": "text", "required": true, "maxLength": 60 },
+          { "key": "host", "label": "Host name", "help": "Shown in the host credit strip on the podcast index.", "type": "text", "required": true, "maxLength": 60 },
+          { "key": "sponsor", "label": "Sponsor name", "type": "text", "required": true, "maxLength": 60 },
+          { "key": "homeUrl", "label": "Podcast home URL", "help": "The Behind the Prompt landing site. Always behindtheprompt.fm.", "type": "text", "required": true, "maxLength": 200 },
+          { "key": "chambersAnchor", "label": "Chamber partners anchor", "help": "Deep link to the partner-chambers section on the podcast home.", "type": "text", "required": true, "maxLength": 200 }
+        ]
       }
     ]
   },
@@ -608,6 +621,41 @@
     },
 
     {
+      "key": "podcast",
+      "label": "Podcast index",
+      "file": "pages/podcast.json",
+      "template": "podcast",
+      "fields": [
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        { "key": "crumbLabel", "label": "Breadcrumb label", "type": "text", "required": true, "maxLength": 48 },
+        { "key": "eyebrow", "label": "Small label above the headline", "type": "text", "required": true, "maxLength": 56 },
+        { "key": "heroTitle", "label": "Page headline", "type": "text", "required": true, "maxLength": 70 },
+        { "key": "heroSub", "label": "Page sub-heading", "type": "textarea", "required": true, "maxLength": 260, "assist": true },
+        {
+          "key": "externalLink",
+          "label": "Subscribe link",
+          "help": "Points visitors to the podcast home for the audio feeds.",
+          "type": "group",
+          "fields": [
+            { "key": "label", "label": "Link text", "type": "text", "required": true, "maxLength": 60 },
+            { "key": "href", "label": "Link URL", "type": "text", "required": true, "maxLength": 200 }
+          ]
+        }
+      ]
+    },
+
+    {
       "key": "ai-solutions",
       "label": "AI Solutions",
       "file": "pages/ai-solutions.json",
@@ -682,6 +730,13 @@
             { "key": "namePlaceholder", "label": "Name field placeholder", "help": "The input holds about 28 characters.", "type": "text", "required": true, "maxLength": 28 },
             { "key": "businessLabel", "label": "Business field label", "type": "text", "required": true, "maxLength": 35 },
             { "key": "businessPlaceholder", "label": "Business field placeholder", "type": "text", "required": true, "maxLength": 28 },
+            { "key": "chamberLabel", "label": "Chamber question label", "help": "Asks whether the business is a chamber of commerce member.", "type": "text", "required": true, "maxLength": 90 },
+            { "key": "chamberHint", "label": "Chamber question hint", "type": "text", "required": true, "maxLength": 90 },
+            { "key": "chamberYesLabel", "label": "Chamber option: Yes", "type": "text", "required": true, "maxLength": 24 },
+            { "key": "chamberNoLabel", "label": "Chamber option: No", "type": "text", "required": true, "maxLength": 24 },
+            { "key": "chamberUnsureLabel", "label": "Chamber option: Not sure", "type": "text", "required": true, "maxLength": 24 },
+            { "key": "chamberNameLabel", "label": "Chamber name field label", "help": "Shown only when the visitor picks Yes.", "type": "text", "required": true, "maxLength": 40 },
+            { "key": "chamberNamePlaceholder", "label": "Chamber name field placeholder", "type": "text", "required": true, "maxLength": 40 },
             { "key": "emailLabel", "label": "Email field label", "type": "text", "required": true, "maxLength": 35 },
             { "key": "emailPlaceholder", "label": "Email field placeholder", "type": "text", "required": true, "maxLength": 28 },
             { "key": "emailHint", "label": "Email field hint", "type": "text", "required": true, "maxLength": 80 },
@@ -950,6 +1005,128 @@
             { "key": "type", "label": "Block type", "type": "select", "required": true, "options": [{ "value": "heading", "label": "Heading" }, { "value": "paragraph", "label": "Paragraph" }, { "value": "prompt", "label": "Prompt box" }] },
             { "key": "heading", "label": "Section heading", "help": "Used by Heading blocks only. 26 characters per line at 360px; 78 is three lines, which is as tall as a section title should get.", "type": "text", "maxLength": 78, "assist": true },
             { "key": "prompt", "label": "Prompt box text", "help": "Used by Prompt blocks only. Pre-formatted, so your line breaks are kept. 40 characters per line; 1600 is around forty lines, roughly a screen and a half on a phone.", "type": "textarea", "maxLength": 1600, "assist": true },
+            {
+              "key": "runs",
+              "label": "Paragraph text",
+              "help": "Used by Paragraph blocks. Split into fragments only when part of the sentence needs to be bold, italic, code or a link.",
+              "type": "list",
+              "maxItems": 30,
+              "itemFields": [
+                { "key": "text", "label": "Fragment text", "type": "textarea", "required": true, "maxLength": 800, "assist": true },
+                { "key": "style", "label": "Emphasis", "type": "select", "options": [{ "value": "normal", "label": "Normal" }, { "value": "bold", "label": "Bold" }, { "value": "italic", "label": "Italic" }, { "value": "code", "label": "Code" }, { "value": "link", "label": "Link" }] },
+                { "key": "href", "label": "Link target", "help": "Only used when the emphasis is set to Link.", "type": "text", "maxLength": 200 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "key": "podcast",
+      "label": "Podcast episodes",
+      "folder": "collections/podcast",
+      "template": "episode",
+      "slugFrom": "slug",
+      "maxItems": 60,
+      "sortBy": "slug",
+      "fields": [
+        {
+          "key": "slug",
+          "label": "Web address",
+          "help": "Becomes the episode filename, e.g. \"ep-01-invisible-to-chatgpt\" publishes at /podcast/ep-01-invisible-to-chatgpt.html. Changing this breaks existing links.",
+          "type": "text",
+          "required": true,
+          "maxLength": 60
+        },
+        { "key": "episodeNumber", "label": "Episode number", "help": "Whole number as text, e.g. \"1\". Controls the order episodes appear on the podcast index (lowest first).", "type": "text", "required": true, "maxLength": 4 },
+        { "key": "releaseDate", "label": "Release date", "help": "YYYY-MM-DD. Used for the sitemap and the episode date line.", "type": "date", "required": true, "maxLength": 10 },
+        { "key": "duration", "label": "Duration", "help": "e.g. \"42 min\". Use \"TBD\" for episodes that have not aired yet.", "type": "text", "required": true, "maxLength": 12 },
+        { "key": "status", "label": "Episode status", "type": "select", "options": [{ "value": "upcoming", "label": "Upcoming" }, { "value": "live", "label": "Live" }, { "value": "archived", "label": "Archived" }] },
+        { "key": "guestStatus", "label": "Guest status", "type": "select", "required": true, "options": [{ "value": "confirmed", "label": "Confirmed" }, { "value": "in-conversation", "label": "In conversation" }, { "value": "in-outreach", "label": "In outreach" }] },
+        {
+          "key": "meta",
+          "label": "Search & social",
+          "type": "group",
+          "fields": [
+            { "key": "title", "label": "Browser tab & Google title", "help": "Aim for 50-60 characters.", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "description", "label": "Google description", "help": "Aim for 150-160 characters.", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "ogTitle", "label": "Social share title", "type": "text", "required": true, "maxLength": 75 },
+            { "key": "ogDescription", "label": "Social share description", "type": "textarea", "required": true, "maxLength": 200, "assist": true },
+            { "key": "twitterCard", "label": "Twitter card style", "type": "select", "readOnly": true, "options": [{ "value": "summary_large_image", "label": "Large image" }, { "value": "summary", "label": "Small image" }] }
+          ]
+        },
+        { "key": "eyebrow", "label": "Small label above the headline", "type": "text", "required": true, "maxLength": 60 },
+        { "key": "heroTitle", "label": "Headline", "type": "text", "required": true, "maxLength": 90 },
+        { "key": "heroSub", "label": "Sub-heading", "type": "textarea", "required": true, "maxLength": 400, "assist": true },
+        { "key": "title", "label": "Breadcrumb / card title", "type": "text", "required": true, "maxLength": 90 },
+        { "key": "topicNote", "label": "Topic note", "help": "Optional short note about the episode topic, shown when no guest is defined yet.", "type": "textarea", "maxLength": 240, "assist": true },
+        {
+          "key": "guest",
+          "label": "Guest",
+          "help": "Leave the whole group empty for episodes that are still in outreach.",
+          "type": "group",
+          "fields": [
+            { "key": "name", "label": "Guest name", "type": "text", "maxLength": 60 },
+            { "key": "role", "label": "Guest role", "type": "text", "maxLength": 90 },
+            { "key": "bio", "label": "Guest bio", "type": "textarea", "maxLength": 300, "assist": true },
+            { "key": "linkedin", "label": "Guest LinkedIn URL", "type": "text", "maxLength": 200 }
+          ]
+        },
+        {
+          "key": "embed",
+          "label": "Player links",
+          "help": "Optional. Full https:// links to the episode on each platform.",
+          "type": "group",
+          "fields": [
+            { "key": "spotify", "label": "Spotify URL", "type": "text", "maxLength": 500 },
+            { "key": "apple", "label": "Apple Podcasts URL", "type": "text", "maxLength": 500 },
+            { "key": "youtube", "label": "YouTube URL", "type": "text", "maxLength": 500 }
+          ]
+        },
+        {
+          "key": "chapters",
+          "label": "Chapters",
+          "help": "Optional timestamped chapters. Leave empty for episodes that have not aired.",
+          "type": "list",
+          "minItems": 0,
+          "maxItems": 20,
+          "itemFields": [
+            { "key": "time", "label": "Timestamp", "help": "e.g. \"04:12\".", "type": "text", "required": true, "maxLength": 8 },
+            { "key": "label", "label": "Chapter label", "type": "text", "required": true, "maxLength": 90 }
+          ]
+        },
+        {
+          "key": "keyTakeaways",
+          "label": "Key takeaways",
+          "help": "Optional bullet list. Leave empty for episodes that have not aired.",
+          "type": "list",
+          "minItems": 0,
+          "maxItems": 8,
+          "itemFields": [
+            { "key": "", "label": "Takeaway", "type": "text", "required": true, "maxLength": 200 }
+          ]
+        },
+        {
+          "key": "chamberCta",
+          "label": "Chamber call-to-action",
+          "type": "group",
+          "fields": [
+            { "key": "text", "label": "CTA text", "type": "textarea", "required": true, "maxLength": 240, "assist": true },
+            { "key": "href", "label": "CTA link", "type": "text", "required": true, "maxLength": 300 }
+          ]
+        },
+        {
+          "key": "blocks",
+          "label": "Show notes body",
+          "help": "The show notes, one block at a time. May be empty for episodes that have not aired. Use Heading for a section title, Paragraph for body copy, and Prompt for a copy-and-paste box.",
+          "type": "list",
+          "minItems": 0,
+          "maxItems": 120,
+          "itemFields": [
+            { "key": "type", "label": "Block type", "type": "select", "required": true, "options": [{ "value": "heading", "label": "Heading" }, { "value": "paragraph", "label": "Paragraph" }, { "value": "prompt", "label": "Prompt box" }] },
+            { "key": "heading", "label": "Section heading", "help": "Used by Heading blocks only.", "type": "text", "maxLength": 78, "assist": true },
+            { "key": "prompt", "label": "Prompt box text", "help": "Used by Prompt blocks only. Pre-formatted, so your line breaks are kept.", "type": "textarea", "maxLength": 1600, "assist": true },
             {
               "key": "runs",
               "label": "Paragraph text",

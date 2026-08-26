@@ -110,6 +110,7 @@ const PAGES = [
   { out: 'index.html', template: 'index', content: 'index', navKey: null, ogType: 'website' },
   { out: 'latest.html', template: 'latest', content: 'latest', navKey: 'latest.html', ogType: 'website' },
   { out: 'playbooks.html', template: 'playbooks', content: 'playbooks', navKey: 'playbooks.html', ogType: 'website' },
+  { out: 'podcast.html', template: 'podcast', content: 'podcast', navKey: 'podcast.html', ogType: 'website' },
   { out: 'ai-solutions.html', template: 'ai-solutions', content: 'ai-solutions', navKey: 'ai-solutions.html', ogType: 'website' },
   { out: 'about.html', template: 'about', content: 'about', navKey: 'about.html', ogType: 'website' },
 ];
@@ -117,18 +118,36 @@ const PAGES = [
 const COLLECTIONS = [
   { key: 'playbooks', template: 'playbook', navKey: 'playbooks.html', ogType: 'article' },
   { key: 'newsletter', template: 'newsletter', navKey: 'latest.html', ogType: 'article' },
+  { key: 'podcast', template: 'episode', navKey: 'podcast.html', ogType: 'article', subdir: 'podcast' },
 ];
 
 // The homepage links to its own newsletter anchor as "#newsletter" rather than
 // "index.html#newsletter"; every other page keeps the fully qualified href.
-function resolveHref(href, outFile) {
-  if (!href || outFile !== 'index.html') return href;
-  const [file, hash] = href.split('#');
-  return file === outFile && hash ? `#${hash}` : href;
+// Pages that live in a subdirectory (e.g. podcast/ep-01.html) can't use the
+// root-relative hrefs the rest of the site shares, so their internal links are
+// rewritten to site-absolute form (a leading slash).
+function inSubdir(outFile) {
+  return outFile.includes('/');
 }
 
-function buildNav(site, navKey) {
-  return site.nav.map((item) => ({ ...item, current: item.href === navKey }));
+function absolutize(href, outFile) {
+  if (!href || !inSubdir(outFile)) return href;
+  // Leave anchors, absolute URLs, and already-absolute paths untouched.
+  if (/^(https?:|mailto:|#|\/)/.test(href)) return href;
+  return `/${href}`;
+}
+
+function resolveHref(href, outFile) {
+  if (!href) return href;
+  if (outFile === 'index.html') {
+    const [file, hash] = href.split('#');
+    return file === outFile && hash ? `#${hash}` : href;
+  }
+  return absolutize(href, outFile);
+}
+
+function buildNav(site, navKey, outFile) {
+  return site.nav.map((item) => ({ ...item, href: absolutize(item.href, outFile), current: item.href === navKey }));
 }
 
 function buildFooterColumns(site, outFile) {
@@ -146,7 +165,7 @@ function baseScope(site, page, outFile, navKey, ogType) {
   const canonical = pageUrl(outFile);
   return {
     site,
-    nav: buildNav(site, navKey),
+    nav: buildNav(site, navKey, outFile),
     footerColumns: buildFooterColumns(site, outFile),
     headerCtaHref: resolveHref(
       outFile === 'ai-solutions.html' ? site.headerCta.hrefOnOwnPage : site.headerCta.href,
@@ -174,9 +193,24 @@ function main() {
   const site = Object.assign({}, raw, { contactDomain: raw.contactEmail.split('@').pop() });
   const written = [];
 
+  // Episodes are listed ascending on the podcast index. loadCollection already
+  // sorts alphabetically by filename, and the ep-NN zero-padded slugs make that
+  // the same as ascending episode order, so no reversal is needed here.
+  const episodes = loadCollection('podcast').map((ep) => ({
+    episodeNumber: ep.episodeNumber,
+    releaseDate: ep.releaseDate,
+    duration: ep.duration,
+    status: ep.status,
+    guestStatus: ep.guestStatus,
+    heroTitle: ep.heroTitle,
+    heroSub: ep.heroSub,
+    href: `podcast/${ep.slug}.html`,
+  }));
+
   for (const page of PAGES) {
     const data = resolveIcons(decorateRunsDeep(readJson(path.join(CONTENT, 'pages', `${page.content}.json`))));
     const scope = Object.assign({}, data, baseScope(site, data, page.out, page.navKey, page.ogType));
+    if (page.template === 'podcast') scope.episodes = episodes;
     const html = render(loadTemplate(page.template), scope, partials);
     fs.writeFileSync(path.join(ROOT, page.out), html);
     written.push(page.out);
@@ -184,13 +218,17 @@ function main() {
 
   for (const collection of COLLECTIONS) {
     for (const item of loadCollection(collection.key)) {
-      const out = `${item.slug}.html`;
-      const scope = Object.assign({}, item, baseScope(site, item, out, collection.navKey, collection.ogType), {
+      // Collections may nest under a subdirectory (e.g. podcast/ep-01.html).
+      // outFile keeps the subdir so the canonical URL and sitemap stay correct.
+      const outFile = collection.subdir ? `${collection.subdir}/${item.slug}.html` : `${item.slug}.html`;
+      const scope = Object.assign({}, item, baseScope(site, item, outFile, collection.navKey, collection.ogType), {
         blocks: decorateBlocks(item.blocks),
       });
       const html = render(loadTemplate(collection.template), scope, partials);
-      fs.writeFileSync(path.join(ROOT, out), html);
-      written.push(out);
+      const destPath = path.join(ROOT, outFile);
+      fs.mkdirSync(path.dirname(destPath), { recursive: true });
+      fs.writeFileSync(destPath, html);
+      written.push(outFile);
     }
   }
 

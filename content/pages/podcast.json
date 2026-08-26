@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Behind the Prompt — The Practical AI Podcast | The AI Collective",
+    "description": "Behind the Prompt is the practical-AI podcast for Prairie small businesses. Plain-English conversations about using AI to get real work done, hosted by Hailey Schwabe.",
+    "ogTitle": "Behind the Prompt — The Practical AI Podcast",
+    "ogDescription": "Plain-English conversations about using AI to get real work done, for Prairie small businesses.",
+    "twitterCard": "summary_large_image"
+  },
+  "crumbLabel": "Podcast",
+  "eyebrow": "Behind the Prompt",
+  "heroTitle": "The practical AI podcast for Prairie business.",
+  "heroSub": "Plain-English conversations about using AI to get real work done — no hype, no jargon. New episodes drop through the season, featuring builders, operators, and researchers with Saskatchewan roots.",
+  "externalLink": {
+    "label": "Subscribe on Spotify, Apple & YouTube →",
+    "href": "https://behindtheprompt.fm"
+  }
+}

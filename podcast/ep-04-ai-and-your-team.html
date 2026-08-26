@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ep 04 — AI and Your Team | Behind the Prompt</title>
+  <meta name="description" content="New tools fail when people feel replaced or confused. We talk about introducing AI to a small team, setting simple ground rules, and getting buy-in instead o..." />
+  <link rel="canonical" href="https://aicollective.biz/podcast/ep-04-ai-and-your-team.html" />
+  <meta property="og:title" content="Behind the Prompt Ep 04 — AI and Your Team" />
+  <meta property="og:description" content="How to introduce AI to a small team and get buy-in instead of pushback." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aicollective.biz/podcast/ep-04-ai-and-your-team.html" />
+  <meta property="og:site_name" content="The AI Collective" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "PodcastEpisode",
+        "name": "AI and your team: rolling it out without the pushback",
+        "episodeNumber": "4",
+        "datePublished": "2026-10-20",
+        "description": "New tools fail when people feel replaced or confused. We talk about introducing AI to a small team, setting simple ground rules, and getting buy-in instead of quiet resistance.",
+        "url": "https://aicollective.biz/podcast/ep-04-ai-and-your-team.html",
+        "partOfSeries": { "@type": "PodcastSeries", "name": "Behind the Prompt", "url": "https://behindtheprompt.fm" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": "Behind the Prompt", "item": "https://aicollective.biz/podcast.html" },
+          { "@type": "ListItem", "position": 3, "name": "AI and Your Team", "item": "https://aicollective.biz/podcast/ep-04-ai-and-your-team.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/index.html" class="brand" aria-label="The AI Collective home">
+        <svg class="brand__logo" width="34" height="34" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+          <path d="M17 2 4 9.5v15L17 32l13-7.5v-15L17 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M17 9v16M9.5 13.25 17 17l7.5-3.75M9.5 20.75 17 17M24.5 20.75 17 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.65"/>
+          <circle cx="17" cy="17" r="3" fill="currentColor"/>
+        </svg>
+        <span class="brand__name">The AI <span>Collective</span></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <div class="nav__links">
+          <a class="nav__link" href="/latest.html">Latest</a>
+          <a class="nav__link" href="/playbooks.html">Playbooks</a>
+          <a class="nav__link" href="/podcast.html" aria-current="page">Podcast</a>
+          <a class="nav__link" href="/ai-solutions.html">AI Solutions</a>
+          <a class="nav__link" href="/about.html">About</a>
+        </div>
+        <div class="header__actions">
+          <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode"></button>
+          <a href="/ai-solutions.html" class="btn btn--primary">Tell us your goal</a>
+          <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__head">
+      <span class="brand__name">The AI <span style="color:var(--neon-cyan)">Collective</span></span>
+      <button class="theme-toggle" id="mobileClose" aria-label="Close menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="mobile-nav__links">
+      <a href="/latest.html">Latest</a>
+      <a href="/playbooks.html">Playbooks</a>
+      <a href="/podcast.html">Podcast</a>
+      <a href="/ai-solutions.html">AI Solutions</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a> <span>/</span> <a href="/podcast.html">Behind the Prompt</a> <span>/</span> <span aria-current="page">AI and Your Team</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">Episode 04 · People &amp; Change</span>
+          <h1 class="page-hero__title">AI and your team: rolling it out without the pushback</h1>
+          <p class="page-hero__sub">New tools fail when people feel replaced or confused. We talk about introducing AI to a small team, setting simple ground rules, and getting buy-in instead of quiet resistance.</p>
+          <div class="ep-meta">
+            <span class="ep-meta__item">Episode 4</span>
+            <span class="ep-meta__item">2026-10-20</span>
+            <span class="ep-meta__item">TBD</span>
+            <span class="ep-meta__item ep-meta__status" data-status="upcoming">upcoming</span>
+            <span class="guest-pill guest-pill--in-outreach">in-outreach</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight container">
+
+      <!-- TOPIC NOTE (no guest defined yet) -->
+      <div class="ep-note reveal">
+        <span class="eyebrow">This episode</span>
+        <p>This episode's topic is locked; the guest search is underway. Have someone we should talk to? Email joel@intheresults.com.</p>
+      </div>
+
+
+
+
+
+      <div class="ep-chamber reveal">
+        <p>Members of partner chambers get a member-rate AI Visibility Audit and a monthly white-label briefing.</p>
+        <a class="btn btn--ghost" href="https://behindtheprompt.fm/#partners" rel="noopener" target="_blank">See partner chambers →</a>
+      </div>
+
+      <div class="reveal" style="margin-top: var(--space-10)">
+        <a href="/podcast.html" class="btn btn--ghost">← All episodes</a>
+      </div>
+    </section>
+
+    <!-- PODCAST EXTERNAL LINKS -->
+    <section class="section section--tight container">
+      <div class="ep-external reveal">
+        <p class="ep-external__line">Also available on Spotify, Apple Podcasts, and YouTube — subscribe at <a href="https://behindtheprompt.fm" rel="noopener" target="_blank">Behind the Prompt</a>.</p>
+        <p class="ep-external__line ep-external__line--muted">Members of partner chambers get a monthly white-label briefing and a member-rate AI Visibility Audit. <a href="https://behindtheprompt.fm/#partners" rel="noopener" target="_blank">See partner chambers →</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="/index.html" class="brand" aria-label="The AI Collective home">
+            <svg class="brand__logo" width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+              <path d="M17 2 4 9.5v15L17 32l13-7.5v-15L17 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M17 9v16M9.5 13.25 17 17l7.5-3.75M9.5 20.75 17 17M24.5 20.75 17 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.65"/>
+              <circle cx="17" cy="17" r="3" fill="currentColor"/>
+            </svg>
+            <span class="brand__name">The AI <span>Collective</span></span>
+          </a>
+          <p>Saskatchewan's source for practical AI. Made on the Prairies, built for Western Canada.</p>
+        </div>
+        <div class="footer__col"><h5>Read</h5><a href="/latest.html">Latest</a><a href="/playbooks.html">Playbooks</a><a href="/podcast.html">Podcast</a><a href="/ai-solutions.html">AI Solutions</a></div>
+        <div class="footer__col"><h5>Collective</h5><a href="/about.html">About</a><a href="/ai-solutions.html">Work with us</a><a href="/index.html#newsletter">Newsletter</a></div>
+        <div class="footer__col"><h5>Get involved</h5><a href="/ai-solutions.html">Tell us your goal</a><a href="/about.html#tools">Submit a tool</a><a href="/index.html#newsletter">Newsletter</a></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 The AI Collective · aicollective.biz · Saskatchewan, Canada</span>
+        <span>Privacy · Unsubscribe · CASL compliant</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/newsletter-popup.js" defer></script>
+</body>
+</html>

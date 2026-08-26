@@ -1,0 +1,46 @@
+{
+  "slug": "ep-01-invisible-to-chatgpt",
+  "episodeNumber": "1",
+  "releaseDate": "2026-09-08",
+  "duration": "TBD",
+  "status": "upcoming",
+  "guestStatus": "in-conversation",
+  "meta": {
+    "title": "Ep 01 — Invisible to ChatGPT | Behind the Prompt",
+    "description": "Why your business may be invisible when customers ask AI for a recommendation — and what to do about it. Behind the Prompt, the practical-AI podcast for Prairie SMBs.",
+    "ogTitle": "Behind the Prompt Ep 01 — Invisible to ChatGPT",
+    "ogDescription": "Why your business may be invisible when customers ask AI for a recommendation — and how to fix it.",
+    "twitterCard": "summary_large_image"
+  },
+  "eyebrow": "Episode 01 · AI Search",
+  "heroTitle": "Invisible to ChatGPT: why AI can't find your business",
+  "heroSub": "More people ask ChatGPT, Gemini, and Perplexity for recommendations than ever — and most Prairie businesses are nowhere in the answers. We dig into why that happens and what a small business can actually do about it.",
+  "title": "Invisible to ChatGPT",
+  "topicNote": "",
+  "guest": {
+    "name": "Max Schmeiser",
+    "role": "VP, Data Science — Gemini App at Google DeepMind",
+    "bio": "PhD economist and University of Regina alum now leading data science for the Gemini App at Google DeepMind. Previously held senior data and research roles at Netflix, Twitter, Amazon, and the US Federal Reserve.",
+    "linkedin": "https://www.linkedin.com/in/max-schmeiser"
+  },
+  "embed": {
+    "spotify": "",
+    "apple": "",
+    "youtube": ""
+  },
+  "chapters": [],
+  "keyTakeaways": [],
+  "chamberCta": {
+    "text": "Members of partner chambers get a member-rate AI Visibility Audit and a monthly white-label briefing.",
+    "href": "https://behindtheprompt.fm/#partners"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        { "text": "Episode airs September 8, 2026. ", "style": "bold" },
+        { "text": "Full show notes, chapter markers, and key takeaways will be published here once the episode is live.", "style": "normal" }
+      ]
+    }
+  ]
+}

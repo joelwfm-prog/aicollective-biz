@@ -16,6 +16,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://aicollective.biz/podcast.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://aicollective.biz/ai-solutions.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -57,6 +62,66 @@
   </url>
   <url>
     <loc>https://aicollective.biz/weekly-2026-07-16.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-01-invisible-to-chatgpt.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-02-ai-made-in-saskatchewan.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-03-five-ai-use-cases.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-04-ai-and-your-team.html</loc>
+    <lastmod>2026-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-05-data-privacy-pipeda.html</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-06-ai-for-customer-service.html</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-07-year-end-ai-audit.html</loc>
+    <lastmod>2026-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-08-2027-predictions.html</loc>
+    <lastmod>2027-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-09-ag-trades-manufacturing.html</loc>
+    <lastmod>2027-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/podcast/ep-10-build-your-own-ai-tools.html</loc>
+    <lastmod>2027-02-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

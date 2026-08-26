@@ -1,0 +1,52 @@
+{
+  "slug": "ep-02-ai-made-in-saskatchewan",
+  "episodeNumber": "2",
+  "releaseDate": "2026-09-22",
+  "duration": "TBD",
+  "status": "upcoming",
+  "meta": {
+    "title": "Ep 02 — AI Made in Saskatchewan | Behind the Prompt",
+    "description": "Lessons from a homegrown Saskatchewan technology success on building deep-tech on the Prairies and adopting AI with discipline.",
+    "ogTitle": "Behind the Prompt Ep 02 — AI Made in Saskatchewan",
+    "ogDescription": "Building world-class technology on the Prairies, and what SMBs can learn from it.",
+    "twitterCard": "summary_large_image"
+  },
+  "eyebrow": "Episode 02 · Prairie Tech",
+  "heroTitle": "AI made in Saskatchewan: lessons from a homegrown success",
+  "heroSub": "Saskatchewan has quietly produced world-class technology companies. We talk about building deep-tech on the Prairies, what it takes to compete globally, and what small businesses can learn from how serious R&D teams actually adopt new tools.",
+  "title": "AI Made in Saskatchewan",
+  "embed": {
+    "spotify": "",
+    "apple": "",
+    "youtube": ""
+  },
+  "chapters": [],
+  "keyTakeaways": [],
+  "chamberCta": {
+    "text": "Members of partner chambers get a member-rate AI Visibility Audit and a monthly white-label briefing.",
+    "href": "https://behindtheprompt.fm/#partners"
+  },
+  "guestStatus": "in-conversation",
+  "topicNote": "",
+  "guest": {
+    "name": "Jeff Dyck",
+    "role": "VP, R&D — Siemens EDA",
+    "bio": "Vice President of R&D at Siemens EDA and co-founder of Solido Design Automation, a Saskatoon-born company whose machine-learning tools became an industry standard before its acquisition by Siemens.",
+    "linkedin": ""
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Episode airs September 22, 2026. ",
+          "style": "bold"
+        },
+        {
+          "text": "Full show notes, chapter markers, and key takeaways will be published here once the episode is live.",
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

@@ -24,7 +24,7 @@ const readText = (file) => fs.readFileSync(file, 'utf8');
 
 // Scopes the build assembles itself, so templates read them but no schema field
 // declares them. Matched against the first segment of a path.
-const DERIVED_ROOTS = new Set(['canonical', 'nav', 'footerColumns', 'headerCtaHref', 'blocks']);
+const DERIVED_ROOTS = new Set(['canonical', 'nav', 'footerColumns', 'headerCtaHref', 'blocks', 'episodes']);
 
 // Presentation flags the build attaches to each loop item. Matched against the
 // last segment, since they appear inside content-owned lists.

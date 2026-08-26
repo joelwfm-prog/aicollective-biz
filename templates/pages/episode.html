@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+{{> head}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "PodcastEpisode",
+        "name": {{{json heroTitle}}},
+        "episodeNumber": {{{json episodeNumber}}},
+        "datePublished": {{{json releaseDate}}},
+        "description": {{{json heroSub}}},
+        "url": {{{json canonical}}},
+        "partOfSeries": { "@type": "PodcastSeries", "name": {{{json site.podcast.name}}}, "url": {{{json site.podcast.homeUrl}}} }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aicollective.biz/" },
+          { "@type": "ListItem", "position": 2, "name": {{{json site.podcast.name}}}, "item": "https://aicollective.biz/podcast.html" },
+          { "@type": "ListItem", "position": 3, "name": {{{json title}}}, "item": {{{json canonical}}} }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+{{> header}}
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"></div>
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/index.html">Home</a> <span>/</span> <a href="/podcast.html">{{site.podcast.name}}</a> <span>/</span> <span aria-current="page">{{title}}</span></nav>
+        <div class="page-hero__inner">
+          <span class="eyebrow">{{eyebrow}}</span>
+          <h1 class="page-hero__title">{{heroTitle}}</h1>
+          <p class="page-hero__sub">{{heroSub}}</p>
+          <div class="ep-meta">
+            <span class="ep-meta__item">Episode {{episodeNumber}}</span>
+            <span class="ep-meta__item">{{releaseDate}}</span>
+            <span class="ep-meta__item">{{duration}}</span>
+{{#if status}}
+            <span class="ep-meta__item ep-meta__status" data-status="{{attr status}}">{{status}}</span>
+{{/if}}
+{{#if guestStatus}}
+            <span class="guest-pill guest-pill--{{attr guestStatus}}">{{guestStatus}}</span>
+{{/if}}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight container">
+{{#if guest.name}}
+      <!-- GUEST -->
+      <div class="ep-guest reveal">
+        <div class="ep-guest__head">
+          <h2>Guest</h2>
+          <span class="guest-pill guest-pill--{{attr guestStatus}}">{{guestStatus}}</span>
+        </div>
+        <h3 class="ep-guest__name">{{guest.name}}</h3>
+        <p class="ep-guest__role">{{guest.role}}</p>
+{{#if guest.bio}}
+        <p class="ep-guest__bio">{{guest.bio}}</p>
+{{/if}}
+{{#if guest.linkedin}}
+        <a class="ep-guest__link" href="{{attr guest.linkedin}}" rel="noopener" target="_blank">Connect on LinkedIn →</a>
+{{/if}}
+      </div>
+{{/if}}
+
+{{#if topicNote}}
+      <!-- TOPIC NOTE (no guest defined yet) -->
+      <div class="ep-note reveal">
+        <span class="eyebrow">This episode</span>
+        <p>{{topicNote}}</p>
+      </div>
+{{/if}}
+
+{{#if embed.spotify}}
+      <div class="ep-players reveal"><a class="btn btn--ghost" href="{{attr embed.spotify}}" rel="noopener" target="_blank">Listen on Spotify</a>{{#if embed.apple}}<a class="btn btn--ghost" href="{{attr embed.apple}}" rel="noopener" target="_blank">Apple Podcasts</a>{{/if}}{{#if embed.youtube}}<a class="btn btn--ghost" href="{{attr embed.youtube}}" rel="noopener" target="_blank">Watch on YouTube</a>{{/if}}</div>
+{{/if}}
+
+{{#if keyTakeaways}}
+      <!-- KEY TAKEAWAYS -->
+      <div class="ep-takeaways reveal">
+        <h2>Key takeaways</h2>
+        <ul>
+{{#each keyTakeaways}}
+          <li>{{.}}</li>
+{{/each}}
+        </ul>
+      </div>
+{{/if}}
+
+{{#if chapters}}
+      <!-- CHAPTERS -->
+      <div class="ep-chapters reveal">
+        <h2>Chapters</h2>
+        <ol class="ep-chapters__list">
+{{#each chapters}}
+          <li><span class="ep-chapters__time">{{time}}</span><span class="ep-chapters__label">{{label}}</span></li>
+{{/each}}
+        </ol>
+      </div>
+{{/if}}
+
+{{#if blocks}}
+      <!-- SHOW NOTES -->
+      <article class="prose reveal" style="margin-top: var(--space-10)">
+{{#each blocks}}
+{{> proseBlock}}
+{{/each}}
+      </article>
+{{/if}}
+
+      <div class="ep-chamber reveal">
+        <p>{{chamberCta.text}}</p>
+        <a class="btn btn--ghost" href="{{attr chamberCta.href}}" rel="noopener" target="_blank">See partner chambers →</a>
+      </div>
+
+      <div class="reveal" style="margin-top: var(--space-10)">
+        <a href="/podcast.html" class="btn btn--ghost">← All episodes</a>
+      </div>
+    </section>
+
+{{> podcastExternalLinks}}
+  </main>
+
+  <!-- FOOTER -->
+{{> footer}}
+</body>
+</html>

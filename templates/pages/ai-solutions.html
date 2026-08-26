@@ -90,6 +90,19 @@
                 <input class="input" id="business" name="business" type="text" placeholder="{{attr intake.businessPlaceholder}}" autocomplete="organization" />
               </div>
             </div>
+            <fieldset class="field chamber-field">
+              <legend class="chamber-field__legend">{{intake.chamberLabel}}</legend>
+              <div class="chamber-field__options">
+                <label class="chamber-opt"><input type="radio" name="chamberStatus" value="yes" /><span>{{intake.chamberYesLabel}}</span></label>
+                <label class="chamber-opt"><input type="radio" name="chamberStatus" value="no" /><span>{{intake.chamberNoLabel}}</span></label>
+                <label class="chamber-opt"><input type="radio" name="chamberStatus" value="unsure" /><span>{{intake.chamberUnsureLabel}}</span></label>
+              </div>
+              <span class="hint">{{intake.chamberHint}}</span>
+              <div class="field chamber-name" id="chamberNameWrap" data-visible-if="chamberStatus=yes" hidden>
+                <label for="chamberName">{{intake.chamberNameLabel}}</label>
+                <input class="input" id="chamberName" name="chamberName" type="text" maxlength="120" placeholder="{{attr intake.chamberNamePlaceholder}}" />
+              </div>
+            </fieldset>
             <div class="field">
               <label for="email">{{intake.emailLabel}} <span class="req">*</span></label>
               <input class="input" id="email" name="email" type="email" placeholder="{{attr intake.emailPlaceholder}}" autocomplete="email" required />
@@ -131,6 +144,24 @@
       const statusEl = document.getElementById('intakeStatus');
       const btn = document.getElementById('intakeSubmit');
       if (!form) return;
+
+      // Show/hide the chamber-name field based on the chamber radio choice.
+      const chamberWrap = document.getElementById('chamberNameWrap');
+      function syncChamber() {
+        const picked = form.querySelector('input[name="chamberStatus"]:checked');
+        const show = picked && picked.value === 'yes';
+        if (chamberWrap) chamberWrap.hidden = !show;
+      }
+      form.querySelectorAll('input[name="chamberStatus"]').forEach(function (r) {
+        r.addEventListener('change', syncChamber);
+      });
+      syncChamber();
+
+      function chamberValue() {
+        const picked = form.querySelector('input[name="chamberStatus"]:checked');
+        return picked ? picked.value : '';
+      }
+
       form.addEventListener('submit', async function (e) {
         e.preventDefault();
         const describe = form.describe.value.trim();
@@ -143,13 +174,20 @@
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               name: form.name.value.trim(), email, business: form.business.value.trim(),
+              chamberStatus: chamberValue(),
+              chamberName: (form.chamberName && form.chamberName.value.trim()) || '',
               describe, consent: form.consent.checked,
             }),
           });
           const data = await res.json().catch(() => ({}));
           if (res.ok && data.ok) {
             form.reset();
-            setStatus('ok', "Got it — thanks! We'll map out a solution and email you back soon. ✦");
+            if (chamberWrap) chamberWrap.hidden = true;
+            if (data.routing && data.routing.destination === 'chamber') {
+              setStatus('ok', "Got it — thanks! As a chamber member you're eligible for a member-rate AI Visibility Audit and the monthly briefing. We'll be in touch shortly. ✦");
+            } else {
+              setStatus('ok', "Got it — thanks! We'll map out a solution and email you back soon. ✦");
+            }
           } else {
             setStatus('err', data.error || 'Something went wrong. Please try again in a moment.');
           }
