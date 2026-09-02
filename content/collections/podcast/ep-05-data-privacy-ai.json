@@ -1,0 +1,52 @@
+{
+  "slug": "ep-05-data-privacy-ai",
+  "episodeNumber": "5",
+  "releaseDate": "2026-11-10",
+  "duration": "TBD",
+  "status": "upcoming",
+  "guestStatus": "in-outreach",
+  "meta": {
+    "title": "Ep 05 — Data, Privacy & AI | Behind the Prompt",
+    "description": "What businesses on both sides of the border are legally allowed to do with customer data and LLMs — and the handful of practical guardrails every small business should put in place.",
+    "ogTitle": "Behind the Prompt Ep 05 — Data, Privacy & AI",
+    "ogDescription": "What businesses on both sides of the border are legally allowed to do with customer data and LLMs — and the handful of practical guardrails every small business should put in place.",
+    "twitterCard": "summary_large_image"
+  },
+  "eyebrow": "Episode 05 · Privacy & Trust",
+  "heroTitle": "Data, privacy, and AI: what small businesses actually need to do",
+  "heroSub": "What businesses on both sides of the border are legally allowed to do with customer data and LLMs — and the handful of practical guardrails every small business should put in place.",
+  "title": "Data, Privacy & AI",
+  "topicNote": "",
+  "guest": {
+    "name": "TBA",
+    "role": "Guest outreach underway",
+    "bio": "",
+    "linkedin": ""
+  },
+  "embed": {
+    "spotify": "",
+    "apple": "",
+    "youtube": ""
+  },
+  "chapters": [],
+  "keyTakeaways": [],
+  "chamberCta": {
+    "text": "Members of partner chambers get 15% off any Results AI monthly plan, permanently, and a monthly white-label briefing they can share with their teams.",
+    "href": "https://behindtheprompt.fm/#partners"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Episode airs November 10, 2026. ",
+          "style": "bold"
+        },
+        {
+          "text": "Full show notes, chapter markers, and key takeaways will be published here once the episode is live.",
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

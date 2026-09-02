@@ -1,20 +1,28 @@
 {
   "slug": "ep-04-ai-and-your-team",
   "episodeNumber": "4",
-  "releaseDate": "2026-10-20",
+  "releaseDate": "2026-10-27",
   "duration": "TBD",
   "status": "upcoming",
+  "guestStatus": "in-outreach",
   "meta": {
     "title": "Ep 04 — AI and Your Team | Behind the Prompt",
-    "description": "New tools fail when people feel replaced or confused. We talk about introducing AI to a small team, setting simple ground rules, and getting buy-in instead o...",
+    "description": "What roles are actually changing, what owners are getting wrong, and how to roll AI out to a team without the pushback.",
     "ogTitle": "Behind the Prompt Ep 04 — AI and Your Team",
-    "ogDescription": "How to introduce AI to a small team and get buy-in instead of pushback.",
+    "ogDescription": "What roles are actually changing, what owners are getting wrong, and how to roll AI out to a team without the pushback.",
     "twitterCard": "summary_large_image"
   },
   "eyebrow": "Episode 04 · People & Change",
-  "heroTitle": "AI and your team: rolling it out without the pushback",
-  "heroSub": "New tools fail when people feel replaced or confused. We talk about introducing AI to a small team, setting simple ground rules, and getting buy-in instead of quiet resistance.",
+  "heroTitle": "AI and your team: the hiring and firing conversation",
+  "heroSub": "What roles are actually changing, what owners are getting wrong, and how to roll AI out to a team without the pushback.",
   "title": "AI and Your Team",
+  "topicNote": "",
+  "guest": {
+    "name": "TBA",
+    "role": "Guest outreach underway",
+    "bio": "",
+    "linkedin": ""
+  },
   "embed": {
     "spotify": "",
     "apple": "",
@@ -23,10 +31,22 @@
   "chapters": [],
   "keyTakeaways": [],
   "chamberCta": {
-    "text": "Members of partner chambers get a member-rate AI Visibility Audit and a monthly white-label briefing.",
+    "text": "Members of partner chambers get 15% off any Results AI monthly plan, permanently, and a monthly white-label briefing they can share with their teams.",
     "href": "https://behindtheprompt.fm/#partners"
   },
-  "guestStatus": "in-outreach",
-  "topicNote": "This episode's topic is locked; the guest search is underway. Have someone we should talk to? Email joel@intheresults.com.",
-  "blocks": []
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Episode airs October 27, 2026. ",
+          "style": "bold"
+        },
+        {
+          "text": "Full show notes, chapter markers, and key takeaways will be published here once the episode is live.",
+          "style": "normal"
+        }
+      ]
+    }
+  ]
 }

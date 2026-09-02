@@ -1,0 +1,52 @@
+{
+  "slug": "ep-02-inside-the-ai-toolroom",
+  "episodeNumber": "2",
+  "releaseDate": "2026-09-29",
+  "duration": "TBD",
+  "status": "upcoming",
+  "guestStatus": "in-outreach",
+  "meta": {
+    "title": "Ep 02 — Inside the AI Toolroom | Behind the Prompt",
+    "description": "Most business owners use AI without ever seeing how the sausage gets made. We go behind the curtain with an operator whose work runs inside billions of chips worldwide — and talk about what that means for the tools showing up in your dashboard next quarter.",
+    "ogTitle": "Behind the Prompt Ep 02 — Inside the AI Toolroom",
+    "ogDescription": "Most business owners use AI without ever seeing how the sausage gets made. We go behind the curtain with an operator whose work runs inside billions of chips worldwide — and talk about what that means for the tools showing up in your dashboard next quarter.",
+    "twitterCard": "summary_large_image"
+  },
+  "eyebrow": "Episode 02 · How AI Gets Built",
+  "heroTitle": "How AI is built: inside the room where the tools are made",
+  "heroSub": "Most business owners use AI without ever seeing how the sausage gets made. We go behind the curtain with an operator whose work runs inside billions of chips worldwide — and talk about what that means for the tools showing up in your dashboard next quarter.",
+  "title": "Inside the AI Toolroom",
+  "topicNote": "",
+  "guest": {
+    "name": "Jeff Dyck",
+    "role": "VP, R&D — Siemens EDA",
+    "bio": "Co-founded Solido Design Automation and sold it to Siemens; his machine-learning software now runs inside billions of chips worldwide. VP of R&D at Siemens EDA.",
+    "linkedin": "https://www.linkedin.com/in/jeff-dyck"
+  },
+  "embed": {
+    "spotify": "",
+    "apple": "",
+    "youtube": ""
+  },
+  "chapters": [],
+  "keyTakeaways": [],
+  "chamberCta": {
+    "text": "Members of partner chambers get 15% off any Results AI monthly plan, permanently, and a monthly white-label briefing they can share with their teams.",
+    "href": "https://behindtheprompt.fm/#partners"
+  },
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Episode airs September 29, 2026. ",
+          "style": "bold"
+        },
+        {
+          "text": "Full show notes, chapter markers, and key takeaways will be published here once the episode is live.",
+          "style": "normal"
+        }
+      ]
+    }
+  ]
+}

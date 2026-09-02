@@ -1,20 +1,28 @@
 {
   "slug": "ep-09-ag-trades-manufacturing",
   "episodeNumber": "9",
-  "releaseDate": "2027-01-26",
+  "releaseDate": "2027-02-02",
   "duration": "TBD",
   "status": "upcoming",
+  "guestStatus": "in-outreach",
   "meta": {
     "title": "Ep 09 — AI in Ag, Trades & Manufacturing | Behind the Prompt",
-    "description": "The Prairie economy runs on ag, trades, and making things. We explore where AI is landing in these hands-on industries and what early adopters are learning t...",
+    "description": "The industries no one talks about at AI conferences. Practical use cases from the field, the shop floor, and the loading dock.",
     "ogTitle": "Behind the Prompt Ep 09 — AI in Ag, Trades & Manufacturing",
-    "ogDescription": "Where AI is landing in ag, trades, and manufacturing across the Prairies.",
+    "ogDescription": "The industries no one talks about at AI conferences. Practical use cases from the field, the shop floor, and the loading dock.",
     "twitterCard": "summary_large_image"
   },
   "eyebrow": "Episode 09 · Industry Deep-Dive",
-  "heroTitle": "AI in ag, trades, and manufacturing on the Prairies",
-  "heroSub": "The Prairie economy runs on ag, trades, and making things. We explore where AI is landing in these hands-on industries and what early adopters are learning the hard way.",
+  "heroTitle": "AI in ag, trades, and manufacturing",
+  "heroSub": "The industries no one talks about at AI conferences. Practical use cases from the field, the shop floor, and the loading dock.",
   "title": "AI in Ag, Trades & Manufacturing",
+  "topicNote": "",
+  "guest": {
+    "name": "TBA",
+    "role": "Guest outreach underway",
+    "bio": "",
+    "linkedin": ""
+  },
   "embed": {
     "spotify": "",
     "apple": "",
@@ -23,10 +31,22 @@
   "chapters": [],
   "keyTakeaways": [],
   "chamberCta": {
-    "text": "Members of partner chambers get a member-rate AI Visibility Audit and a monthly white-label briefing.",
+    "text": "Members of partner chambers get 15% off any Results AI monthly plan, permanently, and a monthly white-label briefing they can share with their teams.",
     "href": "https://behindtheprompt.fm/#partners"
   },
-  "guestStatus": "in-outreach",
-  "topicNote": "This episode's topic is locked; the guest search is underway. Have someone we should talk to? Email joel@intheresults.com.",
-  "blocks": []
+  "blocks": [
+    {
+      "type": "paragraph",
+      "runs": [
+        {
+          "text": "Episode airs February 2, 2027. ",
+          "style": "bold"
+        },
+        {
+          "text": "Full show notes, chapter markers, and key takeaways will be published here once the episode is live.",
+          "style": "normal"
+        }
+      ]
+    }
+  ]
 }
