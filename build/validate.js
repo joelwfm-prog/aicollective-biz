@@ -42,7 +42,9 @@ const DERIVED_LOCALS = new Set([
   'spaceBefore',
 ]);
 
-const DERIVED_EXACT = new Set(['meta.canonical', 'meta.ogType', 'meta.ogUrl', 'site.contactDomain']);
+const DERIVED_EXACT = new Set([
+  'meta.canonical', 'meta.ogType', 'meta.ogUrl', 'meta.ogImage', 'meta.ogImageAlt', 'meta.robots', 'site.contactDomain',
+]);
 
 // The mirror image: schema fields the build reads and reshapes, so no template
 // names them directly. Prefix match, so "site.nav" covers "site.nav[].label".
