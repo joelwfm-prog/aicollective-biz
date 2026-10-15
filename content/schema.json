@@ -823,7 +823,7 @@
         {
           "key": "slug",
           "label": "Web address",
-          "help": "Becomes the page filename, e.g. \"playbook-a\" publishes at /playbook-a.html. Changing this breaks existing links.",
+          "help": "Becomes the page filename, e.g. \"get-cited-by-chatgpt-ai-search\" publishes at /get-cited-by-chatgpt-ai-search.html. Changing this breaks existing links.",
           "type": "text",
           "required": true,
           "maxLength": 60
