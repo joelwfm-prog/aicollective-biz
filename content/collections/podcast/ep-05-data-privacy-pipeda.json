@@ -1,0 +1,32 @@
+{
+  "slug": "ep-05-data-privacy-pipeda",
+  "episodeNumber": "5",
+  "releaseDate": "2026-11-03",
+  "duration": "TBD",
+  "status": "upcoming",
+  "meta": {
+    "title": "Ep 05 — Data, Privacy & PIPEDA | Behind the Prompt",
+    "description": "What can you safely feed an AI tool, and what should never leave your systems? A plain-English look at Canadian privacy expectations and practical guardrails...",
+    "ogTitle": "Behind the Prompt Ep 05 — Data, Privacy & PIPEDA",
+    "ogDescription": "A plain-English look at Canadian privacy rules and practical AI guardrails.",
+    "twitterCard": "summary_large_image"
+  },
+  "eyebrow": "Episode 05 · Privacy & Trust",
+  "heroTitle": "Data, privacy, and PIPEDA: using AI without crossing the line",
+  "heroSub": "What can you safely feed an AI tool, and what should never leave your systems? A plain-English look at Canadian privacy expectations and practical guardrails for small businesses.",
+  "title": "Data, Privacy & PIPEDA",
+  "embed": {
+    "spotify": "",
+    "apple": "",
+    "youtube": ""
+  },
+  "chapters": [],
+  "keyTakeaways": [],
+  "chamberCta": {
+    "text": "Members of partner chambers get a member-rate AI Visibility Audit and a monthly white-label briefing.",
+    "href": "https://behindtheprompt.fm/#partners"
+  },
+  "guestStatus": "in-outreach",
+  "topicNote": "This episode's topic is locked; the guest search is underway. Have someone we should talk to? Email joel@intheresults.com.",
+  "blocks": []
+}

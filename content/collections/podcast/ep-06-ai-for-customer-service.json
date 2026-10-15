@@ -1,28 +1,20 @@
 {
   "slug": "ep-06-ai-for-customer-service",
   "episodeNumber": "6",
-  "releaseDate": "2026-11-24",
+  "releaseDate": "2026-11-17",
   "duration": "TBD",
   "status": "upcoming",
-  "guestStatus": "in-outreach",
   "meta": {
     "title": "Ep 06 — AI for Customer Service | Behind the Prompt",
-    "description": "Voice, chat, email. What works today, what breaks, and how to hand off to humans without the customer noticing.",
+    "description": "Automated replies can save hours or drive customers away. We dig into where AI genuinely helps front-line service, where a human still has to step in, and ho...",
     "ogTitle": "Behind the Prompt Ep 06 — AI for Customer Service",
-    "ogDescription": "Voice, chat, email. What works today, what breaks, and how to hand off to humans without the customer noticing.",
+    "ogDescription": "Where AI genuinely helps customer service, and where a human still steps in.",
     "twitterCard": "summary_large_image"
   },
   "eyebrow": "Episode 06 · Customer Service",
   "heroTitle": "AI for customer service that doesn't feel robotic",
-  "heroSub": "Voice, chat, email. What works today, what breaks, and how to hand off to humans without the customer noticing.",
+  "heroSub": "Automated replies can save hours or drive customers away. We dig into where AI genuinely helps front-line service, where a human still has to step in, and how to keep your voice.",
   "title": "AI for Customer Service",
-  "topicNote": "",
-  "guest": {
-    "name": "TBA",
-    "role": "Guest outreach underway",
-    "bio": "",
-    "linkedin": ""
-  },
   "embed": {
     "spotify": "",
     "apple": "",
@@ -31,22 +23,10 @@
   "chapters": [],
   "keyTakeaways": [],
   "chamberCta": {
-    "text": "Members of partner chambers get 15% off any Results AI monthly plan, permanently, and a monthly white-label briefing they can share with their teams.",
+    "text": "Members of partner chambers get a member-rate AI Visibility Audit and a monthly white-label briefing.",
     "href": "https://behindtheprompt.fm/#partners"
   },
-  "blocks": [
-    {
-      "type": "paragraph",
-      "runs": [
-        {
-          "text": "Episode airs November 24, 2026. ",
-          "style": "bold"
-        },
-        {
-          "text": "Full show notes, chapter markers, and key takeaways will be published here once the episode is live.",
-          "style": "normal"
-        }
-      ]
-    }
-  ]
+  "guestStatus": "in-outreach",
+  "topicNote": "This episode's topic is locked; the guest search is underway. Have someone we should talk to? Email joel@intheresults.com.",
+  "blocks": []
 }
