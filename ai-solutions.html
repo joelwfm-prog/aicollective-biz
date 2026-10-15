@@ -214,7 +214,8 @@
   <script src="js/newsletter-popup.js" defer></script>
   <script>
     (function () {
-      const API = '__PORT_8000__'.startsWith('__') ? 'http://localhost:8000' : '__PORT_8000__';
+      // Same-origin: Caddy proxies /api/* to the intake service on the server.
+      const API = '';
       const form = document.getElementById('intakeForm');
       const statusEl = document.getElementById('intakeStatus');
       const btn = document.getElementById('intakeSubmit');
