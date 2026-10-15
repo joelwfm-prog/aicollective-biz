@@ -7,7 +7,6 @@
   "nav": [
     { "label": "Latest", "href": "latest.html" },
     { "label": "Playbooks", "href": "playbooks.html" },
-    { "label": "Podcast", "href": "podcast.html" },
     { "label": "AI Solutions", "href": "ai-solutions.html" },
     { "label": "About", "href": "about.html" }
   ],
@@ -19,28 +18,20 @@
   "articleCta": {
     "eyebrow": "The AI Collective Weekly",
     "title": "Get this in your inbox every Thursday.",
-    "description": "One plain-English AI email for small business. No fluff, no spam, unsubscribe in one click.",
+    "description": "One plain-English AI email for Prairie business. No fluff, no spam, unsubscribe in one click.",
     "buttonLabel": "Join the free weekly →",
     "buttonHref": "index.html#newsletter"
-  },
-  "podcast": {
-    "name": "Behind the Prompt",
-    "host": "Michael Bach",
-    "sponsor": "Results AI",
-    "homeUrl": "https://behindtheprompt.fm",
-    "chambersAnchor": "https://behindtheprompt.fm/#partners"
   },
   "playbookBackLabel": "← All playbooks",
   "newsletterBackLabel": "← All issues & articles",
   "footer": {
-    "blurb": "Practical AI for small business. Plain-English, jargon-free, built for owners and operators across North America.",
+    "blurb": "Saskatchewan's source for practical AI. Made on the Prairies, built for Western Canada.",
     "columns": [
       {
         "heading": "Read",
         "links": [
           { "label": "Latest", "href": "latest.html" },
           { "label": "Playbooks", "href": "playbooks.html" },
-          { "label": "Podcast", "href": "podcast.html" },
           { "label": "AI Solutions", "href": "ai-solutions.html" }
         ]
       },
@@ -62,6 +53,6 @@
       }
     ],
     "legalLeft": "© 2026 The AI Collective · aicollective.biz · Saskatchewan, Canada",
-    "legalRight": "Privacy · Unsubscribe · CASL compliant"
+    "legalRight": "Unsubscribe anytime"
   }
 }

@@ -1,0 +1,23 @@
+# The AI Collective (aicollective.biz)
+
+> Saskatchewan-made source of practical, plain-English AI news, step-by-step playbooks, a weekly newsletter, and a free "tell us your goal" AI solution-mapping request for small and medium businesses in Saskatchewan and Western Canada. Operated by Hello Earth 2 Business Inc. Not affiliated with aicollective.com.
+
+## Playbooks
+- [Get cited by ChatGPT & AI search](https://aicollective.biz/get-cited-by-chatgpt-ai-search.html): Checklist for getting a local business named in AI answers: consistent NAP, a complete Google Business Profile, real reviews, plain-English FAQ content, basic schema markup, and testing yourself in ChatGPT.
+- [A month of social posts in one afternoon](https://aicollective.biz/month-of-social-posts-in-one-afternoon.html): Prompt-and-schedule workflow for planning, batch-writing, editing, and scheduling a month of social posts.
+- [Automate the 5 tasks eating your Mondays](https://aicollective.biz/automate-small-business-tasks.html): Invoice follow-ups, review requests, appointment reminders, FAQ email replies, and weekly reporting.
+- [Write your AI ground rules in 30 minutes](https://aicollective.biz/small-business-ai-policy-template.html): Fill-in-the-blank small-business AI policy covering off-limits data, who can use AI for what, human review, disclosure, and PIPEDA.
+- [Turn one blog post into a week of content](https://aicollective.biz/repurpose-one-blog-post-into-a-week-of-content.html): Repurposing one article into social posts, an email, and a short video script, with the prompt.
+- [Claim your Sask + Canada AI grants](https://aicollective.biz/saskatchewan-canada-ai-grants.html): Starting map of the kinds of federal, Saskatchewan, and regional funding a small business can look into for tech and AI adoption. Confirm current eligibility with each program.
+
+## Newsletter
+- [The AI Collective Weekly #1: Nobody's Googling you anymore](https://aicollective.biz/weekly-2026-07-16.html): Why customers are asking AI assistants instead of searching, and one thing to do this week (July 16, 2026).
+
+## Services
+- [AI Solutions: tell us what you want AI to do](https://aicollective.biz/ai-solutions.html): Describe a goal in plain English and get a free initial solution map using existing tools or a custom setup.
+
+## About
+- [About The AI Collective](https://aicollective.biz/about.html)
+- [Privacy Policy](https://aicollective.biz/privacy.html)
+- [Latest articles](https://aicollective.biz/latest.html)
+- [All playbooks](https://aicollective.biz/playbooks.html)

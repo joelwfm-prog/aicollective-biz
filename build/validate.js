@@ -24,7 +24,7 @@ const readText = (file) => fs.readFileSync(file, 'utf8');
 
 // Scopes the build assembles itself, so templates read them but no schema field
 // declares them. Matched against the first segment of a path.
-const DERIVED_ROOTS = new Set(['canonical', 'nav', 'footerColumns', 'headerCtaHref', 'blocks', 'episodes']);
+const DERIVED_ROOTS = new Set(['canonical', 'nav', 'footerColumns', 'headerCtaHref', 'blocks']);
 
 // Presentation flags the build attaches to each loop item. Matched against the
 // last segment, since they appear inside content-owned lists.
@@ -42,7 +42,9 @@ const DERIVED_LOCALS = new Set([
   'spaceBefore',
 ]);
 
-const DERIVED_EXACT = new Set(['meta.canonical', 'meta.ogType', 'meta.ogUrl', 'site.contactDomain']);
+const DERIVED_EXACT = new Set([
+  'meta.canonical', 'meta.ogType', 'meta.ogUrl', 'meta.ogImage', 'meta.ogImageAlt', 'meta.robots', 'site.contactDomain',
+]);
 
 // The mirror image: schema fields the build reads and reshapes, so no template
 // names them directly. Prefix match, so "site.nav" covers "site.nav[].label".

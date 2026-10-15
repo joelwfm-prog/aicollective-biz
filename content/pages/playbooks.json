@@ -62,7 +62,7 @@
     "guides": [
       {
         "letter": "A",
-        "href": "playbook-a.html",
+        "href": "get-cited-by-chatgpt-ai-search.html",
         "title": "Get cited by ChatGPT & AI search",
         "summary": "The exact checklist a Saskatoon contractor used to get named in AI answers in six weeks. Schema, profiles, reviews, and content.",
         "category": "AI Search",
@@ -70,7 +70,7 @@
       },
       {
         "letter": "B",
-        "href": "playbook-b.html",
+        "href": "month-of-social-posts-in-one-afternoon.html",
         "title": "A month of social posts in one afternoon",
         "summary": "The prompt-and-schedule workflow a Regina café uses to stay consistent — from idea to a fully queued month.",
         "category": "Marketing",
@@ -78,7 +78,7 @@
       },
       {
         "letter": "C",
-        "href": "playbook-c.html",
+        "href": "automate-small-business-tasks.html",
         "title": "Automate the 5 tasks eating your Mondays",
         "summary": "Invoicing follow-ups, review requests, appointment reminders — the unglamorous wins that give you your week back.",
         "category": "Automation",
@@ -86,7 +86,7 @@
       },
       {
         "letter": "D",
-        "href": "playbook-d.html",
+        "href": "small-business-ai-policy-template.html",
         "title": "Write your AI ground rules in 30 minutes",
         "summary": "A fill-in-the-blank policy for what AI can and can't touch — client data, customer info, and quality control.",
         "category": "Do It Right",
@@ -94,7 +94,7 @@
       },
       {
         "letter": "E",
-        "href": "playbook-e.html",
+        "href": "repurpose-one-blog-post-into-a-week-of-content.html",
         "title": "Turn one blog post into a week of content",
         "summary": "Repurpose a single article into emails, social posts, and a short video script — without sounding like a robot.",
         "category": "Content",
@@ -102,7 +102,7 @@
       },
       {
         "letter": "F",
-        "href": "playbook-f.html",
+        "href": "saskatchewan-canada-ai-grants.html",
         "title": "Claim your Sask + Canada AI grants",
         "summary": "What kinds of funding a Prairie business can pursue for AI and tech adoption, and how to draft the application with AI's help.",
         "category": "Funding",
