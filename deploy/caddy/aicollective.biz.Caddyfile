@@ -1,0 +1,75 @@
+# aicollective.biz: PROPOSED live vhost for /etc/caddy/Caddyfile on cms-prototype-01.
+# NOT APPLIED. An operator merges this into the existing aicollective.biz block.
+#
+# KEEP from the existing block: the site address line, the existing `tls ...`
+# line (if any), the existing /api/* upstream, and any existing rule that
+# already 404s repo internals (server.js etc. return 404 on the live site today).
+#
+# What changes vs today (`try_files {path} {path}.html {path}/ /index.html`):
+#   1. Unknown paths return a real 404 with /404.html instead of a 200 homepage
+#      (fixes soft 404s, /llms.txt, /favicon.ico, /about/).
+#   2. 301s: /index.html -> /, and the old playbook-a..f URLs -> new slugs.
+#   3. Long cache lifetimes for images; 1 day for CSS/JS (not fingerprinted).
+# www -> apex and HSTS are handled at Cloudflare (see deploy/cloudflare-rules.md).
+#
+# Rollback: restore the previous block and `systemctl reload caddy`.
+
+aicollective.biz {
+	# tls ...            <- keep the existing line exactly as it is
+
+	root * /var/www/aicollective
+	encode zstd gzip
+
+	# Repo/build internals never served (the Vyb6 rsync excludes most already).
+	@internal path /server.js /package.json /package-lock.json /CONTENT-CALENDAR.md /.git* /.github/* /deploy/* /templates/* /content/* /build/* /data/* /node_modules/*
+	error @internal 404
+
+	# Permanent redirects (301)
+	redir /index.html / permanent
+	redir /index / permanent
+	redir /playbook-a.html /get-cited-by-chatgpt-ai-search.html permanent
+	redir /playbook-a /get-cited-by-chatgpt-ai-search.html permanent
+	redir /playbook-b.html /month-of-social-posts-in-one-afternoon.html permanent
+	redir /playbook-b /month-of-social-posts-in-one-afternoon.html permanent
+	redir /playbook-c.html /automate-small-business-tasks.html permanent
+	redir /playbook-c /automate-small-business-tasks.html permanent
+	redir /playbook-d.html /small-business-ai-policy-template.html permanent
+	redir /playbook-d /small-business-ai-policy-template.html permanent
+	redir /playbook-e.html /repurpose-one-blog-post-into-a-week-of-content.html permanent
+	redir /playbook-e /repurpose-one-blog-post-into-a-week-of-content.html permanent
+	redir /playbook-f.html /saskatchewan-canada-ai-grants.html permanent
+	redir /playbook-f /saskatchewan-canada-ai-grants.html permanent
+
+	# Caching (Cloudflare honours these for the browser TTL)
+	header /assets/* Cache-Control "public, max-age=2592000"
+	header /css/* Cache-Control "public, max-age=86400"
+	header /js/* Cache-Control "public, max-age=86400"
+
+	# Intake + newsletter API. Keep the existing upstream address.
+	handle /api/* {
+		reverse_proxy 127.0.0.1:8000
+	}
+
+	# Static site: exact file, else "<path>.html" (extensionless URLs), else 404.
+	# No directory fallback and no homepage fallback.
+	handle {
+		try_files {path} {path}.html
+		file_server
+	}
+
+	handle_errors {
+		@notfound expression `{err.status_code} == 404`
+		handle @notfound {
+			rewrite * /404.html
+			file_server
+		}
+		respond "{err.status_code} {err.status_text}"
+	}
+}
+
+# Optional origin-side fallback, only needed if the Cloudflare redirect rule is
+# ever disabled. Keep commented while Cloudflare handles www -> apex.
+# www.aicollective.biz {
+# 	# tls ...  (same as above)
+# 	redir https://aicollective.biz{uri} permanent
+# }

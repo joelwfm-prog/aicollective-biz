@@ -2,62 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aicollective.biz/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://aicollective.biz/latest.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://aicollective.biz/playbooks.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://aicollective.biz/ai-solutions.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://aicollective.biz/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://aicollective.biz/playbook-a.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://aicollective.biz/automate-small-business-tasks.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://aicollective.biz/playbook-b.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://aicollective.biz/get-cited-by-chatgpt-ai-search.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://aicollective.biz/playbook-c.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://aicollective.biz/month-of-social-posts-in-one-afternoon.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://aicollective.biz/playbook-d.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://aicollective.biz/repurpose-one-blog-post-into-a-week-of-content.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://aicollective.biz/playbook-e.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://aicollective.biz/saskatchewan-canada-ai-grants.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
-    <loc>https://aicollective.biz/playbook-f.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://aicollective.biz/small-business-ai-policy-template.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
   <url>
     <loc>https://aicollective.biz/weekly-2026-07-16.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-10-15</lastmod>
+  </url>
+  <url>
+    <loc>https://aicollective.biz/privacy.html</loc>
+    <lastmod>2026-10-15</lastmod>
   </url>
 </urlset>

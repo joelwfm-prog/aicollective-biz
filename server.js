@@ -131,10 +131,25 @@ app.post('/api/intake', async (req, res) => {
 app.get('/api/health', (req, res) => res.json({ ok: true, canSend: CAN_SEND, subs: fs.existsSync(SUBS_CSV) }));
 
 // Read-only subscriber count + list for the notification checker.
-// Protected by a token so it's not public. Pass ?token=... matching NOTIFY_TOKEN.
-const NOTIFY_TOKEN = process.env.NOTIFY_TOKEN || 'aic-notify-7Kq2wLmZ';
+// Protected by NOTIFY_TOKEN, which MUST be set in the service environment.
+// There is deliberately no fallback: if the token is missing or too short the
+// endpoint is disabled (fails closed) rather than guarded by a guessable value.
+// Send the token as "Authorization: Bearer <token>" (preferred, stays out of
+// access logs) or, for the existing checker, as ?token=<token>.
+const crypto = require('crypto');
+const NOTIFY_TOKEN = (process.env.NOTIFY_TOKEN || '').trim();
+const NOTIFY_ENABLED = NOTIFY_TOKEN.length >= 24;
+if (!NOTIFY_ENABLED) console.warn('[server] NOTIFY_TOKEN missing or shorter than 24 chars — /api/subscribers is disabled');
+function tokenMatches(given) {
+  const a = Buffer.from(String(given || ''));
+  const b = Buffer.from(NOTIFY_TOKEN);
+  return a.length === b.length && crypto.timingSafeEqual(a, b);
+}
 app.get('/api/subscribers', (req, res) => {
-  if ((req.query.token || '') !== NOTIFY_TOKEN) return res.status(403).json({ ok: false });
+  if (!NOTIFY_ENABLED) return res.status(503).json({ ok: false, error: 'disabled' });
+  const auth = String(req.headers.authorization || '');
+  const given = auth.startsWith('Bearer ') ? auth.slice(7).trim() : (req.query.token || '');
+  if (!tokenMatches(given)) return res.status(403).json({ ok: false });
   let rows = [];
   try {
     const raw = fs.readFileSync(SUBS_CSV, 'utf8').trim().split('\n');

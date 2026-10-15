@@ -11,6 +11,11 @@ const ROOT = path.join(__dirname, '..');
 const TEMPLATES = path.join(ROOT, 'templates');
 const CONTENT = path.join(ROOT, 'content');
 const BASE_URL = 'https://aicollective.biz/';
+const { execFileSync } = require('child_process');
+
+// Default social share card (1200x630), cut from the AI-search feature art.
+const OG_IMAGE = BASE_URL + 'assets/og-default.jpg';
+const OG_IMAGE_ALT = 'The AI Collective: practical AI for Prairie small business';
 
 const readJson = (file) => JSON.parse(fs.readFileSync(file, 'utf8'));
 const readText = (file) => fs.readFileSync(file, 'utf8');
@@ -162,8 +167,81 @@ function baseScope(site, page, outFile, navKey, ogType) {
       ogType,
       ogUrl: canonical,
       twitterCard: page.meta.twitterCard,
+      ogImage: OG_IMAGE,
+      ogImageAlt: OG_IMAGE_ALT,
     },
   };
+}
+
+// ------------------------------------------------------------ post-process
+
+// Every internal link and asset is written site-absolute ("/latest.html",
+// "/css/style.css") so a page renders correctly from any URL. That matters for
+// 404.html, which the server returns for arbitrary nested paths. Links to the
+// homepage use "/" rather than "/index.html", which is a duplicate of "/".
+function absolutizeHtml(html) {
+  return html
+    .replace(/(\s(?:href|src))="(?!https?:|\/|#|mailto:|tel:|data:|javascript:)([^"]*)"/g, '$1="/$2"')
+    .replace(/(\shref)="\/index\.html(#[^"]*)?"/g, (_, attr, hash) => `${attr}="/${hash || ''}"`);
+}
+
+// ----------------------------------------------------------------- fixed pages
+
+// Pages with fixed, template-owned copy that the content editor does not manage
+// (legal text and the error page). Rendered with the shared header and footer.
+const FIXED_PAGES = [
+  {
+    out: '404.html',
+    template: '404',
+    sitemap: false,
+    meta: {
+      title: 'Page not found | The AI Collective',
+      description: "That page doesn't exist. Try the latest articles, the playbooks, or tell us what you want AI to do for your business.",
+      robots: 'noindex',
+      canonical: '',
+    },
+  },
+  {
+    out: 'privacy.html',
+    template: 'privacy',
+    sitemap: true,
+    meta: {
+      title: 'Privacy Policy | The AI Collective',
+      description: 'How The AI Collective (Hello Earth 2 Business Inc.) collects, uses, stores, and protects the information you send through aicollective.biz.',
+    },
+  },
+];
+
+// --------------------------------------------------------------------- sitemap
+
+// lastmod comes from git: the newest commit touching any of the page's source
+// files, or today if those files have uncommitted edits. Omitted if git is
+// unavailable rather than guessed.
+function lastModified(files) {
+  try {
+    const rel = files.map((f) => path.relative(ROOT, f));
+    const dirty = execFileSync('git', ['status', '--porcelain', '--', ...rel], { cwd: ROOT, encoding: 'utf8' }).trim();
+    if (dirty) {
+      const now = new Date();
+      const pad = (n) => String(n).padStart(2, '0');
+      return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+    }
+    const out = execFileSync('git', ['log', '-1', '--format=%cs', '--', ...rel], { cwd: ROOT, encoding: 'utf8' }).trim();
+    return out || null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function writeSitemap(entries) {
+  const urls = entries
+    .map(({ outFile, sources }) => {
+      const lastmod = lastModified(sources);
+      return `  <url>\n    <loc>${pageUrl(outFile)}</loc>\n${lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : ''}  </url>`;
+    })
+    .join('\n');
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
+  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), xml);
 }
 
 function main() {
@@ -173,13 +251,18 @@ function main() {
   // address in its mailto, so only the address is editable.
   const site = Object.assign({}, raw, { contactDomain: raw.contactEmail.split('@').pop() });
   const written = [];
+  const sitemap = [];
+  const tpl = (name) => path.join(TEMPLATES, 'pages', `${name}.html`);
+  const PARTIALS_DIR = path.join(TEMPLATES, 'partials');
+  const shared = [path.join(CONTENT, 'site.json'), ...fs.readdirSync(PARTIALS_DIR).map((f) => path.join(PARTIALS_DIR, f))];
 
   for (const page of PAGES) {
     const data = resolveIcons(decorateRunsDeep(readJson(path.join(CONTENT, 'pages', `${page.content}.json`))));
     const scope = Object.assign({}, data, baseScope(site, data, page.out, page.navKey, page.ogType));
-    const html = render(loadTemplate(page.template), scope, partials);
+    const html = absolutizeHtml(render(loadTemplate(page.template), scope, partials));
     fs.writeFileSync(path.join(ROOT, page.out), html);
     written.push(page.out);
+    sitemap.push({ outFile: page.out, sources: [path.join(CONTENT, 'pages', `${page.content}.json`), tpl(page.template), ...shared] });
   }
 
   for (const collection of COLLECTIONS) {
@@ -188,11 +271,29 @@ function main() {
       const scope = Object.assign({}, item, baseScope(site, item, out, collection.navKey, collection.ogType), {
         blocks: decorateBlocks(item.blocks),
       });
-      const html = render(loadTemplate(collection.template), scope, partials);
+      const html = absolutizeHtml(render(loadTemplate(collection.template), scope, partials));
       fs.writeFileSync(path.join(ROOT, out), html);
       written.push(out);
+      sitemap.push({
+        outFile: out,
+        sources: [path.join(CONTENT, 'collections', collection.key, `${item.slug}.json`), tpl(collection.template), ...shared],
+      });
     }
   }
+
+  for (const page of FIXED_PAGES) {
+    const scope = baseScope(site, { meta: { ...page.meta, ogTitle: page.meta.title, ogDescription: page.meta.description, twitterCard: 'summary_large_image' } }, page.out, null, 'website');
+    scope.meta.robots = page.meta.robots;
+    if (page.meta.canonical === '') { scope.meta.canonical = ''; scope.canonical = ''; }
+    const file = path.join(TEMPLATES, 'fixed', `${page.template}.html`);
+    const html = absolutizeHtml(render(compile(readText(file)), scope, partials));
+    fs.writeFileSync(path.join(ROOT, page.out), html);
+    written.push(page.out);
+    if (page.sitemap) sitemap.push({ outFile: page.out, sources: [file, ...shared] });
+  }
+
+  // Homepage first, then the order pages were built in.
+  writeSitemap(sitemap);
 
   process.stdout.write(`built ${written.length} pages: ${written.join(', ')}\n`);
 }
