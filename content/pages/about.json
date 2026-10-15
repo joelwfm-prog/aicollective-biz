@@ -3,7 +3,7 @@
     "title": "About The AI Collective | Prairie-Made AI for Business",
     "description": "The AI Collective is a Saskatchewan-made source for practical AI for small and medium business. Made on the Prairies, built for Western Canada — no hype, no jargon.",
     "ogTitle": "About The AI Collective | Prairie-Made AI for Business",
-    "ogDescription": "Who's behind The AI Collective, and why we started a plain-English AI resource for Prairie business."
+    "ogDescription": "Who's behind The AI Collective, and why we started a plain-English AI resource for Prairie businesses."
   },
   "seo": {
     "name": "About The AI Collective"
@@ -17,18 +17,28 @@
     "paragraphs": [
       {
         "runs": [
-          { "text": "Most AI coverage is written for Silicon Valley, not Saskatchewan. It's either breathless hype or dense jargon — and neither helps a busy owner decide what to actually do on Monday morning." }
+          {
+            "text": "Most AI coverage is written for Silicon Valley, not Saskatchewan. It's either breathless hype or dense jargon — and neither helps a busy owner decide what to actually do on Monday morning."
+          }
         ]
       },
       {
         "runs": [
-          { "text": "We're operators and builders based in Saskatchewan. We use AI every day to run real businesses, and we got tired of translating the noise ourselves. So we started sharing what works — plainly, honestly, and with a Prairie accent." }
+          {
+            "text": "We're operators and builders based in Saskatchewan. We use AI every day to run real businesses, and we got tired of translating the noise ourselves. So we started sharing what works — plainly, honestly, and with a Prairie accent."
+          }
         ]
       },
       {
         "runs": [
-          { "style": "bold", "text": "Our promise:" },
-          { "style": "normal", "text": " no hype, no fear-mongering, no affiliate-link soup. When a tool is worth your money, we'll tell you why. When it isn't, we'll say that too." }
+          {
+            "text": "Our promise:",
+            "style": "bold"
+          },
+          {
+            "text": "no hype, no fear-mongering, no affiliate-link soup. When a tool is worth your money, we'll tell you why. When it isn't, we'll say that too.",
+            "style": "normal"
+          }
         ]
       }
     ]
