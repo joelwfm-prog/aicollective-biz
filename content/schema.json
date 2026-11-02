@@ -367,7 +367,7 @@
         {
           "key": "businessesToWatch",
           "label": "Businesses to watch",
-          "help": "Cards linking to other businesses. Keep the disclosure line: these are from the founder's own network.",
+          "help": "Cards linking to other businesses. Keep the disclosure line: these are businesses from The AI Collective's network.",
           "type": "group",
           "fields": [
             { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
