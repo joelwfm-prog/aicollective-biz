@@ -729,3 +729,20 @@ a.side-card:hover { transform: translateX(4px); border-color: var(--color-border
 .aic-nlpop__note{font-size:14px;color:#b6ff3b;font-weight:600;margin:4px 0 0}
 .aic-nlpop__fine{font-size:11px;color:#8a7ca8;margin:10px 0 0;text-align:center}
 @media (max-width:480px){.aic-nlpop{right:12px;left:12px;bottom:12px;width:auto}}
+
+/* ---------- Businesses to watch ---------- */
+.watch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+.watch-card {
+  display: flex; flex-direction: column; gap: var(--space-3);
+  padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+  background: var(--color-surface); color: inherit; text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.watch-card:hover { transform: translateY(-4px); border-color: var(--neon-cyan); box-shadow: var(--shadow-md); }
+.watch-card__logo { height: 56px; display: flex; align-items: center; }
+.watch-card__logo img { max-height: 56px; max-width: 160px; width: auto; height: auto; border-radius: 10px; }
+.watch-card h3 { font-size: var(--text-lg); font-weight: 600; }
+.watch-card p { color: var(--color-text-muted); font-size: var(--text-base); flex: 1; }
+.watch-card__url { color: var(--neon-cyan); font-size: var(--text-sm); font-weight: 600; }
+@media (max-width: 1024px) { .watch-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) { .watch-grid { grid-template-columns: 1fr; } }

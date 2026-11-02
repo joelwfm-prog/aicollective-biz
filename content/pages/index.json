@@ -133,5 +133,44 @@
       "No spam, ever",
       "Unsubscribe in one click"
     ]
+  },
+  "businessesToWatch": {
+    "eyebrow": "Businesses to watch",
+    "title": "From the Collective's network",
+    "disclosure": "These are businesses from The AI Collective's founder and network.",
+    "items": [
+      {
+        "name": "Results AI",
+        "url": "https://www.intheresults.com",
+        "display": "intheresults.com",
+        "logo": "/assets/partners/results-ai.png",
+        "logoAlt": "Results AI logo",
+        "description": "Results AI audits how your business shows up when customers ask ChatGPT, Perplexity or Gemini, with an AEO score, competitor analysis and a custom content plan."
+      },
+      {
+        "name": "VYB6",
+        "url": "https://www.vyb6.com",
+        "display": "vyb6.com",
+        "logo": "/assets/partners/vyb6.svg",
+        "logoAlt": "VYB6 logo",
+        "description": "VYB6 is a website builder where you describe your business in plain words or by voice and get a complete site that's ready for Google and AI search."
+      },
+      {
+        "name": "YourAI Build",
+        "url": "https://yourai.build",
+        "display": "yourai.build",
+        "logo": "/assets/partners/yourai-build.svg",
+        "logoAlt": "YourAI Build logo",
+        "description": "YourAI Build sets up custom AI tools for small businesses inside how they already work, and trains the team to use them. It serves Saskatchewan, Western Canada and beyond."
+      },
+      {
+        "name": "AG AI Solutions",
+        "url": "https://agaisolutions.com/",
+        "display": "agaisolutions.com",
+        "logo": "/assets/partners/ag-ai-solutions.svg",
+        "logoAlt": "AG AI Solutions logo",
+        "description": "AG AI Solutions is a practical AI partner for Western Canadian agriculture, from farms and feedlots to processors, building small tools around repetitive work and slow decisions. It's based in Moose Jaw, SK."
+      }
+    ]
   }
 }

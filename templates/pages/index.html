@@ -126,6 +126,25 @@
       </div>
     </section>
 
+    <!-- ================= BUSINESSES TO WATCH ================= -->
+    <section class="section section--tight container" id="businesses-to-watch">
+      <div class="section-head section-head--center reveal">
+        <span class="eyebrow">{{businessesToWatch.eyebrow}}</span>
+        <h2 class="section-head__title">{{businessesToWatch.title}}</h2>
+        <p class="section-head__desc">{{businessesToWatch.disclosure}}</p>
+      </div>
+      <div class="watch-grid">
+{{#each businessesToWatch.items}}
+        <a class="watch-card reveal" href="{{attr url}}" target="_blank" rel="noopener">
+          <div class="watch-card__logo"><img src="{{attr logo}}" alt="{{attr logoAlt}}" loading="lazy" /></div>
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          <span class="watch-card__url">{{display}} ↗</span>
+        </a>
+{{/each}}
+      </div>
+    </section>
+
     <!-- ================= NEWSLETTER ================= -->
     <section class="section container" id="newsletter">
       <div class="newsletter reveal">

@@ -365,6 +365,28 @@
           ]
         },
         {
+          "key": "businessesToWatch",
+          "label": "Businesses to watch",
+          "help": "Cards linking to other businesses. Keep the disclosure line: these are from the founder's own network.",
+          "type": "group",
+          "fields": [
+            { "key": "eyebrow", "label": "Small label above", "type": "text", "required": true, "maxLength": 56 },
+            { "key": "title", "label": "Heading", "type": "text", "required": true, "maxLength": 63 },
+            { "key": "disclosure", "label": "Disclosure line", "type": "textarea", "required": true, "maxLength": 160 },
+            {
+              "key": "items", "label": "Business cards", "help": "Built for four cards in a row on desktop.", "type": "list", "minItems": 1, "maxItems": 8,
+              "itemFields": [
+                { "key": "name", "label": "Business name", "type": "text", "required": true, "maxLength": 40 },
+                { "key": "url", "label": "Website address", "help": "Full URL including https://", "type": "text", "required": true, "maxLength": 120 },
+                { "key": "display", "label": "Website shown on card", "type": "text", "required": true, "maxLength": 40 },
+                { "key": "logo", "label": "Logo", "type": "image", "required": true },
+                { "key": "logoAlt", "label": "Logo description", "type": "text", "required": true, "maxLength": 125 },
+                { "key": "description", "label": "Short description", "help": "One or two plain sentences.", "type": "textarea", "required": true, "maxLength": 240 }
+              ]
+            }
+          ]
+        },
+        {
           "key": "newsletter",
           "label": "Newsletter sign-up",
           "help": "The form posts to the live subscribe endpoint. Only the wording is editable.",
