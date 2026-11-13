@@ -746,3 +746,14 @@ a.side-card:hover { transform: translateX(4px); border-color: var(--color-border
 .watch-card__url { color: var(--neon-cyan); font-size: var(--text-sm); font-weight: 600; }
 @media (max-width: 1024px) { .watch-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 640px) { .watch-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Custom-setup partner note on AI Solutions ---------- */
+.custom-partner {
+  margin: var(--space-8) auto 0;
+  max-width: 62ch;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+.custom-partner a { color: var(--neon-cyan); font-weight: 600; text-decoration: none; }
+.custom-partner a:hover { text-decoration: underline; }

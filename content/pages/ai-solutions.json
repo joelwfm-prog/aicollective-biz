@@ -86,5 +86,11 @@
         "answer": "Your description comes straight to us so we can reply. We never sell your data, and you only join the newsletter if you tick the box."
       }
     ]
+  },
+  "customPartner": {
+    "textBefore": "When a custom setup is the right path, our network partner ",
+    "linkLabel": "YourAI Build",
+    "linkUrl": "https://yourai.build",
+    "textAfter": " sets up custom AI tools for small businesses and trains the team to use them."
   }
 }

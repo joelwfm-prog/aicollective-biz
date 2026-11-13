@@ -689,6 +689,18 @@
           ]
         },
         {
+          "key": "customPartner",
+          "label": "Custom-setup partner note",
+          "help": "A short line under the three 'How it works' cards. Names the network partner that builds custom setups. Leave the link label as YourAI Build.",
+          "type": "group",
+          "fields": [
+            { "key": "textBefore", "label": "Text before the link", "type": "textarea", "required": true, "maxLength": 120 },
+            { "key": "linkLabel", "label": "Link text", "help": "Shown as the clickable name. Keep this as YourAI Build.", "type": "text", "required": true, "maxLength": 40 },
+            { "key": "linkUrl", "label": "Link address", "help": "Full URL including https://", "type": "text", "required": true, "maxLength": 120 },
+            { "key": "textAfter", "label": "Text after the link", "type": "textarea", "required": true, "maxLength": 160 }
+          ]
+        },
+        {
           "key": "intake",
           "label": "Enquiry form wording",
           "help": "The form itself is wired to the live enquiry endpoint. Only the wording is editable here.",
