@@ -731,7 +731,7 @@ a.side-card:hover { transform: translateX(4px); border-color: var(--color-border
 @media (max-width:480px){.aic-nlpop{right:12px;left:12px;bottom:12px;width:auto}}
 
 /* ---------- Businesses to watch ---------- */
-.watch-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+.watch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6); }
 .watch-card {
   display: flex; flex-direction: column; gap: var(--space-3);
   padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-lg);

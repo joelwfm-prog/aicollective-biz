@@ -170,6 +170,14 @@
         "logo": "/assets/partners/ag-ai-solutions.svg",
         "logoAlt": "AG AI Solutions logo",
         "description": "AG AI Solutions is a practical AI partner for Western Canadian agriculture, from farms and feedlots to processors, building small tools around repetitive work and slow decisions. It's based in Moose Jaw, SK."
+      },
+      {
+        "name": "The Agent Door",
+        "url": "https://theagentdoor.com",
+        "display": "theagentdoor.com",
+        "logo": "/assets/partners/the-agent-door.png",
+        "logoAlt": "The Agent Door logo",
+        "description": "The Agent Door helps small and mid-sized businesses in Canada and the United States make their business easy for AI to find, understand, trust and work with. It sets up an agent that can take a quote request, check a service area or book."
       }
     ]
   }
